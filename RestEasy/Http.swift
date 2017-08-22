@@ -113,16 +113,10 @@ public enum HTTPMethod: String {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         if let object = object {
-            switch self {
-            case .post, .put, .patch:
-                do {
-                    request.httpBody = try JSONSerialization.data(withJSONObject: object.toJSON() ?? [], options: [])
-                } catch let error {
-                    throw HTTPMethodError.jsonSerializationFailed(error: error)
-                }
-                
-            default:
-                break
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: object.asJSON() ?? [], options: [])
+            } catch let error {
+                throw HTTPMethodError.jsonSerializationFailed(error: error)
             }
         }
         

@@ -9,7 +9,7 @@
 import Foundation
 
 extension HTTPURLResponse {
-    public func formatForLog(withData data: Data? = nil) -> String {
+    open override var debugDescription: String {
         var fields: [String] = ["\nResponse:", "==============="]
         fields.append("Response Code: \(self.statusCode)")
         
@@ -19,11 +19,7 @@ extension HTTPURLResponse {
             allHeaderFields.forEach { (key, val) in fields.append("\t\(key): \(val)") }
         }
         
-        if let data = data {
-            let dataString = String(data: data, encoding: String.Encoding.utf8) ?? "Data could not be printed"
-            fields.append(contentsOf: ["Data", "\t\(dataString)"])
-        }
-        
+
         return fields.joined(separator: "\n")
     }
 }

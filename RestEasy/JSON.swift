@@ -17,7 +17,7 @@ public protocol JSONDeserializable {
 
 /// Denotes that the conformer can serialize itself to JSON
 public protocol JSONSerializable {
-    func toJSON() -> JSON?
+    func asJSON() -> JSON?
 }
 
 /// Denotes that the conformer can both serialize and deserialize itself to/from JSON

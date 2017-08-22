@@ -20,6 +20,15 @@
 		7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69701F4B79EF001CC66D /* Patchable.swift */; };
 		7DDB69731F4B7A5F001CC66D /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69721F4B7A5F001CC66D /* Deletable.swift */; };
 		7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
+		C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
+		C26230251F4C94E7003A5E99 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; };
+		C26230261F4C94E7003A5E99 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; };
+		C26230281F4C9565003A5E99 /* Nimble.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C26230291F4C9565003A5E99 /* Quick.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
+		C26230301F4C97CD003A5E99 /* PostableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302F1F4C97CD003A5E99 /* PostableSpec.swift */; };
+		C26230331F4C9850003A5E99 /* PostableDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230321F4C9850003A5E99 /* PostableDoubles.swift */; };
+		C26230351F4C9908003A5E99 /* HelperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230341F4C9908003A5E99 /* HelperProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +40,21 @@
 			remoteInfo = RestEasy;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C26230271F4C9505003A5E99 /* Copy Carthage Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C26230281F4C9565003A5E99 /* Nimble.framework in Copy Carthage Frameworks */,
+				C26230291F4C9565003A5E99 /* Quick.framework in Copy Carthage Frameworks */,
+			);
+			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7DDB69451F4B6FA1001CC66D /* RestEasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestEasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +73,13 @@
 		7DDB69701F4B79EF001CC66D /* Patchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patchable.swift; sourceTree = "<group>"; };
 		7DDB69721F4B7A5F001CC66D /* Deletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deletable.swift; sourceTree = "<group>"; };
 		7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
+		C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		C26230231F4C94E7003A5E99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		C26230241F4C94E7003A5E99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestableConfiguration.swift; sourceTree = "<group>"; };
+		C262302F1F4C97CD003A5E99 /* PostableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostableSpec.swift; sourceTree = "<group>"; };
+		C26230321F4C9850003A5E99 /* PostableDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostableDoubles.swift; sourceTree = "<group>"; };
+		C26230341F4C9908003A5E99 /* HelperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +95,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDB694F1F4B6FA1001CC66D /* RestEasy.framework in Frameworks */,
+				C26230251F4C94E7003A5E99 /* Nimble.framework in Frameworks */,
+				C26230261F4C94E7003A5E99 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +109,7 @@
 				7DDB69471F4B6FA1001CC66D /* RestEasy */,
 				7DDB69521F4B6FA1001CC66D /* RestEasyTests */,
 				7DDB69461F4B6FA1001CC66D /* Products */,
+				C26230221F4C94E7003A5E99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +132,7 @@
 				7DDB69631F4B705D001CC66D /* Restable.swift */,
 				7DDB69481F4B6FA1001CC66D /* RestEasy.h */,
 				7DDB69491F4B6FA1001CC66D /* Info.plist */,
+				C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */,
 			);
 			path = RestEasy;
 			sourceTree = "<group>";
@@ -105,8 +140,12 @@
 		7DDB69521F4B6FA1001CC66D /* RestEasyTests */ = {
 			isa = PBXGroup;
 			children = (
+				C262302C1F4C96F3003A5E99 /* Configurations */,
+				C26230311F4C9808003A5E99 /* Doubles */,
 				7DDB69531F4B6FA1001CC66D /* RestEasyTests.swift */,
 				7DDB69551F4B6FA1001CC66D /* Info.plist */,
+				C262302F1F4C97CD003A5E99 /* PostableSpec.swift */,
+				C26230341F4C9908003A5E99 /* HelperProtocols.swift */,
 			);
 			path = RestEasyTests;
 			sourceTree = "<group>";
@@ -122,6 +161,31 @@
 				7DDB696D1F4B7861001CC66D /* Puttable.swift */,
 			);
 			name = http;
+			sourceTree = "<group>";
+		};
+		C26230221F4C94E7003A5E99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C26230231F4C94E7003A5E99 /* Nimble.framework */,
+				C26230241F4C94E7003A5E99 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C262302C1F4C96F3003A5E99 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
+		C26230311F4C9808003A5E99 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				C26230321F4C9850003A5E99 /* PostableDoubles.swift */,
+			);
+			name = Doubles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +227,7 @@
 				7DDB694A1F4B6FA1001CC66D /* Sources */,
 				7DDB694B1F4B6FA1001CC66D /* Frameworks */,
 				7DDB694C1F4B6FA1001CC66D /* Resources */,
+				C26230271F4C9505003A5E99 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +312,7 @@
 				7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */,
 				7DDB69681F4B705D001CC66D /* HttpResponseCode.swift in Sources */,
 				7DDB69731F4B7A5F001CC66D /* Deletable.swift in Sources */,
+				C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26230331F4C9850003A5E99 /* PostableDoubles.swift in Sources */,
+				C26230301F4C97CD003A5E99 /* PostableSpec.swift in Sources */,
+				C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */,
+				C26230351F4C9908003A5E99 /* HelperProtocols.swift in Sources */,
 				7DDB69541F4B6FA1001CC66D /* RestEasyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +486,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 54F2GBB767;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RestEasyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.RestEasyTests;
@@ -429,6 +503,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 54F2GBB767;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RestEasyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.RestEasyTests;
@@ -456,6 +534,7 @@
 				7DDB695B1F4B6FA1001CC66D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DDB695C1F4B6FA1001CC66D /* Build configuration list for PBXNativeTarget "RestEasyTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +543,7 @@
 				7DDB695E1F4B6FA1001CC66D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

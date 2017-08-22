@@ -55,13 +55,11 @@ extension Restable {
         let task = URLSession.shared.dataTask(with: try request()) {
             data, response, error in
             
-            if let httpResponse = response as? HTTPURLResponse {
-                print(httpResponse.formatForLog(withData: data))
+            if let res = response {
+                print(res)
             }
             
-            let callback = { self.dataTaskCompletionHandler(data: data,
-                                                            response: response,
-                                                            error: error,
+            let callback = { self.dataTaskCompletionHandler(data: data, response: response, error: error,
                                                             completion: completion) }
             if callbackOnMain {
                 DispatchQueue.main.async {
@@ -124,7 +122,6 @@ extension Restable {
             completion?(Result.failure(HttpError.unsuccessfulResponse(httpResponse)))
             return
         }
-        
         
         var json = JSON()
         
