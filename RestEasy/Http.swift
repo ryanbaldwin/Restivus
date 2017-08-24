@@ -16,7 +16,6 @@ import Foundation
 /// - unsuccessfulResponse: Used when the HTTPURLResponse has a status code other than 2xx
 /// - unableToDeserializeJSON: Used when the returned data cannot be deserialized into a JSON object
 /// - noData: Used when the server response does not contain any data.
-/// - couldNotInflateResultType: Used when unable to deserialize JSON into ResultType
 /// - other: Called when some other non-HttpError is raised.
 public enum HttpError: Error {
     case noResponse,
@@ -25,7 +24,6 @@ public enum HttpError: Error {
     unsuccessfulResponse(HTTPURLResponse),
     unableToDeserializeJSON(error: Error, data: Data?),
     noData,
-    couldNotInflateResultType(json: JSON, resultType: JSONDeserializable.Type),
     other(Error)
 }
 
@@ -56,9 +54,6 @@ extension HttpError: Equatable {
             
         case(.unableToDeserializeJSON, .unableToDeserializeJSON):
             return true // nearly impossible to equate these 2 things accurately
-            
-        case (let .couldNotInflateResultType(_, type1), let .couldNotInflateResultType(_, type2)):
-            return type1.self == type2.self // JSON is a [String: Any], and thus isn't equatable.
             
         case (.other, .other):
             return true // cannot accurately compare the underlying Error types as Error is a protocol
@@ -91,7 +86,15 @@ public enum HTTPMethod: String {
     /// - Returns: A URLRequest ready for submission
     /// - Throws: An `InvalidURLError` if the `url` is malformed
     func makeURLRequest(url: String) throws -> URLRequest {
-        return try makeURLRequest(url: url, object: nil)
+        guard let urlForRequest = URL(string: url) else {
+            throw HTTPMethodError.invalidURL(url: url)
+        }
+        
+        var request = URLRequest(url: urlForRequest)
+        request.httpMethod = rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        return request
     }
     
     /// Creates a URLRequest appropriate for this instance
@@ -102,22 +105,12 @@ public enum HTTPMethod: String {
     /// - Returns: A URLRequest ready for submission
     /// - Throws: An `InvalidURLError` if the `url` is malformed, or another `Error` occuring during
     ///           the JSONSerialization of the `object`.
-    func makeURLRequest(url: String, object: JSONSerializable?) throws -> URLRequest {
-        guard let urlForRequest = URL(string: url) else {
-            throw HTTPMethodError.invalidURL(url: url)
-        }
-        
-        var request = URLRequest(url: urlForRequest)
-        request.httpMethod = rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        
-        if let object = object {
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: object.asJSON() ?? [], options: [])
-            } catch let error {
-                throw HTTPMethodError.jsonSerializationFailed(error: error)
-            }
+    func makeURLRequest<T: Encodable>(url: String, object: T) throws -> URLRequest {
+        var request = try makeURLRequest(url: url)
+        do {
+            request.httpBody = try JSONEncoder().encode(object)
+        } catch let error {
+            throw HTTPMethodError.jsonSerializationFailed(error: error)
         }
         
         return request

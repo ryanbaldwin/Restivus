@@ -14,14 +14,14 @@ import Foundation
 /// - failure: The operation failed, and contains the `Error` from that operation.
 public enum Result<Success> {
     case success(Success)
-    case failure(Error)
+    case failure(HttpError)
 }
 
 // The function used as a completion handler in all HttpSubmittables.
 public typealias HttpSubmittableCompletionHandler<HttpResponse> = (Result<HttpResponse>) -> Void
 
 public protocol Restable {
-    associatedtype ResponseType: JSONDeserializable
+    associatedtype ResponseType: Decodable
     
     /// The base url against which the request will be made.
     /// Example: 
@@ -85,17 +85,17 @@ extension Restable {
     func dataTaskCompletionHandler(data: Data?, response: URLResponse?, error: Error?,
                                    completion: HttpSubmittableCompletionHandler<ResponseType>?) {
         guard error == nil else {
-            completion?(Result.failure(HttpError.other(error!)))
+            completion?(Result.failure(.other(error!)))
             return
         }
         
         guard let response = response else {
-            completion?(Result.failure(HttpError.noResponse))
+            completion?(Result.failure(.noResponse))
             return
         }
         
         guard let httpResponse = response as? HTTPURLResponse else {
-            completion?(Result.failure(HttpError.unexpectedResponse(response)))
+            completion?(Result.failure(.unexpectedResponse(response)))
             return
         }
         
@@ -123,22 +123,13 @@ extension Restable {
             return
         }
         
-        var json = JSON()
-        
-        if httpResponse.responseCode != .noContent204 {
-            do {
-                json = try JSONSerialization.jsonObject(with: data ?? Data(), options: []) as! JSON
-            } catch let error {
-                completion?(Result.failure(HttpError.unableToDeserializeJSON(error: error, data: data)))
-                return
-            }
+        let jsonData = data ?? Data()
+        do {
+            let result = try JSONDecoder().decode(ResponseType.self, from: jsonData)
+            completion?(Result.success(result))
+        } catch let error {
+            print(error)
+            completion?(Result.failure(.unableToDeserializeJSON(error: error, data: data)))
         }
-        
-        guard let result = ResponseType(json: json) else {
-            completion?(Result.failure(HttpError.couldNotInflateResultType(json: json, resultType: ResponseType.self)))
-            return
-        }
-        
-        completion?(Result.success(result))
     }
 }

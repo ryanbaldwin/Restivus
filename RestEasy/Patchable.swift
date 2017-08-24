@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Patchable: Restable {}
 
-extension Patchable where Self: JSONSerializable {
+extension Patchable where Self: Encodable {
     /// Creates a PATCH request for the current instance and
     /// sets the body of the request to this instance's JSON representation
     ///

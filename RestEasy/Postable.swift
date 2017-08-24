@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Postable: Restable {}
 
-extension Postable where Self: JSONSerializable {
+extension Postable where Self: Encodable {
     /// Creates a POST request for the current instance and
     /// sets the body of the request to this instance's JSON representation
     ///

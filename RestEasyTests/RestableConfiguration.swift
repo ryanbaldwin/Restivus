@@ -7,6 +7,7 @@
 //
 
 import Quick
+import Nimble
 
 class RestableConfiguration: QuickConfiguration {
     override class func configure(_ configuration: Configuration) {

@@ -16,7 +16,7 @@ extension Deletable {
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
-    public func request() throws -> URLRequest? {
-        return try HTTPMethod.delete.makeURLRequest(url: baseURL + path)
+    public func request() throws -> URLRequest {
+        return try HTTPMethod.delete.makeURLRequest(url: "\(baseURL)\(path)")
     }
 }

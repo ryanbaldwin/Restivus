@@ -15,7 +15,7 @@ extension Gettable {
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
-    public func request() throws -> URLRequest? {
-        return try HTTPMethod.get.makeURLRequest(url: baseURL + path)
+    public func request() throws -> URLRequest {
+        return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)")
     }
 }

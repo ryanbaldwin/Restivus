@@ -7,28 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0083651F4E5FCF00729F22 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; };
+		7D0083661F4E5FCF00729F22 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; };
+		7D0083671F4E5FD200729F22 /* Nimble.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D0083681F4E5FD200729F22 /* Quick.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
+		7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
+		7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
 		7DDB694F1F4B6FA1001CC66D /* RestEasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDB69451F4B6FA1001CC66D /* RestEasy.framework */; };
-		7DDB69541F4B6FA1001CC66D /* RestEasyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69531F4B6FA1001CC66D /* RestEasyTests.swift */; };
 		7DDB69561F4B6FA1001CC66D /* RestEasy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* RestEasy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DDB69611F4B7052001CC66D /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69601F4B7052001CC66D /* Http.swift */; };
 		7DDB69661F4B705D001CC66D /* Gettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69621F4B705D001CC66D /* Gettable.swift */; };
 		7DDB69671F4B705D001CC66D /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
 		7DDB69681F4B705D001CC66D /* HttpResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69641F4B705D001CC66D /* HttpResponseCode.swift */; };
-		7DDB69691F4B705D001CC66D /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69651F4B705D001CC66D /* JSON.swift */; };
 		7DDB696C1F4B76F1001CC66D /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB696B1F4B76F1001CC66D /* Postable.swift */; };
 		7DDB696E1F4B7861001CC66D /* Puttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB696D1F4B7861001CC66D /* Puttable.swift */; };
 		7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69701F4B79EF001CC66D /* Patchable.swift */; };
 		7DDB69731F4B7A5F001CC66D /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69721F4B7A5F001CC66D /* Deletable.swift */; };
 		7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
 		C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
-		C26230251F4C94E7003A5E99 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; };
-		C26230261F4C94E7003A5E99 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; };
-		C26230281F4C9565003A5E99 /* Nimble.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C26230291F4C9565003A5E99 /* Quick.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
-		C26230301F4C97CD003A5E99 /* PostableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302F1F4C97CD003A5E99 /* PostableSpec.swift */; };
-		C26230331F4C9850003A5E99 /* PostableDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230321F4C9850003A5E99 /* PostableDoubles.swift */; };
-		C26230351F4C9908003A5E99 /* HelperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230341F4C9908003A5E99 /* HelperProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +46,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C26230281F4C9565003A5E99 /* Nimble.framework in Copy Carthage Frameworks */,
-				C26230291F4C9565003A5E99 /* Quick.framework in Copy Carthage Frameworks */,
+				7D0083671F4E5FD200729F22 /* Nimble.framework in Copy Carthage Frameworks */,
+				7D0083681F4E5FD200729F22 /* Quick.framework in Copy Carthage Frameworks */,
 			);
 			name = "Copy Carthage Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,17 +55,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodSpec.swift; sourceTree = "<group>"; };
+		7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodConfiguration.swift; sourceTree = "<group>"; };
+		7D72FA171F4E715000A4B3F9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7DDB69451F4B6FA1001CC66D /* RestEasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestEasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDB69481F4B6FA1001CC66D /* RestEasy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestEasy.h; sourceTree = "<group>"; };
 		7DDB69491F4B6FA1001CC66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DDB694E1F4B6FA1001CC66D /* RestEasyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestEasyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DDB69531F4B6FA1001CC66D /* RestEasyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestEasyTests.swift; sourceTree = "<group>"; };
 		7DDB69551F4B6FA1001CC66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DDB69601F4B7052001CC66D /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		7DDB69621F4B705D001CC66D /* Gettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gettable.swift; sourceTree = "<group>"; };
 		7DDB69631F4B705D001CC66D /* Restable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restable.swift; sourceTree = "<group>"; };
 		7DDB69641F4B705D001CC66D /* HttpResponseCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponseCode.swift; sourceTree = "<group>"; };
-		7DDB69651F4B705D001CC66D /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		7DDB696B1F4B76F1001CC66D /* Postable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
 		7DDB696D1F4B7861001CC66D /* Puttable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puttable.swift; sourceTree = "<group>"; };
 		7DDB69701F4B79EF001CC66D /* Patchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patchable.swift; sourceTree = "<group>"; };
@@ -77,9 +76,6 @@
 		C26230231F4C94E7003A5E99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C26230241F4C94E7003A5E99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestableConfiguration.swift; sourceTree = "<group>"; };
-		C262302F1F4C97CD003A5E99 /* PostableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostableSpec.swift; sourceTree = "<group>"; };
-		C26230321F4C9850003A5E99 /* PostableDoubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostableDoubles.swift; sourceTree = "<group>"; };
-		C26230341F4C9908003A5E99 /* HelperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +91,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDB694F1F4B6FA1001CC66D /* RestEasy.framework in Frameworks */,
-				C26230251F4C94E7003A5E99 /* Nimble.framework in Frameworks */,
-				C26230261F4C94E7003A5E99 /* Quick.framework in Frameworks */,
+				7D0083651F4E5FCF00729F22 /* Nimble.framework in Frameworks */,
+				7D0083661F4E5FCF00729F22 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D72FA191F4E715600A4B3F9 /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D72FA171F4E715000A4B3F9 /* Person.swift */,
+			);
+			name = "Test Classes";
+			sourceTree = "<group>";
+		};
 		7DDB693B1F4B6FA1001CC66D = {
 			isa = PBXGroup;
 			children = (
@@ -126,12 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				7DDB696F1F4B79AE001CC66D /* http */,
-				7DDB69651F4B705D001CC66D /* JSON.swift */,
-				7DDB69641F4B705D001CC66D /* HttpResponseCode.swift */,
+				7DDB69491F4B6FA1001CC66D /* Info.plist */,
 				7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */,
 				7DDB69631F4B705D001CC66D /* Restable.swift */,
 				7DDB69481F4B6FA1001CC66D /* RestEasy.h */,
-				7DDB69491F4B6FA1001CC66D /* Info.plist */,
 				C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */,
 			);
 			path = RestEasy;
@@ -142,10 +144,9 @@
 			children = (
 				C262302C1F4C96F3003A5E99 /* Configurations */,
 				C26230311F4C9808003A5E99 /* Doubles */,
-				7DDB69531F4B6FA1001CC66D /* RestEasyTests.swift */,
+				7D72FA191F4E715600A4B3F9 /* Test Classes */,
 				7DDB69551F4B6FA1001CC66D /* Info.plist */,
-				C262302F1F4C97CD003A5E99 /* PostableSpec.swift */,
-				C26230341F4C9908003A5E99 /* HelperProtocols.swift */,
+				7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */,
 			);
 			path = RestEasyTests;
 			sourceTree = "<group>";
@@ -153,9 +154,10 @@
 		7DDB696F1F4B79AE001CC66D /* http */ = {
 			isa = PBXGroup;
 			children = (
-				7DDB69601F4B7052001CC66D /* Http.swift */,
 				7DDB69721F4B7A5F001CC66D /* Deletable.swift */,
 				7DDB69621F4B705D001CC66D /* Gettable.swift */,
+				7DDB69601F4B7052001CC66D /* Http.swift */,
+				7DDB69641F4B705D001CC66D /* HttpResponseCode.swift */,
 				7DDB69701F4B79EF001CC66D /* Patchable.swift */,
 				7DDB696B1F4B76F1001CC66D /* Postable.swift */,
 				7DDB696D1F4B7861001CC66D /* Puttable.swift */,
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */,
+				7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -183,7 +186,6 @@
 		C26230311F4C9808003A5E99 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
-				C26230321F4C9850003A5E99 /* PostableDoubles.swift */,
 			);
 			name = Doubles;
 			sourceTree = "<group>";
@@ -303,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDB69671F4B705D001CC66D /* Restable.swift in Sources */,
-				7DDB69691F4B705D001CC66D /* JSON.swift in Sources */,
 				7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */,
 				7DDB696E1F4B7861001CC66D /* Puttable.swift in Sources */,
 				7DDB69611F4B7052001CC66D /* Http.swift in Sources */,
@@ -320,11 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C26230331F4C9850003A5E99 /* PostableDoubles.swift in Sources */,
-				C26230301F4C97CD003A5E99 /* PostableSpec.swift in Sources */,
+				7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */,
+				7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */,
+				7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */,
 				C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */,
-				C26230351F4C9908003A5E99 /* HelperProtocols.swift in Sources */,
-				7DDB69541F4B6FA1001CC66D /* RestEasyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +457,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -477,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.RestEasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -494,7 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.RestEasyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -511,7 +511,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.RestEasyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
