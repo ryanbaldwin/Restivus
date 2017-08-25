@@ -17,7 +17,7 @@ import Foundation
 /// - unableToDeserializeJSON: Used when the returned data cannot be deserialized into a JSON object
 /// - noData: Used when the server response does not contain any data.
 /// - other: Called when some other non-HttpError is raised.
-public enum HttpError: Error {
+public enum HTTPError: Error {
     case noResponse,
     noRequest,
     unexpectedResponse(URLResponse),
@@ -39,8 +39,8 @@ public enum HttpError: Error {
 ///   - lhs: The HttpError
 ///   - rhs: The other HttpError
 /// - Returns: True if the 2 protocols are roughly equal; otherwise false.
-extension HttpError: Equatable {
-    public static func ==(lhs: HttpError, rhs: HttpError) -> Bool {
+extension HTTPError: Equatable {
+    public static func ==(lhs: HTTPError, rhs: HTTPError) -> Bool {
         switch (lhs, rhs) {
         case (.noResponse, .noResponse): return true
             

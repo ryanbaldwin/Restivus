@@ -15,35 +15,35 @@ class HttpErrorSpec: QuickSpec {
         describe("An HttpError") {
             describe("its equality") {
                 it("is not equal if not the same errors") {
-                    expect(HttpError.noRequest).toNot(equal(HttpError.noResponse))
-                    expect(HttpError.noResponse) == HttpError.noResponse
-                    expect(HttpError.noRequest) == HttpError.noRequest
+                    expect(HTTPError.noRequest).toNot(equal(HTTPError.noResponse))
+                    expect(HTTPError.noResponse) == HTTPError.noResponse
+                    expect(HTTPError.noRequest) == HTTPError.noRequest
                 }
                 
                 it("considers URLResponse when comparing unexpectedResponse") {
                     let response1 = URLResponse()
                     let response2 = URLResponse()
-                    expect(HttpError.unexpectedResponse(response1)).toNot(equal(HttpError.unexpectedResponse(response2)))
-                    expect(HttpError.unexpectedResponse(response1)).to(equal(HttpError.unexpectedResponse(response1)))
+                    expect(HTTPError.unexpectedResponse(response1)).toNot(equal(HTTPError.unexpectedResponse(response2)))
+                    expect(HTTPError.unexpectedResponse(response1)).to(equal(HTTPError.unexpectedResponse(response1)))
                 }
                 
                 it("considers HTTPURLResponses when comparing unsuccessfulResponses") {
                     let url = URL(string: "http://google.ca")
                     let response1 = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
                     let response2 = HTTPURLResponse(url: url!, statusCode: 204, httpVersion: nil, headerFields: nil)!
-                    expect(HttpError.unsuccessfulResponse(response1)).toNot(equal(HttpError.unsuccessfulResponse(response2)))
-                    expect(HttpError.unsuccessfulResponse(response1)).to(equal(HttpError.unsuccessfulResponse(response1)))
+                    expect(HTTPError.unsuccessfulResponse(response1)).toNot(equal(HTTPError.unsuccessfulResponse(response2)))
+                    expect(HTTPError.unsuccessfulResponse(response1)).to(equal(HTTPError.unsuccessfulResponse(response1)))
                 }
                 
                 it("does not consider internals when comparing unableTodeserializeJSON") {
-                    let unable1 = HttpError.unableToDeserializeJSON(error: HttpError.noRequest, data: nil)
-                    let unable2 = HttpError.unableToDeserializeJSON(error: HttpError.noResponse, data: Data())
+                    let unable1 = HTTPError.unableToDeserializeJSON(error: HTTPError.noRequest, data: nil)
+                    let unable2 = HTTPError.unableToDeserializeJSON(error: HTTPError.noResponse, data: Data())
                     expect(unable1) == unable2
                 }
                 
                 it("does not consider internals when comparing others") {
-                    let other1 = HttpError.other(HttpError.noRequest)
-                    let other2 = HttpError.other(HttpError.noResponse)
+                    let other1 = HTTPError.other(HTTPError.noRequest)
+                    let other2 = HTTPError.other(HTTPError.noResponse)
                     expect(other1) == other2
                 }
             }

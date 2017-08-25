@@ -14,7 +14,7 @@ import Foundation
 /// - failure: The operation failed, and contains the `Error` from that operation.
 public enum Result<Success> {
     case success(Success)
-    case failure(HttpError)
+    case failure(HTTPError)
 }
 
 // The function used as a completion handler in all HttpSubmittables.
@@ -119,7 +119,7 @@ extension Restable {
             //                    // NOTIFY!
             //                }
             
-            completion?(Result.failure(HttpError.unsuccessfulResponse(httpResponse)))
+            completion?(Result.failure(HTTPError.unsuccessfulResponse(httpResponse)))
             return
         }
         

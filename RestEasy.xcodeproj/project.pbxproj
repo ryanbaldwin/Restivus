@@ -101,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D424D471F4FC0F000D5C0B9 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */,
+				7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
 		7D72FA191F4E715600A4B3F9 /* Test Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,9 +156,8 @@
 				C262302C1F4C96F3003A5E99 /* Configurations */,
 				C26230311F4C9808003A5E99 /* Doubles */,
 				7D72FA191F4E715600A4B3F9 /* Test Classes */,
+				7D424D471F4FC0F000D5C0B9 /* http */,
 				7DDB69551F4B6FA1001CC66D /* Info.plist */,
-				7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */,
-				7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */,
 			);
 			path = RestEasyTests;
 			sourceTree = "<group>";
