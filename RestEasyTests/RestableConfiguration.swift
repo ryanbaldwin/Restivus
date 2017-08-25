@@ -22,9 +22,11 @@ class RestableConfiguration: QuickConfiguration {
                 expect(request.value(forHTTPHeaderField: "Accept")) == "application/json"
             }
             
-            it("uses json for its content type") {
+            it("submits json") {
                 expect(request.value(forHTTPHeaderField: "Content-Type")) == "application/json"
             }
+            
+            
         }
     }
 }

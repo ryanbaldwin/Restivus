@@ -53,6 +53,18 @@ public protocol Restable {
 }
 
 extension Restable {
+    /// The base url against which the request will be made.
+    /// Example:
+    ///
+    ///     "https://www.google.com"
+    public var baseURL: String { return "" }
+    
+    /// The Path to the endpoint.
+    /// Example:
+    ///
+    ///    "/some/path"
+    public var path: String { return "" }
+    
     /// Submits this request
     ///
     /// - Parameters:

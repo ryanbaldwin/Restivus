@@ -19,3 +19,13 @@ extension Gettable {
         return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)")
     }
 }
+
+extension Gettable where Self: Encodable {
+    /// Creates a GET request for the current instance
+    ///
+    /// - Returns: The URLRequest
+    /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
+    public func request() throws -> URLRequest {
+        return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)", body: self)
+    }
+}

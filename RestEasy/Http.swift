@@ -105,10 +105,11 @@ public enum HTTPMethod: String {
     /// - Returns: A URLRequest ready for submission
     /// - Throws: An `InvalidURLError` if the `url` is malformed, or another `Error` occuring during
     ///           the JSONSerialization of the `object`.
-    func makeURLRequest<T: Encodable>(url: String, object: T) throws -> URLRequest {
+    func makeURLRequest<T>(url: String, body: T) throws -> URLRequest where T: Encodable {
         var request = try makeURLRequest(url: url)
+        
         do {
-            request.httpBody = try JSONEncoder().encode(object)
+            request.httpBody = try JSONEncoder().encode(body)
         } catch let error {
             throw HTTPMethodError.jsonSerializationFailed(error: error)
         }

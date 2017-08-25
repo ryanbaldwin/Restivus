@@ -32,3 +32,36 @@ struct PersonRequest: Restable {
         return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)")
     }
 }
+
+struct DeletePersonRequest: Deletable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct EncodableDeletePersonRequest: Encodable {
+    var personId: String
+}
+extension EncodableDeletePersonRequest: Deletable {
+    typealias ResponseType = Person
+    var path: String { return "/" }
+}
+
+struct GetPersonRequest: Gettable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct PatchPersonRequest: Patchable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct PostPersonRequest: Postable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct PutPersonRequest: Puttable {
+    typealias ResponseType = Person
+    var path = "/"
+}

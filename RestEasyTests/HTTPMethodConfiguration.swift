@@ -37,7 +37,7 @@ class HTTPMethodConfiguration: QuickConfiguration {
             
             it("submits data  if provided") {
                 let person = Person(firstName: "Ryan", lastName: "Baldwin", age: 38)
-                let req = try! method.makeURLRequest(url: url, object: person)
+                let req = try! method.makeURLRequest(url: url, body: person)
                 
                 expect(req.httpBody).toNot(beNil())
                 let decoded = try! JSONDecoder().decode(Person.self, from: req.httpBody!)

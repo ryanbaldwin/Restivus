@@ -10,6 +10,18 @@ import Foundation
 
 public protocol Puttable: Restable {}
 
+extension Puttable {
+    
+    /// Creates a POST request for the current instance and
+    /// sets the body of the request to this instance's JSON representation
+    ///
+    /// - Returns: The URLRequest
+    /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
+    public func request() throws -> URLRequest {
+        return try HTTPMethod.put.makeURLRequest(url: "\(baseURL)\(path)")
+    }
+}
+
 extension Puttable where Self: Encodable {
     
     /// Creates a POST request for the current instance and
@@ -18,6 +30,6 @@ extension Puttable where Self: Encodable {
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.put.makeURLRequest(url: baseURL + path, object: self)
+        return try HTTPMethod.put.makeURLRequest(url: "\(baseURL)\(path)", body: self)
     }
 }
