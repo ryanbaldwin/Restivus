@@ -34,6 +34,11 @@ class HTTPMethodSpec: QuickSpec {
             context("when .delete") {
                 itBehavesLike("an HTTPMethod"){ ["method": HTTPMethod.delete] }
             }
+            
+            it("can determine its equality") {
+                expect(HTTPMethod.get).toNot(equal(HTTPMethod.put))
+                expect(HTTPMethod.get).to(equal(HTTPMethod.get))
+            }
         }
     }
 }
