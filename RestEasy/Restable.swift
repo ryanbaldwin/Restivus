@@ -37,22 +37,36 @@ public protocol Restable {
     
     /// Creates a URLRequest object.
     ///
-    /// - Returns: A URLRequest object, if one was successfully created; otherwise nil
+    /// - Returns: A URLRequest object, if one was successfully created
     func request() throws -> URLRequest
 
     /// Submits this request
     ///
     /// - Parameters:
     ///   - callbackOnMain: A flag indicating if the `completionHandler` should be dispatched to the main queue.
-    ///                     Defaults to true
-    ///   - completionHandler: The handler to be called upon completion or failure.
-    func submit(callbackOnMain: Bool, completion: HttpSubmittableCompletionHandler<ResponseType>?)
+    ///   - session: The URLSession from which the URLSessionDataTask will be created.
+    ///   - completion: The handler to be called upon completion or failure.
+    /// - Returns: The URLSessionDataTask
+    /// - Throws: If a URLSessionDataTask failed to create
+    @discardableResult func submit(callbackOnMain: Bool, session: URLSession,
+                                   completion: HttpSubmittableCompletionHandler<ResponseType>?) throws -> URLSessionDataTask
 }
 
 extension Restable {
-    public func submit(callbackOnMain: Bool = true,
-                       completion: HttpSubmittableCompletionHandler<ResponseType>?) throws -> URLSessionDataTask {
-        let task = URLSession.shared.dataTask(with: try request()) {
+    /// Submits this request
+    ///
+    /// - Parameters:
+    ///   - callbackOnMain: When `true`, will dispatch the `completion` on the main queue. Otherwise `completion` will
+    ///                     be dispatched on whichever dispatch queue the task was original submitted.
+    ///                     Defaults to `true`.
+    ///   - session: The URLSession from which the URLSessionDataTask will be created. Defaults to `URLSession.shared`
+    ///   - completion: The handler to be called upon completion or failure. Defaults to `nil`
+    /// - Returns: The URLSessionDataTask
+    /// - Throws: If a URLSessionDataTask failed to create
+    @discardableResult public func submit(callbackOnMain: Bool = true,
+                                          session: URLSession = URLSession.shared,
+                                          completion: HttpSubmittableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
+        let task = session.dataTask(with: try request()) {
             data, response, error in
             
             if let res = response {
@@ -68,7 +82,6 @@ extension Restable {
             } else {
                 callback()
             }
-            
         }
         
         task.resume()
@@ -100,25 +113,6 @@ extension Restable {
         }
         
         guard httpResponse.responseCode.isSuccess else {
-            
-            // It's not unreasonable for an application to have a centralized place for catching
-            // server 500 errors. So lets be a good citizen and post an app wide notification stating the
-            // server is puking it guts out. It had too much to drink. It's not feeling very well. Poor little guy.
-            /*
-            if self is NotificationCenterPublishable && httpResponse.responseCode.isServerError {
-                NotificationCenter.default.post(Notification(name: .BAServerDidRaise5xx))
-                /* ,
-                 object: nil,
-                 userInfo: [String(describing: HttpRequestable.self): self,
-                 String(describing: HTTPURLResponse.self): httpResponse]*/
-            }
-            */
-            // TODO - if there's a 403 here we may want to broadcast it to the app so we can
-            //        get the user to login via a modal or something.
-            //                if httpResponse.responseCode == .unauthorized {
-            //                    // NOTIFY!
-            //                }
-            
             completion?(Result.failure(HTTPError.unsuccessfulResponse(httpResponse)))
             return
         }

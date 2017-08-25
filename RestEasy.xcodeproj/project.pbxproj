@@ -12,6 +12,8 @@
 		7D0083671F4E5FD200729F22 /* Nimble.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D0083681F4E5FD200729F22 /* Quick.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */; };
+		7D424D491F4FC18B00D5C0B9 /* RestableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D481F4FC18B00D5C0B9 /* RestableSpec.swift */; };
+		7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */; };
 		7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
 		7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
 		7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpErrorSpec.swift; sourceTree = "<group>"; };
+		7D424D481F4FC18B00D5C0B9 /* RestableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestableSpec.swift; sourceTree = "<group>"; };
+		7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restables.swift; sourceTree = "<group>"; };
 		7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodSpec.swift; sourceTree = "<group>"; };
 		7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodConfiguration.swift; sourceTree = "<group>"; };
 		7D72FA171F4E715000A4B3F9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				7D72FA171F4E715000A4B3F9 /* Person.swift */,
+				7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */,
 			);
 			name = "Test Classes";
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				7D72FA191F4E715600A4B3F9 /* Test Classes */,
 				7D424D471F4FC0F000D5C0B9 /* http */,
 				7DDB69551F4B6FA1001CC66D /* Info.plist */,
+				7D424D481F4FC18B00D5C0B9 /* RestableSpec.swift */,
 			);
 			path = RestEasyTests;
 			sourceTree = "<group>";
@@ -333,7 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */,
+				7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */,
 				7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */,
+				7D424D491F4FC18B00D5C0B9 /* RestableSpec.swift in Sources */,
 				7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */,
 				7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */,
 				C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */,
