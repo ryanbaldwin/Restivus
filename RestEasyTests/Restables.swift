@@ -33,6 +33,7 @@ struct OtherErrorRestable: Restable {
     }
 }
 
+// MARK: Deletable
 struct DeletePersonRequest: Deletable {
     typealias ResponseType = Person
     var path = "/"
@@ -45,6 +46,8 @@ extension EncodableDeletePersonRequest: Deletable {
     typealias ResponseType = Person
     var path: String { return "/" }
 }
+
+// MARK: Gettable
 
 struct GetPersonRequest: Gettable {
     typealias ResponseType = Person

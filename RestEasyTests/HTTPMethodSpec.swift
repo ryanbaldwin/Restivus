@@ -10,8 +10,6 @@ import Quick
 import Nimble
 @testable import RestEasy
 
-fileprivate let url = "http://some.domain.com/some/path"
-
 class HTTPMethodSpec: QuickSpec {
     override func spec() {
         describe("an HTTPMethod") {
