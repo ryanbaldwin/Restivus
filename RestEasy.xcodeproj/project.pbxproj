@@ -197,8 +197,8 @@
 		C262302C1F4C96F3003A5E99 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */,
 				7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */,
+				C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";

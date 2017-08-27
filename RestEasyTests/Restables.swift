@@ -10,7 +10,7 @@ import Foundation
 @testable import RestEasy
 
 /// A `Restable` which will always throw an `HTTPError.noRequest` when submitted.
-struct ThrowingPersonRequest: Restable {
+struct NoRequestRestable: Restable {
     typealias ResponseType = Person
     
     var baseURL: String = ""
@@ -22,7 +22,7 @@ struct ThrowingPersonRequest: Restable {
 }
 
 /// A `Restable` which will always complete with an `HTTPError.other(HTTPError.noData)` when submitted.
-struct PersonRequest: Restable {
+struct OtherErrorRestable: Restable {
     typealias ResponseType = Person
     
     var baseURL: String = "https://www.google.com"

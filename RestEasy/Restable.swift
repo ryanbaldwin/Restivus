@@ -139,3 +139,36 @@ extension Restable {
         }
     }
 }
+
+/// A Type-erased container which can hold any Restable for a given response type.
+/// Use this for variables and/or function parameters instead of raw `Restable`.
+/// Attemping to use a raw `Restable` or any of its children (`Gettable`, `Postable`, etc.) will
+/// result in a cpmiler error regarding associated types.
+/// To get the full fledged story google `Swift Static Linking and Protocols with Associated Types`,
+/// crack a bottle of whisky, and watch Game of Thrones.
+public struct AnyRestable<ExpectedResponseType: Decodable>: Restable {
+    public typealias ResponseType = ExpectedResponseType
+    
+    public var baseURL: String
+    public var path: String
+    
+    private var _request: () throws -> URLRequest
+    private var _submit: (Bool, URLSession, ((Result<ExpectedResponseType>) -> Void)?) throws -> URLSessionDataTask
+    
+    init<R: Restable>(_ restable: R) where R.ResponseType == ExpectedResponseType {
+        baseURL = restable.baseURL
+        path = restable.path
+        _request = { return try restable.request() }
+        _submit = { return try restable.submit(callbackOnMain: $0, session: $1, completion: $2) }
+    }
+    
+    public func request() throws -> URLRequest {
+        return try _request()
+    }
+    
+    public func submit(callbackOnMain: Bool = true,
+                       session: URLSession = URLSession.shared,
+                       completion: HttpSubmittableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
+        return try _submit(callbackOnMain, session, completion)
+    }
+}
