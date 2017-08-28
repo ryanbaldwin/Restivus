@@ -15,12 +15,16 @@ class RestableConfiguration: QuickConfiguration {
         sharedExamples("a Restable"){ (sharedExampleContext: @escaping SharedExampleContext) in
             var restable: AnyRestable<Person>!
             var encodable: AnyRestable<Person>!
-            var method: String!
+            var method: HTTPMethod!
             
             beforeEach {
-                restable = sharedExampleContext()["request"] as! AnyRestable<Person>!
-                encodable = sharedExampleContext()["encodable"] as! AnyRestable<Person>!
-                method = sharedExampleContext()["method"] as! String
+                method = sharedExampleContext()["method"] as! HTTPMethod
+                restable = sharedExampleContext()["restable"] as! AnyRestable<Person>
+                encodable = sharedExampleContext()["encodable"] as! AnyRestable<Person>
+            }
+            
+            it("creates a request with the appropriate method type") {
+                expect { try restable.request().httpMethod }.to(equal(method.rawValue))
             }
             
             describe("its headers") {
@@ -76,13 +80,9 @@ class RestableConfiguration: QuickConfiguration {
                 it("creates a DELETE request with itself as the body") {
                     let req = try? encodable.request()
                     expect(req).toNot(beNil())
-                    expect(req?.httpMethod) == method
+                    expect(req?.httpMethod) == method.rawValue
                     expect(req?.httpBody).toNot(beNil())
                 }
-            }
-            
-            it("creates a request with the appropriate method type") {
-                expect { try restable.request().httpMethod }.to(equal(method))
             }
         }
     }

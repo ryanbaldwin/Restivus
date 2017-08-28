@@ -146,7 +146,7 @@ extension Restable {
 /// result in a cpmiler error regarding associated types.
 /// To get the full fledged story google `Swift Static Linking and Protocols with Associated Types`,
 /// crack a bottle of whisky, and watch Game of Thrones.
-public struct AnyRestable<ExpectedResponseType: Decodable>: Restable {
+public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
     public typealias ResponseType = ExpectedResponseType
     
     public var baseURL: String

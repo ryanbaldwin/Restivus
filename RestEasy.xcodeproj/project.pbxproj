@@ -29,6 +29,7 @@
 		7DDB69731F4B7A5F001CC66D /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69721F4B7A5F001CC66D /* Deletable.swift */; };
 		7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
 		C2380A841F50B753004C1B04 /* DeletableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2380A831F50B753004C1B04 /* DeletableSpec.swift */; };
+		C2548E0E1F545366003EDE96 /* GettableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0D1F545366003EDE96 /* GettableSpec.swift */; };
 		C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
 		C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		7DDB69721F4B7A5F001CC66D /* Deletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deletable.swift; sourceTree = "<group>"; };
 		7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		C2380A831F50B753004C1B04 /* DeletableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableSpec.swift; sourceTree = "<group>"; };
+		C2548E0D1F545366003EDE96 /* GettableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettableSpec.swift; sourceTree = "<group>"; };
 		C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		C26230231F4C94E7003A5E99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C26230241F4C94E7003A5E99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */,
 				7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */,
 				C2380A831F50B753004C1B04 /* DeletableSpec.swift */,
+				C2548E0D1F545366003EDE96 /* GettableSpec.swift */,
 			);
 			name = http;
 			sourceTree = "<group>";
@@ -268,7 +271,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = bunnyhug.me;
 				TargetAttributes = {
 					7DDB69441F4B6FA1001CC66D = {
@@ -348,6 +351,7 @@
 				7D424D491F4FC18B00D5C0B9 /* RestableSpec.swift in Sources */,
 				7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */,
 				7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */,
+				C2548E0E1F545366003EDE96 /* GettableSpec.swift in Sources */,
 				C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +377,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -381,7 +387,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -427,7 +437,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -435,7 +447,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
