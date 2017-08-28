@@ -32,18 +32,3 @@ struct OtherErrorRestable: Restable {
         return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)")
     }
 }
-
-struct PatchPersonRequest: Patchable {
-    typealias ResponseType = Person
-    var path = "/"
-}
-
-struct PostPersonRequest: Postable {
-    typealias ResponseType = Person
-    var path = "/"
-}
-
-struct PutPersonRequest: Puttable {
-    typealias ResponseType = Person
-    var path = "/"
-}

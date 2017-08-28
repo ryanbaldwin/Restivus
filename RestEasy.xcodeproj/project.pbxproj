@@ -30,6 +30,9 @@
 		7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
 		C2380A841F50B753004C1B04 /* DeletableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2380A831F50B753004C1B04 /* DeletableSpec.swift */; };
 		C2548E0E1F545366003EDE96 /* GettableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0D1F545366003EDE96 /* GettableSpec.swift */; };
+		C2548E101F5454CE003EDE96 /* PatchableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */; };
+		C2548E121F54550F003EDE96 /* PostableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E111F54550F003EDE96 /* PostableSpec.swift */; };
+		C2548E141F54553E003EDE96 /* PuttableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E131F54553E003EDE96 /* PuttableSpec.swift */; };
 		C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
 		C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,9 @@
 		7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		C2380A831F50B753004C1B04 /* DeletableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableSpec.swift; sourceTree = "<group>"; };
 		C2548E0D1F545366003EDE96 /* GettableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettableSpec.swift; sourceTree = "<group>"; };
+		C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchableSpec.swift; sourceTree = "<group>"; };
+		C2548E111F54550F003EDE96 /* PostableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostableSpec.swift; sourceTree = "<group>"; };
+		C2548E131F54553E003EDE96 /* PuttableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuttableSpec.swift; sourceTree = "<group>"; };
 		C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		C26230231F4C94E7003A5E99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C26230241F4C94E7003A5E99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -116,6 +122,9 @@
 				7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */,
 				C2380A831F50B753004C1B04 /* DeletableSpec.swift */,
 				C2548E0D1F545366003EDE96 /* GettableSpec.swift */,
+				C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */,
+				C2548E111F54550F003EDE96 /* PostableSpec.swift */,
+				C2548E131F54553E003EDE96 /* PuttableSpec.swift */,
 			);
 			name = http;
 			sourceTree = "<group>";
@@ -345,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */,
+				C2548E101F5454CE003EDE96 /* PatchableSpec.swift in Sources */,
 				7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */,
 				7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */,
 				C2380A841F50B753004C1B04 /* DeletableSpec.swift in Sources */,
@@ -352,6 +362,8 @@
 				7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */,
 				7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */,
 				C2548E0E1F545366003EDE96 /* GettableSpec.swift in Sources */,
+				C2548E141F54553E003EDE96 /* PuttableSpec.swift in Sources */,
+				C2548E121F54550F003EDE96 /* PostableSpec.swift in Sources */,
 				C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
