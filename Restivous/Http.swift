@@ -92,8 +92,6 @@ public enum HTTPMethod: String {
         
         var request = URLRequest(url: urlForRequest)
         request.httpMethod = rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
         return request
     }
     

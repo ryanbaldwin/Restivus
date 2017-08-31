@@ -27,16 +27,6 @@ class RestableConfiguration: QuickConfiguration {
                 expect { try restable.request().httpMethod }.to(equal(method.rawValue))
             }
             
-            describe("its headers") {
-                it("accepts json") {
-                    expect { try restable.request().value(forHTTPHeaderField: "Accept") } == "application/json"
-                }
-                
-                it("submits json") {
-                    expect { try restable.request().value(forHTTPHeaderField: "Content-Type") } == "application/json"
-                }
-            }
-            
             context("it fails") {
                 it("completes with an HTTPError.other if an error occured.") {
                     var error: HTTPError?

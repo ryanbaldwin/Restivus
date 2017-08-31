@@ -96,7 +96,10 @@ extension Restable {
     @discardableResult public func submit(callbackOnMain: Bool = true,
                                           session: URLSession = URLSession.shared,
                                           completion: HttpSubmittableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
-        let task = session.dataTask(with: try ((self as? Authenticating)?.sign(request: request()) ?? request())) {
+        var request = try ((self as? Authenticating)?.sign(request: self.request()) ?? self.request())
+        request = resultFormat.headers(for: request)
+        
+        let task = session.dataTask(with: request) {
             data, response, error in
             
             if let res = response {
