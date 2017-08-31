@@ -10,7 +10,7 @@ import Quick
 import Nimble
 @testable import Restivous
 
-struct PatchPersonRequest: Patchable {
+struct PatchPersonRequest: Authenticating, Patchable {
     typealias ResponseType = Person
     var path = "/"
 }

@@ -10,7 +10,7 @@ import Quick
 import Nimble
 @testable import Restivous
 
-struct GetPersonRequest: Gettable {
+struct GetPersonRequest: Authenticating, Gettable {
     typealias ResponseType = Person
     var path = "/"
 }

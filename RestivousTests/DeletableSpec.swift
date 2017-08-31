@@ -10,7 +10,7 @@ import Quick
 import Nimble
 @testable import Restivous
 
-struct DeletePersonRequest: Deletable {
+struct DeletePersonRequest: Authenticating, Deletable {
     typealias ResponseType = Person
     var path = "/"
 }
