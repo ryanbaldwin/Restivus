@@ -8,6 +8,11 @@
 
 import Foundation
 
+/// The type to be used when no custom Decodable result is required.
+/// Useful for when you dont' know, or care, what the response is (or if one is even provided),
+/// such as a `Deletable` with now response body, or a `Gettable` which returns HTML.
+public typealias Raw = Data
+
 /// Represents the result of an asynchronous operation.
 ///
 /// - success: The operation was a success, and contains the `Success` output from that operation.
@@ -20,6 +25,12 @@ public enum Result<Success> {
 // The function used as a completion handler in all HttpSubmittables.
 public typealias HttpSubmittableCompletionHandler<HttpResponse> = (Result<HttpResponse>) -> Void
 
+/// The base protocol for method-specific protocols.
+/// `Restable` defaults the following implementations:
+///    - *baseURL*: `""`
+///    - *path*: `""`
+///    - *resultEncoding*: `.json`
+///    - *submit(...) throws -> URLSessionDataTask*: 
 public protocol Restable {
     associatedtype ResponseType: Decodable
     
@@ -40,6 +51,9 @@ public protocol Restable {
     /// - Returns: A URLRequest object, if one was successfully created
     func request() throws -> URLRequest
 
+    /// Defines the expected format of the response
+    var resultFormat: ResultFormat { get }
+    
     /// Submits this request
     ///
     /// - Parameters:
@@ -64,6 +78,10 @@ extension Restable {
     ///
     ///    "/some/path"
     public var path: String { return "" }
+    
+    /// Defines the expected format of the response
+    /// Defaults to `.json`
+    public var resultFormat: ResultFormat { return .json }
     
     /// Submits this request
     ///
@@ -131,7 +149,7 @@ extension Restable {
         
         let jsonData = data ?? Data()
         do {
-            let result = try JSONDecoder().decode(ResponseType.self, from: jsonData)
+            let result = try resultFormat.decode(result: jsonData, as: ResponseType.self)
             completion?(Result.success(result))
         } catch let error {
             print(error)
