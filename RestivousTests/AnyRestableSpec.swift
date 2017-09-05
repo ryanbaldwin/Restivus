@@ -21,7 +21,7 @@ extension SafeSubmittablePersonRequest: Gettable {
     }
 }
 
-class AnyRestivouspec: QuickSpec {
+class AnyRestableSpec: QuickSpec {
     override func spec() {
         describe("An AnyRestable") {
             var restable: AnyRestable<Person>!
