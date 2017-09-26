@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7DDB69441F4B6FA1001CC66D"
-               BuildableName = "Restivous.framework"
-               BlueprintName = "Restivous"
-               ReferencedContainer = "container:Restivous.xcodeproj">
+               BuildableName = "Restivus.framework"
+               BlueprintName = "Restivus"
+               ReferencedContainer = "container:Restivus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7DDB694D1F4B6FA1001CC66D"
-               BuildableName = "RestivousTests.xctest"
-               BlueprintName = "RestivousTests"
-               ReferencedContainer = "container:Restivous.xcodeproj">
+               BuildableName = "RestivusTests.xctest"
+               BlueprintName = "RestivusTests"
+               ReferencedContainer = "container:Restivus.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7DDB69441F4B6FA1001CC66D"
-            BuildableName = "Restivous.framework"
-            BlueprintName = "Restivous"
-            ReferencedContainer = "container:Restivous.xcodeproj">
+            BuildableName = "Restivus.framework"
+            BlueprintName = "Restivus"
+            ReferencedContainer = "container:Restivus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7DDB69441F4B6FA1001CC66D"
-            BuildableName = "Restivous.framework"
-            BlueprintName = "Restivous"
-            ReferencedContainer = "container:Restivous.xcodeproj">
+            BuildableName = "Restivus.framework"
+            BlueprintName = "Restivus"
+            ReferencedContainer = "container:Restivus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7DDB69441F4B6FA1001CC66D"
-            BuildableName = "Restivous.framework"
-            BlueprintName = "Restivous"
-            ReferencedContainer = "container:Restivous.xcodeproj">
+            BuildableName = "Restivus.framework"
+            BlueprintName = "Restivus"
+            ReferencedContainer = "container:Restivus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
