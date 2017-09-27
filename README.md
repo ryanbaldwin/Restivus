@@ -129,4 +129,4 @@ let inflatedUser = try! JSONDecoder().decode(User.self, from: data)
 ```
 
 ## More Info
-Over the coming weeks I'll be writing a full fledged Wiki on the various how-to's and such of Restivus. So stay tuned. In the meantime I encourage you to [go peruse the Docs](docs/index.html).
+Over the coming weeks I'll be writing a full fledged Wiki on the various how-to's and such of Restivus. So stay tuned. In the meantime I encourage you to [go peruse the Docs](docs/index.html) (likely best to clone the repo locally and view the files there, as GitHub is just going to show you the source).
