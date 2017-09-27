@@ -98,12 +98,17 @@ extension Restable {
                                           completion: HttpSubmittableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
         var request = try ((self as? Authenticating)?.sign(request: self.request()) ?? self.request())
         request = resultFormat.headers(for: request)
+        print(request.debugDescription)
         
         let task = session.dataTask(with: request) {
             data, response, error in
             
             if let res = response {
-                print(res)
+                print(res.debugDescription)
+                if let json = data {
+                    print("Data: \n")
+                    print(String(data: json, encoding: .utf8) ?? "")
+                }
             }
             
             let callback = { self.dataTaskCompletionHandler(data: data, response: response, error: error,
@@ -176,7 +181,7 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
     private var _request: () throws -> URLRequest
     private var _submit: (Bool, URLSession, ((Result<ExpectedResponseType>) -> Void)?) throws -> URLSessionDataTask
     
-    init<R: Restable>(_ restable: R) where R.ResponseType == ExpectedResponseType {
+    public init<R: Restable>(_ restable: R) where R.ResponseType == ExpectedResponseType {
         baseURL = restable.baseURL
         path = restable.path
         _request = { return try restable.request() }

@@ -12,7 +12,7 @@ extension URLRequest {
     /// Returns a string containing formatted, detailed information about the URLRequest.
     ///
     /// - Returns: A detailed description of this request.
-    var debugDescription: String {
+    public var debugDescription: String {
         var fields: [String] = ["\nRequest:", "===============", "Method: \(self.httpMethod ?? "GET")"]
         
         if let url = self.url {
