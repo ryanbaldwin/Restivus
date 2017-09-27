@@ -1,14 +1,14 @@
 //
 //  HttpErrorSpec.swift
-//  Restivous
+//  Restivus
 //
 //  Created by Ryan Baldwin on 2017-08-24.
-//Copyright © 2017 bunnyhug.me. All rights reserved.
+//Copyright © 2017 bunnyhug.me. All rights governed under the Apache 2 License Agreement
 //
 
 import Quick
 import Nimble
-@testable import Restivous
+@testable import Restivus
 
 class HttpErrorSpec: QuickSpec {
     override func spec() {

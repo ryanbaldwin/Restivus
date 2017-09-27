@@ -1,16 +1,16 @@
 //
 //  HttpRequestable.swift
-//  Restivous
+//  Restivus
 //
 //  Created by Ryan Baldwin on 2017-08-21.
-//  Copyright © 2017 bunnyhug.me. All rights reserved.
+//  Copyright © 2017 bunnyhug.me. All rights governed under the Apache 2 License Agreement
 //
 
 import Foundation
 
 /// The type to be used when no custom Decodable result is required.
-/// Useful for when you dont' know, or care, what the response is (or if one is even provided),
-/// such as a `Deletable` with now response body, or a `Gettable` which returns HTML.
+/// Useful for when you don't know, or care, what the response is (or if one is even provided),
+/// such as a `Deletable` with no response body, or a `Gettable` which returns HTML.
 public typealias Raw = Data
 
 /// Represents the result of an asynchronous operation.

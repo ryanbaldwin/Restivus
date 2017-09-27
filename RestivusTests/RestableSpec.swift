@@ -1,16 +1,16 @@
 //
-//  Restivouspec.swift
-//  Restivous
+//  Restivuspec.swift
+//  Restivus
 //
 //  Created by Ryan Baldwin on 2017-08-24.
-//Copyright © 2017 bunnyhug.me. All rights reserved.
+//Copyright © 2017 bunnyhug.me. All rights governed under the Apache 2 License Agreement
 //
 
 import Quick
 import Nimble
-@testable import Restivous
+@testable import Restivus
 
-class Restivouspec: QuickSpec {
+class Restivuspec: QuickSpec {
     override func spec() {
         describe("A Restable") {
             describe("its default implementation") {

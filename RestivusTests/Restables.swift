@@ -1,13 +1,13 @@
 //
-//  Restivous.swift
-//  RestivousTests
+//  Restivus.swift
+//  RestivusTests
 //
 //  Created by Ryan Baldwin on 2017-08-24.
-//  Copyright © 2017 bunnyhug.me. All rights reserved.
+//  Copyright © 2017 bunnyhug.me. All rights governed under the Apache 2 License Agreement
 //
 
 import Foundation
-@testable import Restivous
+@testable import Restivus
 
 // By default, all our Restables, should they go over the wire,
 // will return a 418 (I'm a teapot) from `httpstat.us`

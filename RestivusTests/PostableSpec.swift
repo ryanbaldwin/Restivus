@@ -1,18 +1,18 @@
 //
 //  PostableSpec.swift
-//  Restivous
+//  Restivus
 //
 //  Created by Ryan Baldwin on 2017-08-28.
-//Copyright © 2017 bunnyhug.me. All rights reserved.
+//Copyright © 2017 bunnyhug.me. All rights governed under the Apache 2 License Agreement
 //
 
 import Quick
 import Nimble
-@testable import Restivous
+@testable import Restivus
 
 struct PostPersonRequest: Authenticating, Postable {
     typealias ResponseType = Person
-    var path = "/"
+    let path = "/"
 }
 
 struct EncodablePostPersonRequest: Encodable {

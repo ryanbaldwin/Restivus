@@ -11,7 +11,7 @@ Lets say we have a Login endpoint which we want to model. The endpoint accepts a
 
 ```Swift
 struct User {
-    enum Sex: String {
+    enum Sex: String, Codable {
         case male, female
     }
 
@@ -21,10 +21,17 @@ struct User {
 }
 extension User: Codable {}
 
-struct LoginRequest: Postable {
-    typealias ResponseType = User
+struct LoginRequest: Encodable {
     var username: String
     var password: String
+}
+
+extension LoginRequest: Postable {
+    typealias ResponseType = User
+
+    var baseUrl: String { return "https://myserver.ca/api/v1" }
+
+    var path: String { return "/login" }
 }
 
 let request = LoginRequest(username: "Jerry", password: "Hellooooooo!")
@@ -43,18 +50,83 @@ request.submit() { result in
 }
 ```
 
-We can also model the Login Request:
+### An Explanation
+Lets breakdown the above. We'll start with the conformance to the `Postable` protocol by the `LoginRequest:
 ```Swift
-
+extension LoginRequest: Postable
 ```
+The `Postable` protocol is what turns our `LoginRequest` into a `POST` request. Restivus has a few different HTTP method protocols for commonly used request types: `Gettable`, `Deletable`, `Patchable`, `Postable`, and `Puttable`. Each one maps to its respective method.
 
-So far so good. We have 2 very simple structs which model what we're going to send to the server, and what we'll get back. So how do we turn our struct into something that'll actually POST a request to the server? By having it conform Restivus' `Postable` protocol:
+All of these protocols inherit from `Restable`, which in turn defines the conformance requirements and bulk of the functionality for any request. Its children (`Gettable` and the rest of the crew) provide sensible defaults for creating the actual underlying `URLRequest`.
+
+Next is the `ResponseType`:
+```Swift
+typealias ResponseType = User
+```
+This defines what the returned payload should be deserialized into. In our case, the Login endpoint will return some JSON describing a User (as we structured above). 
+
+Following that are the two properties, `baseUrl` and `path`. 
+```Swift
+var baseUrl: String {
+    "https://myserver.ca/api/v1"
+}
+
+var path: String {
+    "/login"
+}
+```
+These are pretty self explanatory. They are defined in the `Restable` protocol, and default to empty strings. In my experience, the `baseUrl` will typically be the same value for most, if not all the requests. As such, it's a bit of a pain in the butt to repeat that same property over and over again. Since Swift allows for protocol extensions, it's easier to have a global extension of `Restable` that returns a sensible default for `baseUrl`. 
+
+For example, if we were going to create several requests for our `myserver.ca` endpoint, it makes more sense to do the following:
 
 ```Swift
-struct LoginRequest: Postable {
-    var username: String
-    var password: String
+extension Restable {
+    var baseUrl: String { return "https://myserver.ca/api/v1" }
+}
+```
+This also works well if you have different servers for different environments that are determined at runtime, from a configuration. By extending `Restable` to have a default for `baseUrl`, we can then omit it from our `Postable` conformance:
+
+```Swift
+extension LoginRequest: Postable {
+    typealias ResponseType = User
+    var path: String { "/login" }
 }
 ```
 
-The `Postable` protocol is a child protocol of the `Restable` protocol, which defines most of the requirements. As it's name eludes to, `Postable`s are for creating POST requests. Similarily, there is also `Gettable`, `Patchable`, `Puttable`, and `Deletable`. 
+Finally, lets talk about what the conforming our `LoginRequest` to `Encodable` will do:
+```Swift
+struct LoginRequest: Encodable {}
+```
+If you submit a `Restable` which conforms to `Encodable`, then Restivus will serialize that Restable into JSON and submit it as the body of the request. In our case, the following JSON will be submitted in the body of the `LoginRequest`:
+```JSON
+{
+    "username": "Jerry",
+    "password": "Hellooooooo!"
+}
+```
+
+If you'd like to get a bit more of a feel for Swift 4's `Codable` (which is just a combination of `Encodable & Decodable`), put the following into a Playground.
+```Swift
+import Foundation
+
+struct User: Codable {
+    enum Sex: String, Codable {
+        case male, female
+    }
+    
+    var name: String
+    var age: Int
+    var sex: Sex
+}
+
+let user = User(name: "Ryan", age: 38, sex: .male)
+var encoder = JSONEncoder()
+encoder.outputFormatting = .prettyPrinted
+let data = try! encoder.encode(user)
+print(String(data: data, encoding: .utf8)!)
+
+let inflatedUser = try! JSONDecoder().decode(User.self, from: data)
+```
+
+## More Info
+Over the coming weeks I'll be writing a full fledged Wiki on the various how-to's and such of Restivus. So stay tuned. In the meantime I encourage you to [go peruse the Docs](docs/index.html).
