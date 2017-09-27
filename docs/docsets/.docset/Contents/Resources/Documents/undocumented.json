@@ -107,6 +107,20 @@
     },
     {
       "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
+      "line": 71,
+      "symbol": "HTTPMethodError.invalidURL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
+      "line": 72,
+      "symbol": "HTTPMethodError.jsonSerializationFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
       "line": 77,
       "symbol": "HTTPMethod.post",
       "symbol_kind": "source.lang.swift.decl.enumelement",
@@ -138,6 +152,13 @@
       "line": 81,
       "symbol": "HTTPMethod.delete",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "line": null,
+      "symbol": "HttpResponseCode",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -631,6 +652,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "line": 118,
+      "symbol": "HTTPURLResponse.responseCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Patchable.swift",
       "line": null,
       "symbol": "Patchable",
@@ -705,6 +733,13 @@
       "line": 22,
       "symbol": "Result.failure",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Restable.swift",
+      "line": 179,
+      "symbol": "AnyRestable.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {

@@ -14,7 +14,7 @@
     <a title="HTTPMethod Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (30% documented)</p>
+        <p><a href="../index.html"> Docs</a> (25% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -45,9 +45,6 @@
                 <a href="../Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/HTTPMethodError.html">HTTPMethodError</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/HttpResponseCode.html">HttpResponseCode</a>
               </li>
               <li class="nav-group-task">
@@ -63,9 +60,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/HTTPURLResponse.html">HTTPURLResponse</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/URLRequest.html">URLRequest</a>
               </li>
             </ul>
           </li>
@@ -268,102 +262,6 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HTTPMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_tKF"></a>
-                    <a name="//apple_ref/swift/Method/makeURLRequest(url:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_tKF">makeURLRequest(url:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a URLRequest appropriate for this instance</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    An <code>InvalidURLError</code> if the <code>url</code> is malformed
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">makeURLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>url</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The full URL for the URLRequest</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A URLRequest ready for submission</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_x4bodytKs9EncodableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/makeURLRequest(url:body:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_x4bodytKs9EncodableRzlF">makeURLRequest(url:body:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a URLRequest appropriate for this instance</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    An <code>InvalidURLError</code> if the <code>url</code> is malformed, or another <code>Error</code> occuring during
-      the JSONSerialization of the <code>object</code>.
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">makeURLRequest</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A URLRequest ready for submission</p>
                       </div>
                     </section>
                   </div>

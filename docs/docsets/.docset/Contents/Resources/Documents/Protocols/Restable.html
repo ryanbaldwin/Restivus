@@ -14,7 +14,7 @@
     <a title="Restable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (30% documented)</p>
+        <p><a href="../index.html"> Docs</a> (25% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -45,9 +45,6 @@
                 <a href="../Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/HTTPMethodError.html">HTTPMethodError</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/HttpResponseCode.html">HttpResponseCode</a>
               </li>
               <li class="nav-group-task">
@@ -63,9 +60,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/HTTPURLResponse.html">HTTPURLResponse</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/URLRequest.html">URLRequest</a>
               </li>
             </ul>
           </li>
@@ -366,96 +360,6 @@ Defaults to <code>.json</code></p>
                       <div>
                         <h4>Return Value</h4>
                         <p>The URLSessionDataTask</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Restivus8RestablePAAE25dataTaskCompletionHandlery10Foundation4DataVSg0C0_So11URLResponseCSg8responses5Error_pSg5erroryAA6ResultOy12ResponseTypeQzGcSg10completiontF"></a>
-                    <a name="//apple_ref/swift/Method/dataTaskCompletionHandler(data:response:error:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestablePAAE25dataTaskCompletionHandlery10Foundation4DataVSg0C0_So11URLResponseCSg8responses5Error_pSg5erroryAA6ResultOy12ResponseTypeQzGcSg10completiontF">dataTaskCompletionHandler(data:response:error:completion:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Actually handles the callback from the dataTask.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">dataTaskCompletionHandler</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">URLResponse</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?,</span>
-                                   <span class="nv">completion</span><span class="p">:</span> <span class="kt">HttpSubmittableCompletionHandler</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>data</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Data returned from the dataTask, if any.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>response</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The HTTPURLResponse</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>error</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Any error that may have occured</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completionHandler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The original completionHandler passed to <code>submit:</code></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
