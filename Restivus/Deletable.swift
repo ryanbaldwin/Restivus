@@ -11,8 +11,7 @@ import Foundation
 public protocol Deletable: Restable {}
 
 extension Deletable {
-    /// Creates a DELETE request for the current instance and
-    /// sets the body of the request to this instance's JSON representation
+    /// Creates a DELETE request for the current instance
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.

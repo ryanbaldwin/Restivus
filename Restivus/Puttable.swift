@@ -12,8 +12,7 @@ public protocol Puttable: Restable {}
 
 extension Puttable {
     
-    /// Creates a POST request for the current instance and
-    /// sets the body of the request to this instance's JSON representation
+    /// Creates a POST request for the current instance
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.

@@ -22,8 +22,8 @@ public enum Result<Success> {
     case failure(HTTPError)
 }
 
-// The function used as a completion handler in all HttpSubmittables.
-public typealias HttpSubmittableCompletionHandler<HttpResponse> = (Result<HttpResponse>) -> Void
+// The function used as a completion handler in all Restables.
+public typealias HttpSubmittableCompletionHandler<ResponseType> = (Result<ResponseType>) -> Void
 
 /// The base protocol for method-specific protocols.
 /// `Restable` defaults the following implementations:

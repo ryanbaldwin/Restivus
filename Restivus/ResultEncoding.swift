@@ -8,6 +8,10 @@
 
 import Foundation
 
+/// Defines the format of the URL response body
+///
+/// - json: The body of the response will be JSON encoded
+/// - raw: The body of the response will be raw data
 public enum ResultFormat {
     case json, raw
     

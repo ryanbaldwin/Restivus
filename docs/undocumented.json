@@ -709,21 +709,14 @@
     },
     {
       "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/ResultEncoding.swift",
-      "line": 11,
-      "symbol": "ResultFormat",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/ResultEncoding.swift",
-      "line": 12,
+      "line": 16,
       "symbol": "ResultFormat.json",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/ResultEncoding.swift",
-      "line": 12,
+      "line": 16,
       "symbol": "ResultFormat.raw",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
