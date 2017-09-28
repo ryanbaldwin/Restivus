@@ -85,7 +85,7 @@ public enum HTTPMethod: String {
     /// - Parameter url: The full URL for the URLRequest
     /// - Returns: A URLRequest ready for submission
     /// - Throws: An `InvalidURLError` if the `url` is malformed
-    func makeURLRequest(url: String) throws -> URLRequest {
+    public func makeURLRequest(url: String) throws -> URLRequest {
         guard let urlForRequest = URL(string: url) else {
             throw HTTPMethodError.invalidURL(url: url)
         }
@@ -103,15 +103,43 @@ public enum HTTPMethod: String {
     /// - Returns: A URLRequest ready for submission
     /// - Throws: An `InvalidURLError` if the `url` is malformed, or another `Error` occuring during
     ///           the JSONSerialization of the `object`.
-    func makeURLRequest<T>(url: String, body: T) throws -> URLRequest where T: Encodable {
+    public func makeURLRequest<T>(url: String, body: T) throws -> URLRequest where T: Encodable {
         var request = try makeURLRequest(url: url)
         
         do {
-            request.httpBody = try JSONEncoder().encode(body)
+            request.httpBody = try encode(body)
         } catch let error {
             throw HTTPMethodError.jsonSerializationFailed(error: error)
         }
         
         return request
+    }
+    
+    /// JSON encodes the `Encodable` instance.
+    ///
+    /// - Parameter instance: The `Encodable` to be encoded
+    /// - Returns: The encoded data of `instance`
+    /// - Throws: throws an error based on the type of problem:
+    ///     - The value fails to encode, or contains a nested value that fails to encode—this method throws the corresponding error.
+    ///     - The value can't be encoded as a JSON array or JSON object—this method throws the invalidValue error.
+    ///     - The value contains an exceptional floating-point number (such as infinity or nan) and you're using the default
+    ///       JSONEncoder.NonConformingFloatEncodingStrategy—this method throws the invalidValue error.
+    func encode<T>(_ instance: T) throws -> Data where T: Encodable {
+        return try JSONEncoder().encode(instance)
+    }
+    
+    /// JSON encodes the `Encodable` instance.
+    ///
+    /// - Parameter instance: The `Encodable` to be encoded
+    /// - Returns: The encoded data of `instance`
+    /// - Throws: throws an error based on the type of problem:
+    ///     - The value fails to encode, or contains a nested value that fails to encode—this method throws the corresponding error.
+    ///     - The value can't be encoded as a JSON array or JSON object—this method throws the invalidValue error.
+    ///     - The value contains an exceptional floating-point number (such as infinity or nan) and you're using the default
+    ///       JSONEncoder.NonConformingFloatEncodingStrategy—this method throws the invalidValue error.
+    func encode<T>(_ instance: T) throws -> Data where T: Encodable & Restable {
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = instance.dateEncodingStrategy
+        return try encoder.encode(instance)
     }
 }

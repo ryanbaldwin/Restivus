@@ -34,6 +34,14 @@ public typealias HttpSubmittableCompletionHandler<ResponseType> = (Result<Respon
 public protocol Restable {
     associatedtype ResponseType: Decodable
     
+    /// Defines the `JSONDecoder.DateDecodingStrategy` to use when decoding from JSON into the conforming instance.
+    /// Defaults to `.deferredToDate`
+    static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy { get }
+    
+    /// Defines the `JSONEncoder.DateEncodingStrategy` to use when JSON encoding a conforming instance.
+    /// Defaults to `.deferredToDate`
+    var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { get }
+    
     /// The base url against which the request will be made.
     /// Example: 
     ///
@@ -67,6 +75,18 @@ public protocol Restable {
 }
 
 extension Restable {
+    /// Defines the `JSONDecoder.DateDecodingStrategy` to use when decoding from JSON into the conforming type.
+    /// Defaults to `.deferredToDate`
+    public static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
+        return .deferredToDate
+    }
+    
+    /// Defines the `JSONEncoder.DateEncodingStrategy` to use when JSON encoding a conforming instance.
+    /// Defaults to `.deferredToDate`
+    public var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
+        return .deferredToDate
+    }
+    
     /// The base url against which the request will be made.
     /// Example:
     ///
