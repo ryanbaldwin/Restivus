@@ -1,8 +1,6 @@
 # Restivus
 > _Finally!_ A Restivus for the rest of us!
 
-[Link](HOW_TO.md)
-
 Yes, it's true, this library is named after the infamous [_Festivus_ Seinfeld episode](https://www.youtube.com/watch?v=HX55AzGku5Y). I had no choice, as my initial name, RestEasy, was [already taken by the JBoss Community](http://resteasy.jboss.org), and I don't wanna mess with them.
 
 ## What the heck is Restivus?
