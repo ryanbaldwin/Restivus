@@ -22,6 +22,45 @@ public enum Result<Success> {
     case failure(HTTPError)
 }
 
+/// A wrapper which will contain the decoded `T` instance, if one was successfully decoded; otherwise `nil`.
+/// `OptionalResponseType` is useful for when you have a request which may or may not return the expected
+/// JSON structure. For example, fetching a mythical `UserDetails` JSON for a user who does not exist,
+/// but for reason - unbeknownst to us - the server will return no JSON instead of a 404.
+///
+/// Example:
+/// ---
+///
+///     struct UserDetails {
+///         var mothersMaidenName: String
+///         var lovesTheDentist: Bool
+///     }
+///
+///     struct UserDetailsRequest: Codable {
+///         var userId: Int
+///     }
+///
+///     extension UserDetailsRequest: Authenticating, Gettable {
+///         typealias ResponseType = OptionalResponseType<UserDetails>
+///         var path: String = "/some/api/path"
+///     }
+///
+///     UserDetailsRequest(userId: 42).submit() { result in
+///         if case let Result.success(optionalUserDetails) = result {
+///             let userDetails = optionalUserDetails.response
+///
+///         }
+///     }
+/// ---
+struct OptionalResponseType<T>: Decodable where T: Decodable {
+    var response: T? = nil
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        self.response = try? container.decode(T.self)
+    }
+}
+
+
 // The function used as a completion handler in all Restables.
 public typealias HttpSubmittableCompletionHandler<ResponseType> = (Result<ResponseType>) -> Void
 
@@ -175,8 +214,8 @@ extension Restable {
             return
         }
         
-        let jsonData = data ?? Data()
         do {
+            let jsonData = data ?? "{}".data(using: .utf8)!
             let result = try resultFormat.decode(result: jsonData, as: ResponseType.self)
             completion?(Result.success(result))
         } catch let error {

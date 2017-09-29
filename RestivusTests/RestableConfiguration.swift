@@ -31,10 +31,10 @@ class RestableConfiguration: QuickConfiguration {
                 it("completes with an HTTPError.other if an error occured.") {
                     var error: HTTPError?
                     restable.dataTaskCompletionHandler(data: nil, response: HTTPURLResponse(),
-                                                       error: HTTPError.noData) {
+                                                       error: HTTPError.noResponse) {
                         if case let Result.failure(err) = $0 { error = err }
                     }
-                    expect(error).toEventually(equal(HTTPError.other(HTTPError.noData)))
+                    expect(error).toEventually(equal(HTTPError.other(HTTPError.noResponse)))
                 }
                 
                 it("completes with HTTPError.noResponse when the server does not respond.") {

@@ -10,8 +10,8 @@ import Quick
 import Nimble
 @testable import Restivus
 
-extension Restable {
-    var baseUrl: String {
+extension Gettable {
+    var baseURL: String {
         return "http://google.ca"
     }
 }

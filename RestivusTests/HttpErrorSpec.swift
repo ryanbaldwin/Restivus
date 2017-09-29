@@ -15,9 +15,8 @@ class HttpErrorSpec: QuickSpec {
         describe("An HttpError") {
             describe("its equality") {
                 it("is not equal if not the same errors") {
-                    expect(HTTPError.noRequest).toNot(equal(HTTPError.noResponse))
+                    expect(HTTPError.other(HTTPError.noResponse)).toNot(equal(HTTPError.noResponse))
                     expect(HTTPError.noResponse) == HTTPError.noResponse
-                    expect(HTTPError.noRequest) == HTTPError.noRequest
                 }
                 
                 it("considers URLResponse when comparing unexpectedResponse") {
@@ -36,13 +35,13 @@ class HttpErrorSpec: QuickSpec {
                 }
                 
                 it("does not consider internals when comparing unableTodeserializeJSON") {
-                    let unable1 = HTTPError.unableToDeserializeJSON(error: HTTPError.noRequest, data: nil)
+                    let unable1 = HTTPError.unableToDeserializeJSON(error: HTTPError.other(HTTPError.noResponse), data: nil)
                     let unable2 = HTTPError.unableToDeserializeJSON(error: HTTPError.noResponse, data: Data())
                     expect(unable1) == unable2
                 }
                 
                 it("does not consider internals when comparing others") {
-                    let other1 = HTTPError.other(HTTPError.noRequest)
+                    let other1 = HTTPError.other(HTTPError.other(HTTPError.noResponse))
                     let other2 = HTTPError.other(HTTPError.noResponse)
                     expect(other1) == other2
                 }

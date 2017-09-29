@@ -29,15 +29,6 @@ extension Authenticating {
     }
 }
 
-/// A `Restable` which will always throw an `HTTPError.noRequest` when submitted.
-struct NoRequestRestable: Restable {
-    typealias ResponseType = Person
-    
-    func request() throws -> URLRequest {
-        throw HTTPError.noRequest
-    }
-}
-
 /// A `Restable` which will always complete with an `HTTPError.other(HTTPError.noData)` when submitted.
 struct OtherErrorRestable: Restable {
     typealias ResponseType = Person
