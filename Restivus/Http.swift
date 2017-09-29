@@ -9,21 +9,20 @@
 import Foundation
 
 /// Defines the various HttpErrors that can be received in ann HttpSubmittable completion handler.
-///
-/// - noResponse: Used when no response was returned from the server
-/// - noRequest: Used when no request was provided by a HttpRequestable
-/// - unexpectedResponse: Used when the URLResponse is not of the expected type
-/// - unsuccessfulResponse: Used when the HTTPURLResponse has a status code other than 2xx
-/// - unableToDeserializeJSON: Used when the returned data cannot be deserialized into a JSON object
-/// - noData: Used when the server response does not contain any data.
-/// - other: Called when some other non-HttpError is raised.
 public enum HTTPError: Error {
+    /// No response was returned from the server
     case noResponse,
-    noRequest,
+
+    /// The URLResponse is not of the expected type
     unexpectedResponse(URLResponse),
+
+    ///The HTTPURLResponse has a status code other than 2xx
     unsuccessfulResponse(HTTPURLResponse),
+
+    /// The returned data cannot be deserialized into the expected type
     unableToDeserializeJSON(error: Error, data: Data?),
-    noData,
+
+    /// Some other non-HttpError is raised.
     other(Error)
 }
 
@@ -43,8 +42,6 @@ extension HTTPError: Equatable {
     public static func ==(lhs: HTTPError, rhs: HTTPError) -> Bool {
         switch (lhs, rhs) {
         case (.noResponse, .noResponse): return true
-            
-        case (.noRequest, .noRequest): return true
             
         case (let .unexpectedResponse(response1), let .unexpectedResponse(response2)):
             return response1.isEqual(response2)
