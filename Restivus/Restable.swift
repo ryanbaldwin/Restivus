@@ -51,7 +51,7 @@ public enum Result<Success> {
 ///         }
 ///     }
 /// ---
-struct OptionalResponseType<T>: Decodable where T: Decodable {
+public struct OptionalResponseType<T>: Decodable where T: Decodable {
     var response: T? = nil
     
     init(from decoder: Decoder) throws {
