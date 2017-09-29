@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Typealiases  Reference</title>
+    <title>Structs  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Typealiases  Reference"></a>
+    <a title="Structs  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">Restivus Docs</a> (34% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="index.html">Restivus Reference</a>
         <img id="carat" src="img/carat.png" />
-        Typealiases  Reference
+        Structs  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -113,8 +113,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Typealiases</h1>
-            <p>The following typealiases are available globally.</p>
+            <h1>Structs</h1>
+            <p>The following structs are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -123,9 +123,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus3Rawa"></a>
-                    <a name="//apple_ref/swift/Alias/Raw" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus3Rawa">Raw</a>
+                    <a name="/s:8Restivus20OptionalResponseTypeV"></a>
+                    <a name="//apple_ref/swift/Struct/OptionalResponseType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus20OptionalResponseTypeV">OptionalResponseType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -133,16 +133,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type to be used when no custom Decodable result is required.
-Useful for when you don&rsquo;t know, or care, what the response is (or if one is even provided),
-such as a <code><a href="Protocols/Deletable.html">Deletable</a></code> with no response body, or a <code><a href="Protocols/Gettable.html">Gettable</a></code> which returns HTML.</p>
+                        <p>A wrapper which will contain the decoded <code>T</code> instance, if one was successfully decoded; otherwise <code>nil</code>.
+<code>OptionalResponseType</code> is useful for when you have a request which may or may not return the expected
+JSON structure. For example, fetching a mythical <code>UserDetails</code> JSON for a user who does not exist,
+but for reason - unbeknownst to us - the server will return no JSON instead of a 404.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight plaintext"><code>struct UserDetails {
+    var mothersMaidenName: String
+    var lovesTheDentist: Bool
+}
+
+struct UserDetailsRequest: Codable {
+    var userId: Int
+}
+
+extension UserDetailsRequest: Authenticating, Gettable {
+    typealias ResponseType = OptionalResponseType&lt;UserDetails&gt;
+    var path: String = "/some/api/path"
+}
+
+UserDetailsRequest(userId: 42).submit() { result in
+    if case let Result.success(optionalUserDetails) = result {
+        let userDetails = optionalUserDetails.response
+
+    }
+}
+</code></pre>
+
+<hr>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Raw</span> <span class="o">=</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">OptionalResponseType</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">Decodable</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
                       </div>

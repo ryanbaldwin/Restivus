@@ -1,726 +1,684 @@
 {
   "warnings": [
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Authenticating.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Authenticating.swift",
       "line": 11,
       "symbol": "Authenticating",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Deletable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Deletable.swift",
       "line": null,
       "symbol": "Deletable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Deletable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Deletable.swift",
       "line": null,
       "symbol": "Deletable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Deletable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Deletable.swift",
       "line": 11,
       "symbol": "Deletable",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Gettable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Gettable.swift",
       "line": null,
       "symbol": "Gettable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Gettable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Gettable.swift",
       "line": null,
       "symbol": "Gettable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Gettable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Gettable.swift",
       "line": 11,
       "symbol": "Gettable",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HTTPURLResponse+Extensions.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HTTPURLResponse+Extensions.swift",
       "line": 12,
       "symbol": "HTTPURLResponse.debugDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 21,
-      "symbol": "HTTPError.noResponse",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 22,
-      "symbol": "HTTPError.noRequest",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 23,
-      "symbol": "HTTPError.unexpectedResponse",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 24,
-      "symbol": "HTTPError.unsuccessfulResponse",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 25,
-      "symbol": "HTTPError.unableToDeserializeJSON",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 26,
-      "symbol": "HTTPError.noData",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 27,
-      "symbol": "HTTPError.other",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 77,
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Http.swift",
+      "line": 74,
       "symbol": "HTTPMethod.post",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 78,
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Http.swift",
+      "line": 75,
       "symbol": "HTTPMethod.get",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 79,
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Http.swift",
+      "line": 76,
       "symbol": "HTTPMethod.put",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 80,
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Http.swift",
+      "line": 77,
       "symbol": "HTTPMethod.patch",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Http.swift",
-      "line": 81,
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Http.swift",
+      "line": 78,
       "symbol": "HTTPMethod.delete",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 13,
       "symbol": "HttpResponseCode",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 14,
       "symbol": "HttpResponseCode.continue",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 15,
       "symbol": "HttpResponseCode.switchingProtocols",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 16,
       "symbol": "HttpResponseCode.processing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 18,
       "symbol": "HttpResponseCode.ok200",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 19,
       "symbol": "HttpResponseCode.created201",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 20,
       "symbol": "HttpResponseCode.accepted202",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 21,
       "symbol": "HttpResponseCode.nonAuthoritativeInformation203",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 22,
       "symbol": "HttpResponseCode.noContent204",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 23,
       "symbol": "HttpResponseCode.resetContent205",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 24,
       "symbol": "HttpResponseCode.partialContent206",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 25,
       "symbol": "HttpResponseCode.multiStatus207",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 26,
       "symbol": "HttpResponseCode.alreadyReported208",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 27,
       "symbol": "HttpResponseCode.imUsed226",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 29,
       "symbol": "HttpResponseCode.multipleChoices300",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 30,
       "symbol": "HttpResponseCode.movedPermanently301",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 31,
       "symbol": "HttpResponseCode.found302",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 32,
       "symbol": "HttpResponseCode.seeOther303",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 33,
       "symbol": "HttpResponseCode.notModified304",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 34,
       "symbol": "HttpResponseCode.useProxy305",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 35,
       "symbol": "HttpResponseCode.unused306",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 36,
       "symbol": "HttpResponseCode.temporaryRedirect307",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 37,
       "symbol": "HttpResponseCode.permanentRedirect308",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 39,
       "symbol": "HttpResponseCode.badRequest400",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 40,
       "symbol": "HttpResponseCode.unauthorized401",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 41,
       "symbol": "HttpResponseCode.paymentRequired402",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 42,
       "symbol": "HttpResponseCode.forbidden403",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 43,
       "symbol": "HttpResponseCode.notFound404",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 44,
       "symbol": "HttpResponseCode.methodNotAllowed405",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 45,
       "symbol": "HttpResponseCode.notAcceptable406",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 46,
       "symbol": "HttpResponseCode.proxyAuthenticationRequired407",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 47,
       "symbol": "HttpResponseCode.requestTimeout408",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 48,
       "symbol": "HttpResponseCode.conflict409",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 49,
       "symbol": "HttpResponseCode.gone410",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 50,
       "symbol": "HttpResponseCode.lengthRequired411",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 51,
       "symbol": "HttpResponseCode.preconditionFailed412",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 52,
       "symbol": "HttpResponseCode.requestEntityTooLarge413",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 53,
       "symbol": "HttpResponseCode.requestUriTooLong414",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 54,
       "symbol": "HttpResponseCode.unsupportedMediaType45",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 55,
       "symbol": "HttpResponseCode.requestedRangeNotSatisfiable416",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 56,
       "symbol": "HttpResponseCode.expectationFailed417",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 57,
       "symbol": "HttpResponseCode.teapot418",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 58,
       "symbol": "HttpResponseCode.enhanceYourCalm420",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 59,
       "symbol": "HttpResponseCode.unprocessableEntity442",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 60,
       "symbol": "HttpResponseCode.locked423",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 61,
       "symbol": "HttpResponseCode.failedDependency424",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 62,
       "symbol": "HttpResponseCode.reservedForWebDAV425",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 63,
       "symbol": "HttpResponseCode.upgradeRequired426",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 64,
       "symbol": "HttpResponseCode.preconditionRequired428",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 65,
       "symbol": "HttpResponseCode.tooManyRequests429",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 66,
       "symbol": "HttpResponseCode.requestHeaderFieldsTooLarge431",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 67,
       "symbol": "HttpResponseCode.noResponse444",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 68,
       "symbol": "HttpResponseCode.retryWith449",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 69,
       "symbol": "HttpResponseCode.blockedByWindowsParentalControls450",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 70,
       "symbol": "HttpResponseCode.unavailableForLegalReasons451",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 71,
       "symbol": "HttpResponseCode.clientClosedRequest499",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 73,
       "symbol": "HttpResponseCode.internalServerError500",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 74,
       "symbol": "HttpResponseCode.notImplemented501",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 75,
       "symbol": "HttpResponseCode.badGateway502",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 76,
       "symbol": "HttpResponseCode.serviceUnavailable503",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 77,
       "symbol": "HttpResponseCode.gatewayTimeout504",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 78,
       "symbol": "HttpResponseCode.httpVersionNotSupported505",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 79,
       "symbol": "HttpResponseCode.variantAlsoNegotiates506",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 80,
       "symbol": "HttpResponseCode.insufficientStorage507",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 81,
       "symbol": "HttpResponseCode.loopDetected508",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 82,
       "symbol": "HttpResponseCode.bandwidthLimitExceeded509",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 83,
       "symbol": "HttpResponseCode.notExtended510",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 84,
       "symbol": "HttpResponseCode.networkAuthenticationRequired511",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 85,
       "symbol": "HttpResponseCode.networkReadTimeoutError598",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/HttpResponseCode.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/HttpResponseCode.swift",
       "line": 86,
       "symbol": "HttpResponseCode.networkConnectTimeoutError599",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Patchable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Patchable.swift",
       "line": null,
       "symbol": "Patchable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Patchable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Patchable.swift",
       "line": null,
       "symbol": "Patchable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Patchable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Patchable.swift",
       "line": 11,
       "symbol": "Patchable",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Postable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Postable.swift",
       "line": null,
       "symbol": "Postable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Postable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Postable.swift",
       "line": null,
       "symbol": "Postable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Postable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Postable.swift",
       "line": 11,
       "symbol": "Postable",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Puttable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Puttable.swift",
       "line": null,
       "symbol": "Puttable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Puttable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Puttable.swift",
       "line": null,
       "symbol": "Puttable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Puttable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Puttable.swift",
       "line": 11,
       "symbol": "Puttable",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Restable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Restable.swift",
       "line": 21,
       "symbol": "Result.success",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/Restable.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Restable.swift",
       "line": 22,
       "symbol": "Result.failure",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/ResultEncoding.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/Restable.swift",
+      "line": 243,
+      "symbol": "AnyRestable.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/ResultEncoding.swift",
       "line": 16,
       "symbol": "ResultFormat.json",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ryanbaldwin/dev/Restivus/Restivus/ResultEncoding.swift",
+      "file": "/Users/ryanbaldwin/dev/Restivus/src/Restivus/ResultEncoding.swift",
       "line": 16,
       "symbol": "ResultFormat.raw",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/ryanbaldwin/dev/Restivus"
+  "source_directory": "/Users/ryanbaldwin/dev/Restivus/src"
 }
