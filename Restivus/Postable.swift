@@ -9,23 +9,23 @@
 import Foundation
 
 public protocol Postable: Restable {}
+
 extension Postable {
     /// Creates a POST request for the current instance
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.post.makeURLRequest(url: "\(baseURL)\(path)")
+        return try HTTPMethod.post.makeURLRequest(for: self)
     }
 }
 
 extension Postable where Self: Encodable {
-    /// Creates a POST request for the current instance and
-    /// sets the body of the request to this instance's JSON representation
+    /// Creates a POST request for the current instance
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.post.makeURLRequest(url: "\(baseURL)\(path)", body: self)
+        return try HTTPMethod.post.makeURLRequest(for: self)
     }
 }

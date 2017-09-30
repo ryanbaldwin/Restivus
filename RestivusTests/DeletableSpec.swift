@@ -10,19 +10,6 @@ import Quick
 import Nimble
 @testable import Restivus
 
-struct DeletePersonRequest: Authenticating, Deletable {
-    typealias ResponseType = Person
-    var path = "/"
-}
-
-struct EncodableDeletePersonRequest: Encodable {
-    var personId: String
-}
-extension EncodableDeletePersonRequest: Deletable {
-    typealias ResponseType = Person
-    var path: String { return "/" }
-}
-
 class DeletableSpec: QuickSpec {
     override func spec() {
         describe("A default Deletable") {

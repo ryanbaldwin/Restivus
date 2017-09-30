@@ -10,19 +10,6 @@ import Quick
 import Nimble
 @testable import Restivus
 
-struct PutPersonRequest: Authenticating, Puttable {
-    typealias ResponseType = Person
-    var path = "/"
-}
-
-struct EncodablePutPersonRequest: Encodable {
-    var personId: String
-}
-extension EncodablePutPersonRequest: Puttable {
-    typealias ResponseType = Person
-    var path: String { return "/" }
-}
-
 class PuttableSpec: QuickSpec {
     override func spec() {
         describe("A default Puttable") {

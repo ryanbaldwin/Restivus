@@ -47,7 +47,7 @@ extension HTTPError: Equatable {
             return response1.isEqual(response2)
             
         case (let .unsuccessfulResponse(response1), let .unsuccessfulResponse(response2)):
-            return response1.responseCode == response2.responseCode
+            return response1.statusCode == response2.statusCode
             
         case(.unableToDeserializeJSON, .unableToDeserializeJSON):
             return true // nearly impossible to equate these 2 things accurately
@@ -77,19 +77,29 @@ public enum HTTPMethod: String {
     case patch = "PATCH"
     case delete = "DELETE"
     
+    /// Makes a URLRequest for a given `Restable`
+    ///
+    /// - Parameter restable: The `Restable` for which a `URLRequest` will be created
+    /// - Returns: A URLRequest suitable for the given `Restable`
+    /// - Throws: An `HTTPMethodError.invalidURL` if the `URLRequest` could not be created.
+    private func _makeURLRequest<T>(`for` restable: T) throws -> URLRequest where T: Restable {
+        guard let urlForRequest = restable.url ?? URL(string: restable.fullPath) else {
+            throw HTTPMethodError.invalidURL(url: restable.fullPath)
+        }
+        
+        var request = URLRequest(url: urlForRequest, cachePolicy: restable.cachePolicy,
+                                 timeoutInterval: restable.timeoutInterval)
+        request.httpMethod = rawValue
+        return request
+    }
+    
     /// Creates a URLRequest appropriate for this instance
     ///
     /// - Parameter url: The full URL for the URLRequest
     /// - Returns: A URLRequest ready for submission
     /// - Throws: An `InvalidURLError` if the `url` is malformed
-    public func makeURLRequest(url: String) throws -> URLRequest {
-        guard let urlForRequest = URL(string: url) else {
-            throw HTTPMethodError.invalidURL(url: url)
-        }
-        
-        var request = URLRequest(url: urlForRequest)
-        request.httpMethod = rawValue
-        return request
+    public func makeURLRequest<T>(`for` restable: T) throws -> URLRequest where T: Restable {
+        return try _makeURLRequest(for: restable)
     }
     
     /// Creates a URLRequest appropriate for this instance
@@ -100,11 +110,11 @@ public enum HTTPMethod: String {
     /// - Returns: A URLRequest ready for submission
     /// - Throws: An `InvalidURLError` if the `url` is malformed, or another `Error` occuring during
     ///           the JSONSerialization of the `object`.
-    public func makeURLRequest<T>(url: String, body: T) throws -> URLRequest where T: Encodable {
-        var request = try makeURLRequest(url: url)
+    public func makeURLRequest<T>(`for` restable: T) throws -> URLRequest where T: Restable & Encodable {
+        var request = try _makeURLRequest(for: restable)
         
         do {
-            request.httpBody = try encode(body)
+            request.httpBody = try encode(restable)
         } catch let error {
             throw HTTPMethodError.jsonSerializationFailed(error: error)
         }

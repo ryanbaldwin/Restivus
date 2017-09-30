@@ -22,4 +22,29 @@ extension HTTPURLResponse {
 
         return fields.joined(separator: "\n")
     }
+    
+    /// True if this response code is a member of the 1xx Informational set of codes; otherwise false
+    public var isInformational: Bool {
+        return 100...199 ~= statusCode
+    }
+    
+    /// True if this response code is a member of the 2xx Success response codes; otherwise false
+    public var isSuccess: Bool {
+        return 200...299 ~= statusCode
+    }
+    
+    /// True if this response code is a member of the 3xx Redirection response codes; otherwise false
+    public var isRedirection: Bool {
+        return 300...399 ~= statusCode
+    }
+    
+    /// True if this response code is a member of the 4xx Client Error response codes; otherwise false
+    public var isClientError: Bool {
+        return 400...499 ~= statusCode
+    }
+    
+    /// True if this response code is a member of the 5xx Server Error response codes; otherwise false
+    public var isServerError: Bool {
+        return 500...599 ~= statusCode
+    }
 }

@@ -34,6 +34,81 @@ struct OtherErrorRestable: Restable {
     typealias ResponseType = Person
     
     func request() throws -> URLRequest {
-        return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)")
+        return try HTTPMethod.get.makeURLRequest(for: self)
     }
 }
+
+// MARK: DeletePerson requests
+
+struct DeletePersonRequest: Authenticating, Deletable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct EncodableDeletePersonRequest: Encodable {
+    var personId: String
+}
+extension EncodableDeletePersonRequest: Deletable {
+    typealias ResponseType = Person
+    var path: String { return "/" }
+}
+
+// MARK: Get Person Requests
+
+struct GetPersonRequest: Authenticating, Gettable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct EncodableGetPersonRequest: Encodable {
+    var personId: String
+}
+extension EncodableGetPersonRequest: Gettable {
+    typealias ResponseType = Person
+    var path: String { return "/" }
+}
+
+// MARK: Path Person Requests
+struct PatchPersonRequest: Authenticating, Patchable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct EncodablePatchPersonRequest: Encodable {
+    var personId: String
+}
+extension EncodablePatchPersonRequest: Patchable {
+    typealias ResponseType = Person
+    var path: String { return "/" }
+}
+
+// MARK: Post Person Requests
+
+struct PostPersonRequest: Authenticating, Postable {
+    typealias ResponseType = Person
+    let path = "/"
+}
+
+struct EncodablePostPersonRequest: Encodable {
+    var personId: String
+}
+extension EncodablePostPersonRequest: Postable {
+    typealias ResponseType = Person
+    var path: String { return "/" }
+}
+
+// MARK: Put Person Requests
+
+struct PutPersonRequest: Authenticating, Puttable {
+    typealias ResponseType = Person
+    var path = "/"
+}
+
+struct EncodablePutPersonRequest: Encodable {
+    var personId: String
+}
+extension EncodablePutPersonRequest: Puttable {
+    typealias ResponseType = Person
+    var path: String { return "/" }
+}
+

@@ -17,18 +17,17 @@ extension Puttable {
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.put.makeURLRequest(url: "\(baseURL)\(path)")
+        return try HTTPMethod.put.makeURLRequest(for: self)
     }
 }
 
 extension Puttable where Self: Encodable {
-    
-    /// Creates a POST request for the current instance and
-    /// sets the body of the request to this instance's JSON representation
+
+    /// Creates a POST request for the current instance
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.put.makeURLRequest(url: "\(baseURL)\(path)", body: self)
+        return try HTTPMethod.put.makeURLRequest(for: self)
     }
 }

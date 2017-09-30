@@ -69,7 +69,7 @@ class RestableConfiguration: QuickConfiguration {
             }
             
             context("when encodable") {
-                it("creates a DELETE request with itself as the body") {
+                it("creates the appropriate request with itself as the body") {
                     let req = try? encodable.request()
                     expect(req).toNot(beNil())
                     expect(req?.httpMethod) == method.rawValue

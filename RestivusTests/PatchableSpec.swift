@@ -10,19 +10,6 @@ import Quick
 import Nimble
 @testable import Restivus
 
-struct PatchPersonRequest: Authenticating, Patchable {
-    typealias ResponseType = Person
-    var path = "/"
-}
-
-struct EncodablePatchPersonRequest: Encodable {
-    var personId: String
-}
-extension EncodablePatchPersonRequest: Patchable {
-    typealias ResponseType = Person
-    var path: String { return "/" }
-}
-
 class PatchableSpec: QuickSpec {
     override func spec() {
         describe("A default Patchable") {

@@ -17,13 +17,13 @@
 		7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
 		7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
 		7DAD01DE1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */; };
+		7DD6954C1F8016670034969A /* NotificationCenterPublishableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */; };
 		7DD789111F54FA3900446615 /* Authenticating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Authenticating.swift */; };
 		7DDB694F1F4B6FA1001CC66D /* Restivus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDB69451F4B6FA1001CC66D /* Restivus.framework */; };
 		7DDB69561F4B6FA1001CC66D /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DDB69611F4B7052001CC66D /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69601F4B7052001CC66D /* Http.swift */; };
 		7DDB69661F4B705D001CC66D /* Gettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69621F4B705D001CC66D /* Gettable.swift */; };
 		7DDB69671F4B705D001CC66D /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
-		7DDB69681F4B705D001CC66D /* HttpResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69641F4B705D001CC66D /* HttpResponseCode.swift */; };
 		7DDB696C1F4B76F1001CC66D /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB696B1F4B76F1001CC66D /* Postable.swift */; };
 		7DDB696E1F4B7861001CC66D /* Puttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB696D1F4B7861001CC66D /* Puttable.swift */; };
 		7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69701F4B79EF001CC66D /* Patchable.swift */; };
@@ -73,6 +73,7 @@
 		7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodConfiguration.swift; sourceTree = "<group>"; };
 		7D72FA171F4E715000A4B3F9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalResponseTypeSpec.swift; sourceTree = "<group>"; };
+		7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterPublishableSpec.swift; sourceTree = "<group>"; };
 		7DD789101F54FA3900446615 /* Authenticating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticating.swift; sourceTree = "<group>"; };
 		7DDB69451F4B6FA1001CC66D /* Restivus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Restivus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDB69481F4B6FA1001CC66D /* Restivous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restivous.h; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		7DDB69601F4B7052001CC66D /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		7DDB69621F4B705D001CC66D /* Gettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gettable.swift; sourceTree = "<group>"; };
 		7DDB69631F4B705D001CC66D /* Restable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restable.swift; sourceTree = "<group>"; };
-		7DDB69641F4B705D001CC66D /* HttpResponseCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponseCode.swift; sourceTree = "<group>"; };
 		7DDB696B1F4B76F1001CC66D /* Postable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
 		7DDB696D1F4B7861001CC66D /* Puttable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puttable.swift; sourceTree = "<group>"; };
 		7DDB69701F4B79EF001CC66D /* Patchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patchable.swift; sourceTree = "<group>"; };
@@ -189,6 +189,7 @@
 				C2548E151F545778003EDE96 /* AnyRestableSpec.swift */,
 				C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */,
 				7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */,
+				7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */,
 			);
 			path = RestivusTests;
 			sourceTree = "<group>";
@@ -199,7 +200,6 @@
 				7DDB69721F4B7A5F001CC66D /* Deletable.swift */,
 				7DDB69621F4B705D001CC66D /* Gettable.swift */,
 				7DDB69601F4B7052001CC66D /* Http.swift */,
-				7DDB69641F4B705D001CC66D /* HttpResponseCode.swift */,
 				7DDB69701F4B79EF001CC66D /* Patchable.swift */,
 				7DDB696B1F4B76F1001CC66D /* Postable.swift */,
 				7DDB696D1F4B7861001CC66D /* Puttable.swift */,
@@ -346,7 +346,6 @@
 				7DDB696C1F4B76F1001CC66D /* Postable.swift in Sources */,
 				7DDB69661F4B705D001CC66D /* Gettable.swift in Sources */,
 				7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */,
-				7DDB69681F4B705D001CC66D /* HttpResponseCode.swift in Sources */,
 				C23F9A831F584C08000CE9E6 /* ResultEncoding.swift in Sources */,
 				7DDB69731F4B7A5F001CC66D /* Deletable.swift in Sources */,
 				C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */,
@@ -371,6 +370,7 @@
 				C2548E141F54553E003EDE96 /* PuttableSpec.swift in Sources */,
 				C2548E121F54550F003EDE96 /* PostableSpec.swift in Sources */,
 				C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */,
+				7DD6954C1F8016670034969A /* NotificationCenterPublishableSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

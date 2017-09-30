@@ -10,27 +10,49 @@ import Quick
 import Nimble
 @testable import Restivus
 
+private class NonEncodableRestable: Restable {
+    typealias ResponseType = Person
+    func request() throws -> URLRequest {
+        assert(false, "This should not be called as part of these tests.")
+    }
+}
+
+private class EncodableRestable: NonEncodableRestable, Encodable {}
+
 class HTTPMethodSpec: QuickSpec {
     override func spec() {
         describe("an HTTPMethod") {
-            context("when .post") {
-                itBehavesLike("an HTTPMethod"){ ["method": HTTPMethod.post] }
-            }
-
-            context("when .get") {
-                itBehavesLike("an HTTPMethod"){ ["method": HTTPMethod.get] }
-            }
-            
-            context("when .put") {
-                itBehavesLike("an HTTPMethod"){ ["method": HTTPMethod.put] }
-            }
-            
-            context("when .patch") {
-                itBehavesLike("an HTTPMethod"){ ["method": HTTPMethod.patch] }
-            }
-            
-            context("when .delete") {
-                itBehavesLike("an HTTPMethod"){ ["method": HTTPMethod.delete] }
+            context("when dealing with non-encodable restable") {
+                context("and URL is present") {
+                    context("when .post") {
+                        itBehavesLike("an HTTP request without data"){ [
+                            "restable": AnyRestable<Person>(NonEncodableRestable()),
+                            "method": HTTPMethod.post] }
+                    }
+                    context("when .get") {
+                        itBehavesLike("an HTTP request without data"){ [
+                            "restable": AnyRestable<Person>(NonEncodableRestable()),
+                            "method": HTTPMethod.get] }
+                    }
+                    
+                    context("when .put") {
+                        itBehavesLike("an HTTP request without data"){ [
+                            "restable": AnyRestable<Person>(NonEncodableRestable()),
+                            "method": HTTPMethod.put] }
+                    }
+                    
+                    context("when .patch") {
+                        itBehavesLike("an HTTP request without data"){ [
+                            "restable": AnyRestable<Person>(NonEncodableRestable()),
+                            "method": HTTPMethod.patch] }
+                    }
+                    
+                    context("when .delete") {
+                        itBehavesLike("an HTTP request without data"){ [
+                            "restable": AnyRestable<Person>(NonEncodableRestable()),
+                            "method": HTTPMethod.delete] }
+                    }
+                }
             }
             
             it("can determine its equality") {

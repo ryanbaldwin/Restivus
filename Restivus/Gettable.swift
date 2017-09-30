@@ -16,7 +16,7 @@ extension Gettable {
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)")
+        return try HTTPMethod.get.makeURLRequest(for: self)
     }
 }
 
@@ -26,7 +26,7 @@ extension Gettable where Self: Encodable {
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.get.makeURLRequest(url: "\(baseURL)\(path)", body: self)
+        return try HTTPMethod.get.makeURLRequest(for: self)
     }
 }
 

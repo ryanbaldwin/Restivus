@@ -8,6 +8,27 @@
 
 import Foundation
 
+extension Notification.Name {
+    /// A Restivus Restable received a non-2xx response from the server.
+    /// When sent, the `object` of the notification will be the original `Restable`
+    /// request that produced the non-2xx response. The `userInfo["response"]` will
+    /// contain the HTTPURLResponse received from the server.
+    public static let RestivusReceivedNon200 = Notification.Name("RestivusReceivedNon200")
+}
+
+/// When applied to a conforming `Restable`, and the response from the server
+/// results in any Non-2xx HTTP Response, Restivus will publish a Notification Center
+/// notification, containing the original request and response.
+public protocol NotificationCenterPublishable {
+    /// Determines if Restivus should publish a `RestivusReceivedNon200` notification
+    /// for this instance.
+    ///
+    /// - Parameter _: The `HTTPURLResponse` from the server
+    /// - Returns: Return `true` if Restivus should publish a `RestivusReceivedNon200` notification;
+    ///            otherwise `false`.
+    func shouldPublish(_: HTTPURLResponse) -> Bool
+}
+
 /// The type to be used when no custom Decodable result is required.
 /// Useful for when you don't know, or care, what the response is (or if one is even provided),
 /// such as a `Deletable` with no response body, or a `Gettable` which returns HTML.
@@ -93,6 +114,17 @@ public protocol Restable {
     ///    "/some/path"
     var path: String { get }
     
+    /// An optional URL to use for the request instead of `baseURL` and `path`.
+    /// When preset `baseURL` and `path` will be ignored.
+    /// Defaults to nil.
+    var url: URL? { get }
+    
+    /// The cache policy to use for this `Restable`. Defaults to .useProtocolCachePolicy
+    var cachePolicy: URLRequest.CachePolicy { get }
+    
+    /// The timeout interval for the request. Defaults to 60.0
+    var timeoutInterval: TimeInterval { get }
+    
     /// Creates a URLRequest object.
     ///
     /// - Returns: A URLRequest object, if one was successfully created
@@ -137,6 +169,22 @@ extension Restable {
     ///
     ///    "/some/path"
     public var path: String { return "" }
+    
+    /// Returns a dumb concatenation of `baseURL` + `path`.
+    public var fullPath: String {
+        return "\(baseURL)\(path)"
+    }
+    
+    /// An optional URL to use for the request instead of `baseURL` and `path`.
+    /// When preset `baseURL` and `path` will be ignored.
+    /// Defaults to nil.
+    public var url: URL? { return nil }
+    
+    /// The cache policy to use for this `Restable`. Defaults to .useProtocolCachePolicy
+    public var cachePolicy: URLRequest.CachePolicy { return .useProtocolCachePolicy }
+    
+    /// The timeout interval for the request. Defaults to 60.0
+    public var timeoutInterval: TimeInterval { return 60.0 }
     
     /// Defines the expected format of the response
     /// Defaults to `.json`
@@ -209,7 +257,12 @@ extension Restable {
             return
         }
         
-        guard httpResponse.responseCode.isSuccess else {
+        guard httpResponse.isSuccess else {
+            if (self as? NotificationCenterPublishable)?.shouldPublish(httpResponse) == true {
+                NotificationCenter.default.post(Notification(name: .RestivusReceivedNon200, object: self,
+                                                             userInfo: ["response": httpResponse]))
+            }
+            
             completion?(Result.failure(HTTPError.unsuccessfulResponse(httpResponse)))
             return
         }
@@ -228,7 +281,7 @@ extension Restable {
 /// A Type-erased container which can hold any Restable for a given response type.
 /// Use this for variables and/or function parameters instead of raw `Restable`.
 /// Attemping to use a raw `Restable` or any of its children (`Gettable`, `Postable`, etc.) will
-/// result in a cpmiler error regarding associated types.
+/// result in a compiler error regarding associated types.
 /// To get the full fledged story google `Swift Static Linking and Protocols with Associated Types`,
 /// crack a bottle of whisky, and watch Game of Thrones.
 public class AnyRestable<ExpectedResponseType: Decodable>: Restable {

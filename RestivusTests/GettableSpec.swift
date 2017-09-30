@@ -16,19 +16,6 @@ extension Gettable {
     }
 }
 
-struct GetPersonRequest: Authenticating, Gettable {
-    typealias ResponseType = Person
-    var path = "/"
-}
-
-struct EncodableGetPersonRequest: Encodable {
-    var personId: String
-}
-extension EncodableGetPersonRequest: Gettable {
-    typealias ResponseType = Person
-    var path: String { return "/" }
-}
-
 class GettableSpec: QuickSpec {
     override func spec() {
         describe("A default Gettable") {

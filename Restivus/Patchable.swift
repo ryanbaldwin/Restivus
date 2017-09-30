@@ -9,23 +9,24 @@
 import Foundation
 
 public protocol Patchable: Restable {}
+
 extension Patchable {
     /// Creates a PATCH request for the current instance
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.patch.makeURLRequest(url: "\(baseURL)\(path)")
+        return try HTTPMethod.patch.makeURLRequest(for: self)
     }
 }
 
 extension Patchable where Self: Encodable {
-    /// Creates a PATCH request for the current instance and
-    /// sets the body of the request to this instance's JSON representation
+    /// Creates a PATCH request for the current instance
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
-        return try HTTPMethod.patch.makeURLRequest(url: "\(baseURL)\(path)", body: self)
+        return try HTTPMethod.patch.makeURLRequest(for: self)
     }
 }
+

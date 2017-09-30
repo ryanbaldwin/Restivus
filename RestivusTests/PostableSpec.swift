@@ -10,19 +10,6 @@ import Quick
 import Nimble
 @testable import Restivus
 
-struct PostPersonRequest: Authenticating, Postable {
-    typealias ResponseType = Person
-    let path = "/"
-}
-
-struct EncodablePostPersonRequest: Encodable {
-    var personId: String
-}
-extension EncodablePostPersonRequest: Postable {
-    typealias ResponseType = Person
-    var path: String { return "/" }
-}
-
 class PostableSpec: QuickSpec {
     override func spec() {
         describe("A default Postable") {
