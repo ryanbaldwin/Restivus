@@ -52,11 +52,11 @@ public enum Result<Success> {
 ///     }
 /// ---
 public struct OptionalResponseType<T>: Decodable where T: Decodable {
-    var response: T? = nil
+    public private(set) var instance: T? = nil
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-        self.response = try? container.decode(T.self)
+        self.instance = try? container.decode(T.self)
     }
 }
 

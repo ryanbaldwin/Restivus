@@ -32,7 +32,7 @@ class OptionalResponseTypeSpec: QuickSpec {
                 }
                 
                 expect(typedResponse).toEventuallyNot(beNil())
-                expect(typedResponse?.response).toEventually(beNil())
+                expect(typedResponse?.instance).toEventually(beNil())
             }
         }
     }
