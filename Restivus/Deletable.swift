@@ -22,7 +22,8 @@ extension Deletable {
 }
 
 extension Deletable where Self: Encodable {
-    /// Creates a DELETE request for the current instance
+    /// Creates a DELETE request for the current Encodable instance,
+    /// and encodes itself into the HTTP body of the request.
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.

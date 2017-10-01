@@ -22,7 +22,8 @@ extension Gettable {
 }
 
 extension Gettable where Self: Encodable {
-    /// Creates a GET request for the current instance
+    /// Creates a GET request for the current Encodable instance,
+    /// and encodes itself into the HTTP body of the request.
     ///
     /// - Returns: The URLRequest
     /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.

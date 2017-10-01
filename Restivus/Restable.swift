@@ -46,7 +46,7 @@ public enum Result<Success> {
 /// A wrapper which will contain the decoded `T` instance, if one was successfully decoded; otherwise `nil`.
 /// `OptionalResponseType` is useful for when you have a request which may or may not return the expected
 /// JSON structure. For example, fetching a mythical `UserDetails` JSON for a user who does not exist,
-/// but for reason - unbeknownst to us - the server will return no JSON instead of a 404.
+/// but for reason - unbeknownst to us - the server return no JSON instead of a 404.
 ///
 /// Example:
 /// ---
@@ -67,13 +67,13 @@ public enum Result<Success> {
 ///
 ///     UserDetailsRequest(userId: 42).submit() { result in
 ///         if case let Result.success(optionalUserDetails) = result {
-///             let userDetails = optionalUserDetails.response
+///             let userDetails = optionalUserDetails.instance
 ///
 ///         }
 ///     }
 /// ---
 public struct OptionalResponseType<T>: Decodable where T: Decodable {
-    /// Gets the optional inflated instance of T that may or may not have been returned in an HTTPURLResponse
+    /// Gets the optional inflated instance of `T` that may or may not have been returned in an `HTTPURLResponse`
     public private(set) var instance: T? = nil
     
     public init(from decoder: Decoder) throws {
