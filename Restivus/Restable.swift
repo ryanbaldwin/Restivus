@@ -84,14 +84,9 @@ public struct OptionalResponseType<T>: Decodable where T: Decodable {
 
 
 // The function used as a completion handler in all Restables.
-public typealias HttpSubmittableCompletionHandler<ResponseType> = (Result<ResponseType>) -> Void
+public typealias RestableCompletionHandler<ResponseType> = (Result<ResponseType>) -> Void
 
 /// The base protocol for method-specific protocols.
-/// `Restable` defaults the following implementations:
-///    - *baseURL*: `""`
-///    - *path*: `""`
-///    - *resultEncoding*: `.json`
-///    - *submit(...) throws -> URLSessionDataTask*: 
 public protocol Restable {
     associatedtype ResponseType: Decodable
     
@@ -143,7 +138,7 @@ public protocol Restable {
     /// - Returns: The URLSessionDataTask
     /// - Throws: If a URLSessionDataTask failed to create
     @discardableResult func submit(callbackOnMain: Bool, session: URLSession,
-                                   completion: HttpSubmittableCompletionHandler<ResponseType>?) throws -> URLSessionDataTask
+                                   completion: RestableCompletionHandler<ResponseType>?) throws -> URLSessionDataTask
 }
 
 extension Restable {
@@ -203,7 +198,7 @@ extension Restable {
     /// - Throws: If a URLSessionDataTask failed to create
     @discardableResult public func submit(callbackOnMain: Bool = true,
                                           session: URLSession = URLSession.shared,
-                                          completion: HttpSubmittableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
+                                          completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
         var request = try ((self as? Authenticating)?.sign(request: self.request()) ?? self.request())
         request = resultFormat.headers(for: request)
         print(request.debugDescription)
@@ -242,7 +237,7 @@ extension Restable {
     ///   - error: Any error that may have occured
     ///   - completionHandler: The original completionHandler passed to `submit:`
     func dataTaskCompletionHandler(data: Data?, response: URLResponse?, error: Error?,
-                                   completion: HttpSubmittableCompletionHandler<ResponseType>?) {
+                                   completion: RestableCompletionHandler<ResponseType>?) {
         guard error == nil else {
             completion?(Result.failure(.other(error!)))
             return
@@ -312,7 +307,7 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
     
     public func submit(callbackOnMain: Bool = true,
                        session: URLSession = URLSession.shared,
-                       completion: HttpSubmittableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
+                       completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
         return try _submit(callbackOnMain, session, completion)
     }
 }

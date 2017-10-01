@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Defines the various HttpErrors that can be received in ann HttpSubmittable completion handler.
+/// Defines the various HttpErrors that can be received from an RestableCompletionHandler.
 public enum HTTPError: Error {
     /// No response was returned from the server
     case noResponse,

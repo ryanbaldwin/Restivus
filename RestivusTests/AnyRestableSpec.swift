@@ -10,17 +10,6 @@ import Quick
 import Nimble
 @testable import Restivus
 
-struct RequestDidSubmitError: Error {}
-
-struct SafeSubmittablePersonRequest {}
-extension SafeSubmittablePersonRequest: Gettable {
-    typealias ResponseType = Person
-    
-    func submit(callbackOnMain: Bool, session: URLSession, completion: ((Result<Person>) -> Void)?) throws -> URLSessionDataTask {
-        throw HTTPError.other(RequestDidSubmitError())
-    }
-}
-
 class AnyRestableSpec: QuickSpec {
     override func spec() {
         describe("An AnyRestable") {
