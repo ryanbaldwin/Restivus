@@ -14,7 +14,7 @@
     <a title="ResultFormat Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -129,11 +129,6 @@
               </div>
             <p>Defines the format of the URL response body</p>
 
-<ul>
-<li>json: The body of the response will be JSON encoded</li>
-<li>raw: The body of the response will be raw data</li>
-</ul>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -151,14 +146,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The body of the response will be JSON decoded</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ResultFormat</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">json</span><span class="p">,</span></code></pre>
 
                         </div>
                       </div>
@@ -178,14 +173,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The body of the response will be treated as RAW data and will not be decoded</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ResultFormat</span></code></pre>
+                          <pre class="highlight"><code><span class="n">raw</span></code></pre>
 
                         </div>
                       </div>

@@ -14,7 +14,7 @@
     <a title="AnyRestable Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -203,16 +203,36 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Wraps the provided <code>restable</code> into a type-erased enclosure,
+allowing it to be passed around to other functions, used as a stored property, etc.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AnyRestable</span><span class="o">&lt;</span><span class="kt">ExpectedResponseType</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Restable.html">Restable</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">R</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Restable.html">Restable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">restable</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="k">where</span> <span class="kt">R</span><span class="o">.</span><span class="kt">ResponseType</span> <span class="o">==</span> <span class="kt">ExpectedResponseType</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>restable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The restable to be type-erased.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

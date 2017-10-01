@@ -14,7 +14,7 @@
     <a title="Result Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -129,11 +129,6 @@
               </div>
             <p>Represents the result of an asynchronous operation.</p>
 
-<ul>
-<li>success: The operation was a success, and contains the <code>Success</code> output from that operation.</li>
-<li>failure: The operation failed, and contains the <code>Error</code> from that operation.</li>
-</ul>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -151,14 +146,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The operation was a success, and contains the <code>Success</code> output from that operation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">success</span><span class="p">(</span><span class="kt">Success</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -182,14 +177,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The operation failed, and contains the <code>Error</code> from that operation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">failure</span><span class="p">(</span><span class="kt"><a href="../Enums/HTTPError.html">HTTPError</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
