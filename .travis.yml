@@ -1,9 +1,16 @@
 language: swift
+
 os: osx
 osx_iamge: xcode9
+
 xcode_project: Restivus.xcodeproj
 xcode_scheme: Restivus-iOS
 xcode_sdk: iphonesimulator9.3
+
+cache:
+  directories:
+    - Carthage
+
 before_install:
   - brew upgrade carthage
-  - carthage bootstrap
+  - carthage bootstrap --platform iOS --cache-builds
