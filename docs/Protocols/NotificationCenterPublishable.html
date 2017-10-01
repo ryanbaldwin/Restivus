@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Postable Protocol Reference</title>
+    <title>NotificationCenterPublishable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/Postable" class="dashAnchor"></a>
-    <a title="Postable Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/NotificationCenterPublishable" class="dashAnchor"></a>
+    <a title="NotificationCenterPublishable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Restivus Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Postable Protocol Reference
+        NotificationCenterPublishable Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -120,8 +120,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Postable</h1>
-            <p>Undocumented</p>
+            <h1>NotificationCenterPublishable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NotificationCenterPublishable</span></code></pre>
+
+                </div>
+              </div>
+            <p>When applied to a conforming <code><a href="../Protocols/Restable.html">Restable</a></code>, and the response from the server
+results in any Non-2xx HTTP Response, Restivus will publish a Notification Center
+notification, containing the original request and response.</p>
 
           </section>
           <section class="section task-group-section">
@@ -130,81 +138,32 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8PostablePAAE7request10Foundation10URLRequestVyKF"></a>
-                    <a name="//apple_ref/swift/Method/request()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8PostablePAAE7request10Foundation10URLRequestVyKF">request()</a>
+                    <a name="/s:8Restivus29NotificationCenterPublishableP13shouldPublishSbSo15HTTPURLResponseCF"></a>
+                    <a name="//apple_ref/swift/Method/shouldPublish(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus29NotificationCenterPublishableP13shouldPublishSbSo15HTTPURLResponseCF">shouldPublish(_:)</a>
                     </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a POST request for the current instance</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    An HTTPMethodError when the attempt to make the URLRequest failed.
-
-</div>
+                        <p>Determines if Restivus should publish a <code>RestivusReceivedNon200</code> notification
+for this instance.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">shouldPublish</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The URLRequest</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Restivus8PostablePA2aBRzs9EncodableRzlE7request10Foundation10URLRequestVyKF"></a>
-                    <a name="//apple_ref/swift/Method/request()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8PostablePA2aBRzs9EncodableRzlE7request10Foundation10URLRequestVyKF">request()</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a POST request for the current instance</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    An HTTPMethodError when the attempt to make the URLRequest failed.
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The URLRequest</p>
+                        <p>Return <code>true</code> if Restivus should publish a <code>RestivusReceivedNon200</code> notification;
+       otherwise <code>false</code>.</p>
                       </div>
                     </section>
                   </div>

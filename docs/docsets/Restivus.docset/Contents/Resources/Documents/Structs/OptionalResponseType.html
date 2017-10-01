@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Postable Protocol Reference</title>
+    <title>OptionalResponseType Struct Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/Postable" class="dashAnchor"></a>
-    <a title="Postable Protocol Reference"></a>
+    <a name="//apple_ref/swift/Struct/OptionalResponseType" class="dashAnchor"></a>
+    <a title="OptionalResponseType Struct Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Restivus Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Postable Protocol Reference
+        OptionalResponseType Struct Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -120,8 +120,41 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Postable</h1>
-            <p>Undocumented</p>
+            <h1>OptionalResponseType</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">OptionalResponseType</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">Decodable</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                </div>
+              </div>
+            <p>A wrapper which will contain the decoded <code>T</code> instance, if one was successfully decoded; otherwise <code>nil</code>.
+<code>OptionalResponseType</code> is useful for when you have a request which may or may not return the expected
+JSON structure. For example, fetching a mythical <code>UserDetails</code> JSON for a user who does not exist,
+but for reason - unbeknownst to us - the server will return no JSON instead of a 404.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight plaintext"><code>struct UserDetails {
+    var mothersMaidenName: String
+    var lovesTheDentist: Bool
+}
+
+struct UserDetailsRequest: Codable {
+    var userId: Int
+}
+
+extension UserDetailsRequest: Authenticating, Gettable {
+    typealias ResponseType = OptionalResponseType&lt;UserDetails&gt;
+    var path: String = "/some/api/path"
+}
+
+UserDetailsRequest(userId: 42).submit() { result in
+    if case let Result.success(optionalUserDetails) = result {
+        let userDetails = optionalUserDetails.response
+
+    }
+}
+</code></pre>
+
+<hr>
 
           </section>
           <section class="section task-group-section">
@@ -130,81 +163,71 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8PostablePAAE7request10Foundation10URLRequestVyKF"></a>
-                    <a name="//apple_ref/swift/Method/request()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8PostablePAAE7request10Foundation10URLRequestVyKF">request()</a>
+                    <a name="/s:8Restivus20OptionalResponseTypeV8instancexSgv"></a>
+                    <a name="//apple_ref/swift/Property/instance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus20OptionalResponseTypeV8instancexSgv">instance</a>
                     </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a POST request for the current instance</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    An HTTPMethodError when the attempt to make the URLRequest failed.
-
-</div>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">OptionalResponseType</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">Decodable</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The URLRequest</p>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8PostablePA2aBRzs9EncodableRzlE7request10Foundation10URLRequestVyKF"></a>
-                    <a name="//apple_ref/swift/Method/request()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8PostablePA2aBRzs9EncodableRzlE7request10Foundation10URLRequestVyKF">request()</a>
+                    <a name="/s:s9DecodablePxs7Decoder_p4from_tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s9DecodablePxs7Decoder_p4from_tKcfc">init(from:)</a>
                     </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a POST request for the current instance</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    An HTTPMethodError when the attempt to make the URLRequest failed.
-
-</div>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
                       <div>
-                        <h4>Return Value</h4>
-                        <p>The URLRequest</p>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

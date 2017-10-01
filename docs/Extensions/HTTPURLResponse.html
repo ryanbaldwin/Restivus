@@ -14,7 +14,7 @@
     <a title="HTTPURLResponse Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (34% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -46,9 +46,6 @@
                 <a href="../Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/HttpResponseCode.html">HttpResponseCode</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/Result.html">Result</a>
               </li>
               <li class="nav-group-task">
@@ -61,6 +58,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/HTTPURLResponse.html">HTTPURLResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Name.html">– Name</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/URLRequest.html">URLRequest</a>
@@ -80,6 +83,9 @@
                 <a href="../Protocols/Gettable.html">Gettable</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/NotificationCenterPublishable.html">NotificationCenterPublishable</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/Patchable.html">Patchable</a>
               </li>
               <li class="nav-group-task">
@@ -97,7 +103,7 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs.html#/s:8Restivus20OptionalResponseTypeV">OptionalResponseType</a>
+                <a href="../Structs/OptionalResponseType.html">OptionalResponseType</a>
               </li>
             </ul>
           </li>
@@ -153,12 +159,147 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15HTTPURLResponseC8RestivusE15isInformationalSbv"></a>
+                    <a name="//apple_ref/swift/Property/isInformational" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15HTTPURLResponseC8RestivusE15isInformationalSbv">isInformational</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if this response code is a member of the 1xx Informational set of codes; otherwise false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isInformational</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15HTTPURLResponseC8RestivusE9isSuccessSbv"></a>
+                    <a name="//apple_ref/swift/Property/isSuccess" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15HTTPURLResponseC8RestivusE9isSuccessSbv">isSuccess</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if this response code is a member of the 2xx Success response codes; otherwise false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSuccess</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15HTTPURLResponseC8RestivusE13isRedirectionSbv"></a>
+                    <a name="//apple_ref/swift/Property/isRedirection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15HTTPURLResponseC8RestivusE13isRedirectionSbv">isRedirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if this response code is a member of the 3xx Redirection response codes; otherwise false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isRedirection</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15HTTPURLResponseC8RestivusE13isClientErrorSbv"></a>
+                    <a name="//apple_ref/swift/Property/isClientError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15HTTPURLResponseC8RestivusE13isClientErrorSbv">isClientError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if this response code is a member of the 4xx Client Error response codes; otherwise false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isClientError</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15HTTPURLResponseC8RestivusE13isServerErrorSbv"></a>
+                    <a name="//apple_ref/swift/Property/isServerError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15HTTPURLResponseC8RestivusE13isServerErrorSbv">isServerError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if this response code is a member of the 5xx Server Error response codes; otherwise false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isServerError</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2017-09-29)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2017-10-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

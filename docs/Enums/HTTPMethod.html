@@ -14,7 +14,7 @@
     <a title="HTTPMethod Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (34% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -46,9 +46,6 @@
                 <a href="../Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/HttpResponseCode.html">HttpResponseCode</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/Result.html">Result</a>
               </li>
               <li class="nav-group-task">
@@ -61,6 +58,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/HTTPURLResponse.html">HTTPURLResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Name.html">– Name</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/URLRequest.html">URLRequest</a>
@@ -80,6 +83,9 @@
                 <a href="../Protocols/Gettable.html">Gettable</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/NotificationCenterPublishable.html">NotificationCenterPublishable</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/Patchable.html">Patchable</a>
               </li>
               <li class="nav-group-task">
@@ -97,7 +103,7 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs.html#/s:8Restivus20OptionalResponseTypeV">OptionalResponseType</a>
+                <a href="../Structs/OptionalResponseType.html">OptionalResponseType</a>
               </li>
             </ul>
           </li>
@@ -285,9 +291,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_tKF"></a>
-                    <a name="//apple_ref/swift/Method/makeURLRequest(url:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_tKF">makeURLRequest(url:)</a>
+                    <a name="/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0Vx3for_tKAA8RestableRzlF"></a>
+                    <a name="//apple_ref/swift/Method/makeURLRequest(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0Vx3for_tKAA8RestableRzlF">makeURLRequest(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -307,7 +313,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeURLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">makeURLRequest</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="err">`</span><span class="k">for</span><span class="err">`</span> <span class="nv">restable</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Restable.html">Restable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -340,9 +346,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_x4bodytKs9EncodableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/makeURLRequest(url:body:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0VSS3url_x4bodytKs9EncodableRzlF">makeURLRequest(url:body:)</a>
+                    <a name="/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0Vx3for_tKAA8RestableRzs9EncodableRzlF"></a>
+                    <a name="//apple_ref/swift/Method/makeURLRequest(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus10HTTPMethodO14makeURLRequest10Foundation0D0Vx3for_tKAA8RestableRzs9EncodableRzlF">makeURLRequest(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -363,7 +369,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">makeURLRequest</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">makeURLRequest</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="err">`</span><span class="k">for</span><span class="err">`</span> <span class="nv">restable</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Restable.html">Restable</a></span> <span class="o">&amp;</span> <span class="kt">Encodable</span></code></pre>
 
                         </div>
                       </div>
@@ -379,7 +385,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2017-09-29)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2017-10-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

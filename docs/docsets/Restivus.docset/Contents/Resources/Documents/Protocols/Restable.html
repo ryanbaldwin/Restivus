@@ -14,7 +14,7 @@
     <a title="Restable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (34% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -46,9 +46,6 @@
                 <a href="../Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/HttpResponseCode.html">HttpResponseCode</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/Result.html">Result</a>
               </li>
               <li class="nav-group-task">
@@ -61,6 +58,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/HTTPURLResponse.html">HTTPURLResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Name.html">– Name</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/URLRequest.html">URLRequest</a>
@@ -80,6 +83,9 @@
                 <a href="../Protocols/Gettable.html">Gettable</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/NotificationCenterPublishable.html">NotificationCenterPublishable</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/Patchable.html">Patchable</a>
               </li>
               <li class="nav-group-task">
@@ -97,7 +103,7 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs.html#/s:8Restivus20OptionalResponseTypeV">OptionalResponseType</a>
+                <a href="../Structs/OptionalResponseType.html">OptionalResponseType</a>
               </li>
             </ul>
           </li>
@@ -138,9 +144,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8RestableP20dateDecodingStrategy10Foundation11JSONDecoderC04DatedE0OvZ"></a>
-                    <a name="//apple_ref/swift/Variable/dateDecodingStrategy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestableP20dateDecodingStrategy10Foundation11JSONDecoderC04DatedE0OvZ">dateDecodingStrategy</a>
+                    <a name="/s:8Restivus8RestableP20dateDecodingStrategy10Foundation11JSONDecoderC04DatedE0Ov"></a>
+                    <a name="//apple_ref/swift/Property/dateDecodingStrategy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus8RestableP20dateDecodingStrategy10Foundation11JSONDecoderC04DatedE0Ov">dateDecodingStrategy</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -165,7 +171,7 @@ Defaults to <code>.deferredToDate</code></p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">dateDecodingStrategy</span><span class="p">:</span> <span class="kt">JSONDecoder</span><span class="o">.</span><span class="kt">DateDecodingStrategy</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">dateDecodingStrategy</span><span class="p">:</span> <span class="kt">JSONDecoder</span><span class="o">.</span><span class="kt">DateDecodingStrategy</span></code></pre>
 
                         </div>
                       </div>
@@ -285,6 +291,115 @@ Example:</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Restivus8RestableP3url10Foundation3URLVSgv"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus8RestableP3url10Foundation3URLVSgv">url</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional URL to use for the request instead of <code><a href="../Protocols/Restable.html#/s:8Restivus8RestableP7baseURLSSv">baseURL</a></code> and <code><a href="../Protocols/Restable.html#/s:8Restivus8RestableP4pathSSv">path</a></code>.
+When preset <code><a href="../Protocols/Restable.html#/s:8Restivus8RestableP7baseURLSSv">baseURL</a></code> and <code><a href="../Protocols/Restable.html#/s:8Restivus8RestableP4pathSSv">path</a></code> will be ignored.
+Defaults to nil.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>An optional URL to use for the request instead of <code>baseURL</code> and <code>path</code>.
+When preset <code>baseURL</code> and <code>path</code> will be ignored.
+Defaults to nil.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Restivus8RestableP11cachePolicySo12NSURLRequestC05CacheD0Ov"></a>
+                    <a name="//apple_ref/swift/Property/cachePolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus8RestableP11cachePolicySo12NSURLRequestC05CacheD0Ov">cachePolicy</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The cache policy to use for this <code>Restable</code>. Defaults to .useProtocolCachePolicy</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>The cache policy to use for this <code>Restable</code>. Defaults to .useProtocolCachePolicy</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">cachePolicy</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Restivus8RestableP15timeoutIntervalSdv"></a>
+                    <a name="//apple_ref/swift/Property/timeoutInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus8RestableP15timeoutIntervalSdv">timeoutInterval</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The timeout interval for the request. Defaults to 60.0</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>The timeout interval for the request. Defaults to 60.0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">timeoutInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
 
                         </div>
                       </div>
@@ -452,10 +567,44 @@ Defaults to <code>.json</code></p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Restivus8RestablePAAE8fullPathSSv"></a>
+                    <a name="//apple_ref/swift/Property/fullPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus8RestablePAAE8fullPathSSv">fullPath</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a dumb concatenation of <code><a href="../Protocols/Restable.html#/s:8Restivus8RestableP7baseURLSSv">baseURL</a></code> + <code><a href="../Protocols/Restable.html#/s:8Restivus8RestableP4pathSSv">path</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fullPath</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2017-09-29)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2017-10-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
