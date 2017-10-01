@@ -1,7 +1,7 @@
 language: swift
 
 os: osx
-osx_iamge: xcode9
+osx_image: xcode9
 
 xcode_project: Restivus.xcodeproj
 xcode_scheme: Restivus-iOS
