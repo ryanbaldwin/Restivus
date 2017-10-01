@@ -123,17 +123,59 @@
             <h1 id='restivus' class='heading'>Restivus</h1>
 
 <blockquote>
-<p><em>Finally!</em> A Restivus for the rest of us!</p>
+<p><em>Finally!</em> A Festivus for the <em>Restivus</em>!</p>
 </blockquote>
 
 <p>Yes, it&rsquo;s true, this library is named after the infamous <a href="https://www.youtube.com/watch?v=HX55AzGku5Y"><em>Festivus</em> Seinfeld episode</a>. I had no choice, as my initial name, RestEasy, was <a href="http://resteasy.jboss.org">already taken by the JBoss Community</a>, and I don&rsquo;t wanna mess with them.</p>
 <h2 id='what-the-heck-is-restivus' class='heading'>What the heck is Restivus?</h2>
 
 <p>Restivus is a mostly protocol based approach to creating structured HTTP requests and responses. It&rsquo;s simple, easy, and is built around Swift 4&rsquo;s <code>Codable</code> protocol.</p>
-<h2 id='a-quick-example' class='heading'>A quick example</h2>
+<h1 id='installation' class='heading'>Installation</h1>
 
-<p>Lets say we have a Login endpoint which we want to model. The endpoint accepts an username and a password via an HTTP Post. Upon successful login, the endpoint will return an inflated user. For this example the user will simply be a <code>name</code>, <code>age</code>, and <code>sex</code>. Something like the following:</p>
-<pre class="highlight plaintext"><code>struct User {
+<p>I do not currently support CocoaPods because, frankly, I hate it. If there&rsquo;s enough demand I might change my mind. In the interim I recommend using <a href="https://github.com/Carthage/Carthage">Carthage</a>, as it doesn&rsquo;t take over your workspace.</p>
+<h2 id='carthage' class='heading'>Carthage</h2>
+
+<ol>
+<li><p>In your cartfile simply add the following</p>
+<pre class="highlight plaintext"><code>github "ryanbaldwin/Restivus" == v0.1
+</code></pre></li>
+<li><p>Run a <code>carthage update</code></p></li>
+<li><p>Add the framework to your project, as defined <a href="https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos">here</a></p></li>
+</ol>
+<h2 id='good-ol-39-build-it-yourself' class='heading'>Good ol&rsquo; Build It Yourself</h2>
+
+<ol>
+<li>Clone the repo</li>
+<li>Open in Xcode 9</li>
+<li>Build it</li>
+<li>Celebrate</li>
+<li>Go for nachos</li>
+<li>Keep eating nachos</li>
+<li>If you do not hate yourself yet, repeat step 6</li>
+<li>Sleepy time</li>
+</ol>
+<h1 id='some-quick-examples' class='heading'>Some quick examples</h1>
+
+<p>Get the contents of the Google homepage as raw data:</p>
+<pre class="highlight plaintext"><code>struct GoogleHomepageRequest: Gettable {
+    typealias ResponseType = Raw
+    var url = URL(string: "https://www.google.com")
+}
+
+let runningTask = try? GoogleHomepageRequest().submit { result in
+    if case let Result.success(data) = result {
+        print(String(data: data, encoding: .utf8))
+    }
+}
+</code></pre>
+
+<p>Submit a login request which, upon success, returns the authenticated user JSON in the response, something like the following:</p>
+<pre class="highlight plaintext"><code>{ "name": "Ryan Baldwin",
+  "age": 38,
+  "sex": "male"
+}
+</code></pre>
+<pre class="highlight plaintext"><code>struct User: Codable {
     enum Sex: String, Codable {
         case male, female
     }
@@ -142,7 +184,6 @@
     var age: Int
     var sex: Sex
 }
-extension User: Codable {}
 
 struct LoginRequest: Encodable {
     var username: String
@@ -150,104 +191,77 @@ struct LoginRequest: Encodable {
 }
 
 extension LoginRequest: Postable {
-    typealias ResponseType = User
-
-    var baseUrl: String { return "https://myserver.ca/api/v1" }
-
-    var path: String { return "/login" }
+    let url = URL(string: "https://my.awesome-app.com/login")
 }
 
-let request = LoginRequest(username: "Jerry", password: "Hellooooooo!")
-request.submit() { result in 
-    // We get a Result enum, which on success will hold the inflated Decodable 
-    // (as defined by the ResponseType typealias, above)
-    // and a Restivus.HTTPError on failure.
-    switch result {
-    case let .success(user):
-        // a successful call will return to us a fully inflated User struct
-        print(user)
-    case let .failure(error):
-        // There can be several reasons for failure, which we won't get into here
-        print(error)
+_ = try? LoginRequest(username: "rbaldwin", password: "insecure").submit() { result in 
+    if case let Result.success(user) = result {
+        print("\(user.name) (\(user.sex)) is \(user.age) years young, and looking mighty fine.")
     }
 }
 </code></pre>
-<h3 id='an-explanation' class='heading'>An Explanation</h3>
 
-<p>Lets breakdown the above. We&rsquo;ll start with the conformance to the <code>Postable</code> protocol by the `LoginRequest:</p>
-<pre class="highlight plaintext"><code>extension LoginRequest: Postable
-</code></pre>
-
-<p>The <code>Postable</code> protocol is what turns our <code>LoginRequest</code> into a <code>POST</code> request. Restivus has a few different HTTP method protocols for commonly used request types: <code>Gettable</code>, <code>Deletable</code>, <code>Patchable</code>, <code>Postable</code>, and <code>Puttable</code>. Each one maps to its respective method.</p>
-
-<p>All of these protocols inherit from <code>Restable</code>, which in turn defines the conformance requirements and bulk of the functionality for any request. Its children (<code>Gettable</code> and the rest of the crew) provide sensible defaults for creating the actual underlying <code>URLRequest</code>.</p>
-
-<p>Next is the <code>ResponseType</code>:</p>
-<pre class="highlight plaintext"><code>typealias ResponseType = User
-</code></pre>
-
-<p>This defines what the returned payload should be deserialized into. In our case, the Login endpoint will return some JSON describing a User (as we structured above). </p>
-
-<p>Following that are the two properties, <code>baseUrl</code> and <code>path</code>. </p>
-<pre class="highlight plaintext"><code>var baseUrl: String {
-    "https://myserver.ca/api/v1"
+<p>Submit a request against a protected endpoint:</p>
+<pre class="highlight plaintext"><code>struct UpdateUserRequest: Encodable {
+    var user: User
 }
 
-var path: String {
-    "/login"
-}
-</code></pre>
-
-<p>These are pretty self explanatory. They are defined in the <code>Restable</code> protocol, and default to empty strings. In my experience, the <code>baseUrl</code> will typically be the same value for most, if not all the requests. As such, it&rsquo;s a bit of a pain in the butt to repeat that same property over and over again. Since Swift allows for protocol extensions, it&rsquo;s easier to have a global extension of <code>Restable</code> that returns a sensible default for <code>baseUrl</code>. </p>
-
-<p>For example, if we were going to create several requests for our <code>myserver.ca</code> endpoint, it makes more sense to do the following:</p>
-<pre class="highlight plaintext"><code>extension Restable {
-    var baseUrl: String { return "https://myserver.ca/api/v1" }
-}
-</code></pre>
-
-<p>This also works well if you have different servers for different environments that are determined at runtime, from a configuration. By extending <code>Restable</code> to have a default for <code>baseUrl</code>, we can then omit it from our <code>Postable</code> conformance:</p>
-<pre class="highlight plaintext"><code>extension LoginRequest: Postable {
+extension UpdateUserRequest: Authenticating, Postable {
     typealias ResponseType = User
-    var path: String { "/login" }
-}
-</code></pre>
-
-<p>Finally, lets talk about what the conforming our <code>LoginRequest</code> to <code>Encodable</code> will do:</p>
-<pre class="highlight plaintext"><code>struct LoginRequest: Encodable {}
-</code></pre>
-
-<p>If you submit a <code>Restable</code> which conforms to <code>Encodable</code>, then Restivus will serialize that Restable into JSON and submit it as the body of the request. In our case, the following JSON will be submitted in the body of the <code>LoginRequest</code>:</p>
-<pre class="highlight plaintext"><code>{
-    "username": "Jerry",
-    "password": "Hellooooooo!"
-}
-</code></pre>
-
-<p>If you&rsquo;d like to get a bit more of a feel for Swift 4&rsquo;s <code>Codable</code> (which is just a combination of <code>Encodable &amp; Decodable</code>), put the following into a Playground.</p>
-<pre class="highlight plaintext"><code>import Foundation
-
-struct User: Codable {
-    enum Sex: String, Codable {
-        case male, female
+    lazy var url: URL? = {
+        URL(string: "https://my.awesome-app.com/user/\(self.user.name)")
     }
 
-    var name: String
-    var age: Int
-    var sex: Sex
+    /// Sign this request by putting some token in the "Authorization" header
+    /// This function comes from the `Authenticating` protocol
+    func sign(request: URLRequest) -&gt; URLRequest {
+        var req = request
+        req.setValue("Token I_AM_KING", forHTTPHeaderField: "Authorization")
+        return req
+    }
 }
 
-let user = User(name: "Ryan", age: 38, sex: .male)
-var encoder = JSONEncoder()
-encoder.outputFormatting = .prettyPrinted
-let data = try! encoder.encode(user)
-print(String(data: data, encoding: .utf8)!)
+let userForUpdate = User(name: "Ryan Baldwin", age: 39, sex: .male)
+_ = try? UpdateUserRequest(user: userForUpdate).submit() { result in 
+    if case let Result.success(updatedUser) = result {
+        print("\(user.name) is now a \(user.age) year old \(user.sex)")
+    }
+}
+</code></pre>
 
-let inflatedUser = try! JSONDecoder().decode(User.self, from: data)
+<p>The above POSTs the JSON encoded <code>userForUpdate</code> to the server as the following:</p>
+<pre class="highlight plaintext"><code>{ "user": {"name": "Ryan Baldwin",
+           "age": 39,
+           "sex": "male"}}
+</code></pre>
+
+<p>If you don&rsquo;t like that you can implement the <code>Swift.Encodable</code>&lsquo;s <code>encode</code> function, such as the following:</p>
+<pre class="highlight plaintext"><code>struct UpdateUserRequest: Encodable {
+    var user: User
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        container.encode(self.user)
+    }
+}
+</code></pre>
+
+<p>This will now yield the resulting JSON as the following:</p>
+<pre class="highlight plaintext"><code>{"name": "Ryan Baldwin",
+ "age": 39,
+ "sex": "male"}
 </code></pre>
 <h2 id='more-info' class='heading'>More Info</h2>
 
-<p>Over the coming weeks I&rsquo;ll be writing a full fledged Wiki on the various how-to&rsquo;s and such of Restivus. So stay tuned. In the meantime I encourage you to <a href="docs/index.html">go peruse the Docs</a> (likely best to clone the repo locally and view the files there, as GitHub is just going to show you the source).</p>
+<p>Examples, tutorials, whatevers will be posted at <a href="https://ryanbaldwin.github.io/Restivus">Restivus&rsquo; GH Pages site</a>. There, you can also <a href="https://ryanbaldwin.github.io/Restivus/docs">find the official library documentation</a>.</p>
+
+<p>If you&rsquo;re new to Swift 4 and it&rsquo;s <code>Codable</code> protocols, I suggest you take a look at the following articles:</p>
+
+<ul>
+<li><a href="https://medium.com/swiftly-swift/swift-4-decodable-beyond-the-basics-990cc48b7375">Swift 4 Decodable: Beyond The Basics</a></li>
+<li><a href="http://benscheirman.com/2017/06/ultimate-guide-to-json-parsing-with-swift-4/">Ultimate Guide to JSON Parsing With SWift 4</a></li>
+<li><a href="https://developer.apple.com/documentation/swift/encoding_decoding_and_serialization">Encoding, Decoding, and Serialization</a></li>
+</ul>
 
           </section>
         </section>
