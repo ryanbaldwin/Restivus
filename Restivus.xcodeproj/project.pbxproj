@@ -16,6 +16,7 @@
 		7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
 		7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
 		7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
+		7D89E65F1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */; };
 		7DAD01DE1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */; };
 		7DD6954C1F8016670034969A /* NotificationCenterPublishableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */; };
 		7DD789111F54FA3900446615 /* Authenticating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Authenticating.swift */; };
@@ -72,6 +73,7 @@
 		7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodSpec.swift; sourceTree = "<group>"; };
 		7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodConfiguration.swift; sourceTree = "<group>"; };
 		7D72FA171F4E715000A4B3F9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalResponseTypeSpec.swift; sourceTree = "<group>"; };
 		7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterPublishableSpec.swift; sourceTree = "<group>"; };
 		7DD789101F54FA3900446615 /* Authenticating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticating.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */,
 				7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */,
 				7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */,
+				7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */,
 			);
 			path = RestivusTests;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				C2548E161F545778003EDE96 /* AnyRestableSpec.swift in Sources */,
 				7DAD01DE1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift in Sources */,
 				C23F9A811F584395000CE9E6 /* RawDecodableSpec.swift in Sources */,
+				7D89E65F1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */,
 				C2380A841F50B753004C1B04 /* DeletableSpec.swift in Sources */,
 				7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */,
 				7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */,

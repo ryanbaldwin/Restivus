@@ -96,7 +96,7 @@ public protocol Restable {
     
     /// Defines the `JSONDecoder.DateDecodingStrategy` to use when decoding from JSON into the conforming instance.
     /// Defaults to `.deferredToDate`
-    static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy { get }
+    var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy { get }
     
     /// Defines the `JSONEncoder.DateEncodingStrategy` to use when JSON encoding a conforming instance.
     /// Defaults to `.deferredToDate`
@@ -148,7 +148,7 @@ public protocol Restable {
 extension Restable {
     /// Defines the `JSONDecoder.DateDecodingStrategy` to use when decoding from JSON into the conforming type.
     /// Defaults to `.deferredToDate`
-    public static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
+    public var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
         return .deferredToDate
     }
     

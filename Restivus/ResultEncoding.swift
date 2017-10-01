@@ -24,30 +24,11 @@ public enum ResultFormat {
     ///   - type: The instance to inflate from the decoded data
     /// - Returns: An inflated instance of T
     /// - Throws: Error if unable to deocde the data based on the current format.
-    public func decode<T: Decodable>(result: Data, `as` type: T.Type) throws -> T {
+    public func decode<T: Decodable>(result: Data, `as` type: T.Type,
+                                     dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate) throws -> T {
         switch self {
         case .json:
             return try JSONDecoder().decode(type, from: result)
-        case .raw:
-            return result as! T
-        }
-    }
-    
-    /// Decodes and the provided data into an instance of the provided type,
-    /// for the current format. If the current format is `.raw`, the raw
-    /// `Raw` (`Data`) will be returned.
-    ///
-    /// - Parameters:
-    ///   - result: The HTTPURLResponse data to decode
-    ///   - type: The instance to inflate from the decoded data
-    /// - Returns: An inflated instance of T
-    /// - Throws: Error if unable to deocde the data based on the current format.
-    public func decode<T: Decodable>(result: Data, `as` type: T.Type) throws -> T where T: Restable {
-        switch self {
-        case .json:
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = T.dateDecodingStrategy
-            return try decoder.decode(type, from: result)
         case .raw:
             return result as! T
         }

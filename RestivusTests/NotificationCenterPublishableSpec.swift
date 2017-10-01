@@ -26,7 +26,7 @@ private struct NonPublishingRestable: Gettable, NotificationCenterPublishable {
     }
 }
 
-private func makeURLResponse(_ statusCode: Int) -> HTTPURLResponse {
+func makeURLResponse(_ statusCode: Int) -> HTTPURLResponse {
     return HTTPURLResponse(url: URL(string: "https://some.com")!, statusCode: statusCode,
                            httpVersion: nil, headerFields: nil)!
 }

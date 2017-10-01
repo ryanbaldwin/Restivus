@@ -10,39 +10,73 @@ import Quick
 import Nimble
 @testable import Restivus
 
-class HTTPMethodConfiguration: QuickConfiguration {
+class NonEncodableHTTPMethodConfiguration: QuickConfiguration {
     override class func configure(_ configuration: Configuration) {
         sharedExamples("an HTTP request without data"){ (sharedExampleContext: @escaping SharedExampleContext) in
-            var restable: AnyRestable<Person>!
+            var restable: NonEncodableRestable!
             var method: HTTPMethod!
-            var request: URLRequest!
             
             beforeEach {
-                restable = sharedExampleContext()["restable"] as! AnyRestable<Person>
+                restable = NonEncodableRestable()
                 method = sharedExampleContext()["method"] as! HTTPMethod
-                request = try! method.makeURLRequest(for: restable)
             }
             
-            it("sets the correct HTTP method on the request") {
+            context("when URL is present") {
+                it("uses the URL instead of a baseURL and path") {
+                    let url = URL(string: "https://google.ca")!
+                    restable.url = url
+                    restable.baseURL = "http://foo.com"
+                    restable.path = "/path"
+                    
+                    let request = try! method.makeURLRequest(for: restable)
+                    expect(request.url?.absoluteString) == url.absoluteString
+                    expect(request.httpMethod) == method.rawValue
+                }
+            }
+            
+            context("when no URL is present") {
+                it("uses the baseURL and path") {
+                    restable.baseURL = "http://httpstat.us"
+                    restable.path = "/200"
+                    let request = try! method.makeURLRequest(for: restable)
+                    expect(request.url?.absoluteString) == restable.fullPath
+                }
+                
+                it("raises an error when an incorrect URL is present") {
+                    restable.baseURL = "as^^f://"
+                    restable.path = "200"
+                    expect { try method.makeURLRequest(for: restable) }.to(throwError())
+                }
+            }
+            
+            it("does not include anything in the http body") {
+                let url = URL(string: "http://foo.com")!
+                restable.url = url
+                let request = try! method.makeURLRequest(for: restable)
+                expect(request.httpBody).to(beNil())
+            }
+        }
+    }
+}
+
+class EncodableHTTPMethodConfiguration: QuickConfiguration {
+    override class func configure(_ configuration: Configuration) {
+        sharedExamples("an HTTP request with data") { (sharedExampleContext: @escaping SharedExampleContext) in
+            var restable: EncodableRestable!
+            var method: HTTPMethod!
+            
+            beforeEach {
+                restable = EncodableRestable()
+                restable.url = URL(string: "https://www.google.ca")
+                method = sharedExampleContext()["method"] as! HTTPMethod
+            }
+            
+            it("submits data if provided") {
+                let request = try! method.makeURLRequest(for: restable)
+                expect(request.url?.absoluteString) == restable.url!.absoluteString
                 expect(request.httpMethod) == method.rawValue
+                expect(request.httpBody).toNot(beNil())
             }
-            
-//            it("creates the URL correctly") {
-//                expect(request.url) == URL(string: url)
-//            }
-//
-//            it("raises an error when an incorrect URL is present") {
-//                expect { try method.makeURLRequest(url: invalidUrl) }.to(throwError())
-//            }
-//
-//            it("submits data if provided") {
-//                let person = Person(firstName: "Ryan", lastName: "Baldwin", age: 38)
-//                let req = try! method.makeURLRequest(url: url, body: person)
-//
-//                expect(req.httpBody).toNot(beNil())
-//                let decoded = try! JSONDecoder().decode(Person.self, from: req.httpBody!)
-//                expect(decoded) == person
-//            }
         }
     }
 }
