@@ -12,5 +12,6 @@ cache:
     - Carthage
 
 before_install:
-  - brew upgrade carthage
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
   - carthage bootstrap --platform iOS --cache-builds
