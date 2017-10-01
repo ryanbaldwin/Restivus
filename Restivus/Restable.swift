@@ -35,11 +35,11 @@ public protocol NotificationCenterPublishable {
 public typealias Raw = Data
 
 /// Represents the result of an asynchronous operation.
-///
-/// - success: The operation was a success, and contains the `Success` output from that operation.
-/// - failure: The operation failed, and contains the `Error` from that operation.
 public enum Result<Success> {
+    /// The operation was a success, and contains the `Success` output from that operation.
     case success(Success)
+    
+    /// The operation failed, and contains the `Error` from that operation.
     case failure(HTTPError)
 }
 
@@ -73,6 +73,7 @@ public enum Result<Success> {
 ///     }
 /// ---
 public struct OptionalResponseType<T>: Decodable where T: Decodable {
+    /// Gets the optional inflated instance of T that may or may not have been returned in an HTTPURLResponse
     public private(set) var instance: T? = nil
     
     public init(from decoder: Decoder) throws {
@@ -293,6 +294,11 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
     private var _request: () throws -> URLRequest
     private var _submit: (Bool, URLSession, ((Result<ExpectedResponseType>) -> Void)?) throws -> URLSessionDataTask
     
+    /// Wraps the provided `restable` into a type-erased enclosure,
+    /// allowing it to be passed around to other functions, used as a stored property, etc.
+    ///
+    /// - Parameters:
+    ///     - restable: The restable to be type-erased.
     public init<R: Restable>(_ restable: R) where R.ResponseType == ExpectedResponseType {
         baseURL = restable.baseURL
         path = restable.path

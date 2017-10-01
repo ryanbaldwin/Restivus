@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Designates the conforming type as a POST HTTP Request.
 public protocol Postable: Restable {}
 
 extension Postable {

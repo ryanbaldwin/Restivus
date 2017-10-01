@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Designates the conforming type as a DELETE HTTP Request.
 public protocol Deletable: Restable {}
 
 extension Deletable {

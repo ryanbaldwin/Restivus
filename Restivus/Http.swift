@@ -71,10 +71,19 @@ enum HTTPMethodError: Error {
 
 /// An enumeration of the supported methods
 public enum HTTPMethod: String {
+    /// Will generate POST requests for a given Restable
     case post = "POST"
+    
+    /// Will generate GET requests for a given Restable
     case get = "GET"
+    
+    /// Will gneerate a PUT request for a given Restable
     case put = "PUT"
+    
+    /// Will generate a PATCH request for a given Restable
     case patch = "PATCH"
+    
+    /// Will generate a DELETE request for a given restable
     case delete = "DELETE"
     
     /// Makes a URLRequest for a given `Restable`

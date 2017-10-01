@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Designates the conforming type as a PATCH HTTP Request.
 public protocol Patchable: Restable {}
 
 extension Patchable {

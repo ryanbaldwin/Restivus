@@ -9,11 +9,11 @@
 import Foundation
 
 /// Defines the format of the URL response body
-///
-/// - json: The body of the response will be JSON encoded
-/// - raw: The body of the response will be raw data
 public enum ResultFormat {
-    case json, raw
+    /// The body of the response will be JSON decoded
+    case json,
+    /// The body of the response will be treated as RAW data and will not be decoded
+    raw
     
     /// Decodes and the provided data into an instance of the provided type,
     /// for the current format. If the current format is `.raw`, the raw

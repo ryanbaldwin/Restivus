@@ -9,6 +9,7 @@
 import Foundation
 
 extension HTTPURLResponse {
+    /// A textual representation of this instance, suitable for debugging.
     open override var debugDescription: String {
         var fields: [String] = ["\nResponse:", "==============="]
         fields.append("Response Code: \(self.statusCode)")

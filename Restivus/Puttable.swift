@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Designates the conforming type as a PUT HTTP Request.
 public protocol Puttable: Restable {}
 
 extension Puttable {

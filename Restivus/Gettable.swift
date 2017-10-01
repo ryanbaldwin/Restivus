@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Designates the conforming type as a GET HTTP Request.
 public protocol Gettable: Restable {}
 
 extension Gettable {
