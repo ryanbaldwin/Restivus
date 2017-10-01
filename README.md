@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ryanbaldwin/Restivus.svg?branch=master)](https://travis-ci.org/ryanbaldwin/Restivus)
 # Restivus
 > _Finally!_ A Festivus for the _Restivus_!
 

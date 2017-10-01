@@ -3,7 +3,6 @@ language: swift
 os: osx
 osx_image: xcode9
 
-xcode_project: Restivus.xcodeproj
 xcode_scheme: Restivus-iOS
 xcode_sdk: iphonesimulator9.3
 
