@@ -130,7 +130,7 @@
             <p>A wrapper which will contain the decoded <code>T</code> instance, if one was successfully decoded; otherwise <code>nil</code>.
 <code>OptionalResponseType</code> is useful for when you have a request which may or may not return the expected
 JSON structure. For example, fetching a mythical <code>UserDetails</code> JSON for a user who does not exist,
-but for reason - unbeknownst to us - the server will return no JSON instead of a 404.</p>
+but for reason - unbeknownst to us - the server return no JSON instead of a 404.</p>
 <h2 id='example' class='heading'>Example:</h2>
 <pre class="highlight plaintext"><code>struct UserDetails {
     var mothersMaidenName: String
@@ -148,7 +148,7 @@ extension UserDetailsRequest: Authenticating, Gettable {
 
 UserDetailsRequest(userId: 42).submit() { result in
     if case let Result.success(optionalUserDetails) = result {
-        let userDetails = optionalUserDetails.response
+        let userDetails = optionalUserDetails.instance
 
     }
 }
@@ -173,7 +173,7 @@ UserDetailsRequest(userId: 42).submit() { result in
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the optional inflated instance of T that may or may not have been returned in an HTTPURLResponse</p>
+                        <p>Gets the optional inflated instance of <code>T</code> that may or may not have been returned in an <code>HTTPURLResponse</code></p>
 
                       </div>
                       <div class="declaration">
