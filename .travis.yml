@@ -1,10 +1,10 @@
-language: objective-c
+language: swift
 
 os: osx
 osx_image: xcode9
+
 xcode_project: Restivus.xcodeproj
 xcode_scheme: RestivusTests
-xcode_sdk: iphoneos11.0
 
 cache:
   directories:
