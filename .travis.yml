@@ -1,4 +1,4 @@
-language: swift
+language: objective-c
 
 os: osx
 osx_image: xcode9
@@ -12,4 +12,4 @@ cache:
 
 before_install:
   - brew outdated carthage || brew upgrade carthage
-  - carthage bootstrap --platform iOS --cache-builds
+  - carthage bootstrap --platform iOS --cache-builds --no-build
