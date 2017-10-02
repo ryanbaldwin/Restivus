@@ -1,10 +1,10 @@
-language: generic
+language: objective-c
 
 os: osx
 osx_image: xcode9
 
 xcode_project: Restivus.xcodeproj
-xcode_scheme: RestivusTests
+xcode_scheme: Restivus-iOS
 
 cache:
   directories:
@@ -12,13 +12,13 @@ cache:
 
 before_install:
   - brew outdated carthage || brew upgrade carthage
-  - carthage bootstrap --platform iOS --cache-builds --no-build
+  - carthage bootstrap --platform iOS --cache-builds
 
 script:
-  - swift build
-  - swift test
+  - set -o pipefail
+  - xcodebuild -project Restivus.xcodeproj -scheme Restivus-iOS -sdk iphonesimulator11.0 ONLY_ACTIVE_ARCH=NO | xcpretty -c
 
 notification:
   email:
-    - on_success: never
+    - on_success: change
     - on_failure: change
