@@ -1,3 +1,5 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59d2cc3ff4e144000158b811&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/59d2cc3ff4e144000158b811/build/latest?branch=master)
 # Restivus
 > _Finally!_ A Festivus for the _Restivus_!
 
