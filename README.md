@@ -15,6 +15,11 @@ I do not currently support CocoaPods because, frankly, I hate it. If there's eno
 1. In your cartfile simply add the following
 
         github "ryanbaldwin/Restivus" == 0.1
+ 
+   or, if you're running Xcode 9.0.1
+
+        github "ryanbaldwin/Restivus" == 0.1.1
+        
 2. Run a `carthage update`
 3. Add the framework to your project, as defined [here](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 
