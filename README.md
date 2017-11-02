@@ -73,6 +73,7 @@ struct LoginRequest: Encodable {
 }
 
 extension LoginRequest: Postable {
+    typealias ResponseType = User
     let url = URL(string: "https://my.awesome-app.com/login")
 }
 
