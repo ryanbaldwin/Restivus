@@ -16,7 +16,7 @@ I do not currently support CocoaPods because, frankly, I hate it. If there's eno
 
         github "ryanbaldwin/Restivus" == 0.1
  
-   or, if you're running Xcode 9.0.1
+   or, if you're running Xcode 9.1
 
         github "ryanbaldwin/Restivus" == 0.1.1
         
