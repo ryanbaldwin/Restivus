@@ -1,3 +1,5 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59d2cc3ff4e144000158b811&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/59d2cc3ff4e144000158b811/build/latest?branch=master)
 # Restivus
 > _Finally!_ A Festivus for the _Restivus_!
 
@@ -13,6 +15,11 @@ I do not currently support CocoaPods because, frankly, I hate it. If there's eno
 1. In your cartfile simply add the following
 
         github "ryanbaldwin/Restivus" == 0.1
+ 
+   or, if you're running Xcode 9.1
+
+        github "ryanbaldwin/Restivus" == 0.1.1
+        
 2. Run a `carthage update`
 3. Add the framework to your project, as defined [here](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 
