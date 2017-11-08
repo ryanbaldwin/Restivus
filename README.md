@@ -38,6 +38,7 @@ Get the contents of the Google homepage as raw data:
 ```Swift
 struct GoogleHomepageRequest: Gettable {
     typealias ResponseType = Raw
+    var resultFormat: ResultFormat = .raw
     var url = URL(string: "https://www.google.com")
 }
 
