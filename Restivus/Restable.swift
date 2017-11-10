@@ -60,7 +60,7 @@ public enum Result<Success> {
 ///         var userId: Int
 ///     }
 ///
-///     extension UserDetailsRequest: Authenticating, Gettable {
+///     extension UserDetailsRequest: Interceptable, Gettable {
 ///         typealias ResponseType = OptionalResponseType<UserDetails>
 ///         var path: String = "/some/api/path"
 ///     }
@@ -137,8 +137,7 @@ public protocol Restable {
     ///   - completion: The handler to be called upon completion or failure.
     /// - Returns: The URLSessionDataTask
     /// - Throws: If a URLSessionDataTask failed to create
-    @discardableResult func submit(callbackOnMain: Bool, session: URLSession,
-                                   completion: RestableCompletionHandler<ResponseType>?) throws -> URLSessionDataTask
+    @discardableResult func submit(callbackOnMain: Bool, session: URLSession, completion: RestableCompletionHandler<ResponseType>?) throws -> URLSessionDataTask
 }
 
 extension Restable {
