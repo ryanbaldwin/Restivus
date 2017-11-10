@@ -199,7 +199,7 @@ extension Restable {
     @discardableResult public func submit(callbackOnMain: Bool = true,
                                           session: URLSession = URLSession.shared,
                                           completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
-        var request = try ((self as? Authenticating)?.sign(request: self.request()) ?? self.request())
+        var request = try ((self as? Interceptable)?.intercept(request: self.request()) ?? self.request())
         request = resultFormat.headers(for: request)
         print(request.debugDescription)
         

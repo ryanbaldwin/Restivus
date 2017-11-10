@@ -89,15 +89,15 @@ struct UpdateUserRequest: Encodable {
     var user: User
 }
 
-extension UpdateUserRequest: Authenticating, Postable {
+extension UpdateUserRequest: Interceptable, Postable {
     typealias ResponseType = User
     lazy var url: URL? = {
         URL(string: "https://my.awesome-app.com/user/\(self.user.name)")
     }
 
     /// Sign this request by putting some token in the "Authorization" header
-    /// This function comes from the `Authenticating` protocol
-    func sign(request: URLRequest) -> URLRequest {
+    /// This function comes from the `Interceptable` protocol
+    func intercept(request: URLRequest) -> URLRequest {
         var req = request
         req.setValue("Token I_AM_KING", forHTTPHeaderField: "Authorization")
         return req
