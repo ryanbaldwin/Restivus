@@ -19,7 +19,7 @@
 		7D89E65F1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */; };
 		7DAD01DE1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */; };
 		7DD6954C1F8016670034969A /* NotificationCenterPublishableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */; };
-		7DD789111F54FA3900446615 /* Authenticating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Authenticating.swift */; };
+		7DD789111F54FA3900446615 /* Interceptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Interceptable.swift */; };
 		7DDB694F1F4B6FA1001CC66D /* Restivus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDB69451F4B6FA1001CC66D /* Restivus.framework */; };
 		7DDB69561F4B6FA1001CC66D /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DDB69611F4B7052001CC66D /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69601F4B7052001CC66D /* Http.swift */; };
@@ -76,7 +76,7 @@
 		7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalResponseTypeSpec.swift; sourceTree = "<group>"; };
 		7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterPublishableSpec.swift; sourceTree = "<group>"; };
-		7DD789101F54FA3900446615 /* Authenticating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticating.swift; sourceTree = "<group>"; };
+		7DD789101F54FA3900446615 /* Interceptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptable.swift; sourceTree = "<group>"; };
 		7DDB69451F4B6FA1001CC66D /* Restivus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Restivus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDB69481F4B6FA1001CC66D /* Restivous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restivous.h; sourceTree = "<group>"; };
 		7DDB69491F4B6FA1001CC66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7DDB696F1F4B79AE001CC66D /* http */,
-				7DD789101F54FA3900446615 /* Authenticating.swift */,
+				7DD789101F54FA3900446615 /* Interceptable.swift */,
 				7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */,
 				7DDB69491F4B6FA1001CC66D /* Info.plist */,
 				7DDB69631F4B705D001CC66D /* Restable.swift */,
@@ -345,7 +345,7 @@
 				7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */,
 				7DDB696E1F4B7861001CC66D /* Puttable.swift in Sources */,
 				7DDB69611F4B7052001CC66D /* Http.swift in Sources */,
-				7DD789111F54FA3900446615 /* Authenticating.swift in Sources */,
+				7DD789111F54FA3900446615 /* Interceptable.swift in Sources */,
 				7DDB696C1F4B76F1001CC66D /* Postable.swift in Sources */,
 				7DDB69661F4B705D001CC66D /* Gettable.swift in Sources */,
 				7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */,

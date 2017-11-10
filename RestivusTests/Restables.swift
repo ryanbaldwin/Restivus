@@ -21,8 +21,8 @@ extension Restable {
     }
 }
 
-extension Authenticating {
-    func sign(request: URLRequest) -> URLRequest {
+extension Interceptable {
+    func intercept(request: URLRequest) -> URLRequest {
         var req = request
         req.setValue("SIGNED", forHTTPHeaderField: "Is Signed")
         return req
@@ -40,7 +40,7 @@ struct OtherErrorRestable: Restable {
 
 // MARK: DeletePerson requests
 
-struct DeletePersonRequest: Authenticating, Deletable {
+struct DeletePersonRequest: Interceptable, Deletable {
     typealias ResponseType = Person
     var path = "/"
 }
@@ -55,7 +55,7 @@ extension EncodableDeletePersonRequest: Deletable {
 
 // MARK: Get Person Requests
 
-struct GetPersonRequest: Authenticating, Gettable {
+struct GetPersonRequest: Interceptable, Gettable {
     typealias ResponseType = Person
     var path = "/"
 }
@@ -69,7 +69,7 @@ extension EncodableGetPersonRequest: Gettable {
 }
 
 // MARK: Path Person Requests
-struct PatchPersonRequest: Authenticating, Patchable {
+struct PatchPersonRequest: Interceptable, Patchable {
     typealias ResponseType = Person
     var path = "/"
 }
@@ -84,7 +84,7 @@ extension EncodablePatchPersonRequest: Patchable {
 
 // MARK: Post Person Requests
 
-struct PostPersonRequest: Authenticating, Postable {
+struct PostPersonRequest: Interceptable, Postable {
     typealias ResponseType = Person
     let path = "/"
 }
@@ -99,7 +99,7 @@ extension EncodablePostPersonRequest: Postable {
 
 // MARK: Put Person Requests
 
-struct PutPersonRequest: Authenticating, Puttable {
+struct PutPersonRequest: Interceptable, Puttable {
     typealias ResponseType = Person
     var path = "/"
 }
