@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NotificationCenterPublishable Protocol Reference</title>
+    <title>Interceptable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/NotificationCenterPublishable" class="dashAnchor"></a>
-    <a title="NotificationCenterPublishable Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/Interceptable" class="dashAnchor"></a>
+    <a title="Interceptable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Restivus Reference</a>
         <img id="carat" src="../img/carat.png" />
-        NotificationCenterPublishable Protocol Reference
+        Interceptable Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -120,16 +120,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>NotificationCenterPublishable</h1>
+            <h1>Interceptable</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NotificationCenterPublishable</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Interceptable</span></code></pre>
 
                 </div>
               </div>
-            <p>When applied to a conforming <code><a href="../Protocols/Restable.html">Restable</a></code>, and the response from the server
-results in any Non-2xx HTTP Response, Restivus will publish a Notification Center
-notification, containing the original request and response.</p>
+            <p>Provides pre-submission hook which allows a Restable to mutate the HTTPURLRequest.
+For example, adding a token in a header.</p>
 
           </section>
           <section class="section task-group-section">
@@ -138,9 +137,9 @@ notification, containing the original request and response.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus29NotificationCenterPublishableP13shouldPublishSbSo15HTTPURLResponseCF"></a>
-                    <a name="//apple_ref/swift/Method/shouldPublish(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus29NotificationCenterPublishableP13shouldPublishSbSo15HTTPURLResponseCF">shouldPublish(_:)</a>
+                    <a name="/s:8Restivus13InterceptableP9intercept10Foundation10URLRequestVAG7request_tF"></a>
+                    <a name="//apple_ref/swift/Method/intercept(request:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus13InterceptableP9intercept10Foundation10URLRequestVAG7request_tF">intercept(request:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -148,22 +147,39 @@ notification, containing the original request and response.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Determines if Restivus should publish a <code>RestivusReceivedNon200</code> notification
-for this instance.</p>
+                        <p>Intercepts a URLRequest and allows the handler to mutate it to its heart content</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">shouldPublish</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">intercept</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
 
                         </div>
                       </div>
                       <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The intercepted URLRequest</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
                         <h4>Return Value</h4>
-                        <p>Return <code>true</code> if Restivus should publish a <code>RestivusReceivedNon200</code> notification;
-       otherwise <code>false</code>.</p>
+                        <p>A (possibly) mutated version of the provided <code>request</code></p>
                       </div>
                     </section>
                   </div>
