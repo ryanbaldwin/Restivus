@@ -14,11 +14,7 @@ I do not currently support CocoaPods because, frankly, I hate it. If there's eno
 ## Carthage
 1. In your cartfile simply add the following
 
-        github "ryanbaldwin/Restivus" == 0.1
- 
-   or, if you're running Xcode 9.1
-
-        github "ryanbaldwin/Restivus" == 0.1.1
+        github "ryanbaldwin/Restivus" == 0.2
         
 2. Run a `carthage update`
 3. Add the framework to your project, as defined [here](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
@@ -74,7 +70,6 @@ struct LoginRequest: Encodable {
 }
 
 extension LoginRequest: Postable {
-    typealias ResponseType = User
     let url = URL(string: "https://my.awesome-app.com/login")
 }
 
@@ -90,15 +85,15 @@ struct UpdateUserRequest: Encodable {
     var user: User
 }
 
-extension UpdateUserRequest: Authenticating, Postable {
+extension UpdateUserRequest: Interceptable, Postable {
     typealias ResponseType = User
     lazy var url: URL? = {
         URL(string: "https://my.awesome-app.com/user/\(self.user.name)")
     }
 
     /// Sign this request by putting some token in the "Authorization" header
-    /// This function comes from the `Authenticating` protocol
-    func sign(request: URLRequest) -> URLRequest {
+    /// This function comes from the `Interceptable` protocol
+    func intercept(request: URLRequest) -> URLRequest {
         var req = request
         req.setValue("Token I_AM_KING", forHTTPHeaderField: "Authorization")
         return req
