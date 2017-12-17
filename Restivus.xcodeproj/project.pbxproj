@@ -11,6 +11,7 @@
 		7D0083661F4E5FCF00729F22 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; };
 		7D0083671F4E5FD200729F22 /* Nimble.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D0083681F4E5FD200729F22 /* Quick.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D2849991FE61249005A9BA1 /* InterceptableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */; };
 		7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */; };
 		7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */; };
 		7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptableSpec.swift; sourceTree = "<group>"; };
 		7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpErrorSpec.swift; sourceTree = "<group>"; };
 		7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restables.swift; sourceTree = "<group>"; };
 		7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodSpec.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */,
 				7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */,
 				7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */,
+				7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */,
 			);
 			path = RestivusTests;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			files = (
 				7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */,
 				C2548E101F5454CE003EDE96 /* PatchableSpec.swift in Sources */,
+				7D2849991FE61249005A9BA1 /* InterceptableSpec.swift in Sources */,
 				7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */,
 				7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */,
 				C2548E161F545778003EDE96 /* AnyRestableSpec.swift in Sources */,

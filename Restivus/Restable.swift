@@ -198,8 +198,11 @@ extension Restable {
     @discardableResult public func submit(callbackOnMain: Bool = true,
                                           session: URLSession = URLSession.shared,
                                           completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
-        var request = try ((self as? Interceptable)?.intercept(request: self.request()) ?? self.request())
-        request = resultFormat.headers(for: request)
+        var request = resultFormat.headers(for: try self.request())
+        if let interceptable = self as? Interceptable {
+            request = interceptable.intercept(request: request)
+        }
+        
         print(request.debugDescription)
         
         let task = session.dataTask(with: request) {

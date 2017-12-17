@@ -112,3 +112,17 @@ extension EncodablePutPersonRequest: Puttable {
     var path: String { return "/" }
 }
 
+/// Issue #5 reports that Accept header can't be set on an Interceptable request.
+/// This was a result of the actual interception occuring too soon in the submissions process.
+/// This is a test request to ensure this is no longer the case.
+struct InterceptableRequest: Interceptable, Gettable {
+    typealias ResponseType = Raw
+    var resultFormat: ResultFormat = .raw
+    var path: String { return "/" }
+    
+    func intercept(request: URLRequest) -> URLRequest {
+        var req = request
+        req.setValue("ANYTHING-YOU-WANT", forHTTPHeaderField: "Accept")
+        return req
+    }
+}
