@@ -261,7 +261,7 @@ extension Restable {
                                                              userInfo: ["response": httpResponse]))
             }
             
-            completion?(Result.failure(HTTPError.unsuccessfulResponse(httpResponse)))
+            completion?(Result.failure(HTTPError.unsuccessfulResponse(httpResponse, data)))
             return
         }
         

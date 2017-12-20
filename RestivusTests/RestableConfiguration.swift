@@ -60,11 +60,12 @@ class RestableConfiguration: QuickConfiguration {
                     var error: HTTPError?
                     let response = HTTPURLResponse(url: URL(string: "google.ca")!, statusCode: 403, httpVersion: nil,
                                                    headerFields: nil)!
-                    restable.dataTaskCompletionHandler(data: Data(), response: response, error: nil) {
+                    let data = Data()
+                    restable.dataTaskCompletionHandler(data: data, response: response, error: nil) {
                         if case let Result.failure(err) = $0 { error = err }
                     }
-                    
-                    expect(error).toEventually(equal(HTTPError.unsuccessfulResponse(response)))
+
+                    expect(error).toEventually(equal(HTTPError.unsuccessfulResponse(response, data)))
                 }
             }
             

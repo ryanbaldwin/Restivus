@@ -17,7 +17,7 @@ public enum HTTPError: Error {
     unexpectedResponse(URLResponse),
 
     ///The HTTPURLResponse has a status code other than 2xx
-    unsuccessfulResponse(HTTPURLResponse),
+    unsuccessfulResponse(HTTPURLResponse, Data?),
 
     /// The returned data cannot be deserialized into the expected type
     unableToDeserializeJSON(error: Error, data: Data?),
@@ -46,8 +46,8 @@ extension HTTPError: Equatable {
         case (let .unexpectedResponse(response1), let .unexpectedResponse(response2)):
             return response1.isEqual(response2)
             
-        case (let .unsuccessfulResponse(response1), let .unsuccessfulResponse(response2)):
-            return response1.statusCode == response2.statusCode
+        case (let .unsuccessfulResponse(response1, data1), let .unsuccessfulResponse(response2, data2)):
+            return response1.statusCode == response2.statusCode && data1 == data2
             
         case(.unableToDeserializeJSON, .unableToDeserializeJSON):
             return true // nearly impossible to equate these 2 things accurately

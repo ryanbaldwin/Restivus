@@ -30,8 +30,10 @@ class HttpErrorSpec: QuickSpec {
                     let url = URL(string: "http://google.ca")
                     let response1 = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
                     let response2 = HTTPURLResponse(url: url!, statusCode: 204, httpVersion: nil, headerFields: nil)!
-                    expect(HTTPError.unsuccessfulResponse(response1)).toNot(equal(HTTPError.unsuccessfulResponse(response2)))
-                    expect(HTTPError.unsuccessfulResponse(response1)).to(equal(HTTPError.unsuccessfulResponse(response1)))
+                    let data1 = "{\"message\": \"data1\"}".data(using: .utf8)
+                    let data2 = "{\"message\": \"data2\"}".data(using: .utf8)
+                    expect(HTTPError.unsuccessfulResponse(response1, data1)).toNot(equal(HTTPError.unsuccessfulResponse(response2, data2)))
+                    expect(HTTPError.unsuccessfulResponse(response1, data1)).to(equal(HTTPError.unsuccessfulResponse(response1, data1)))
                 }
                 
                 it("does not consider internals when comparing unableTodeserializeJSON") {
