@@ -241,7 +241,7 @@ extension Restable {
     func dataTaskCompletionHandler(data: Data?, response: URLResponse?, error: Error?,
                                    completion: RestableCompletionHandler<ResponseType>?) {
         guard error == nil else {
-            completion?(Result.failure(.other(error!)))
+            completion?(Result.failure(.other(error!, data)))
             return
         }
         
@@ -251,7 +251,7 @@ extension Restable {
         }
         
         guard let httpResponse = response as? HTTPURLResponse else {
-            completion?(Result.failure(.unexpectedResponse(response)))
+            completion?(Result.failure(.unexpectedResponse(response, data)))
             return
         }
         

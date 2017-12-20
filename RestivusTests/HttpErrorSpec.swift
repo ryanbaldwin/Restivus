@@ -15,15 +15,17 @@ class HttpErrorSpec: QuickSpec {
         describe("An HttpError") {
             describe("its equality") {
                 it("is not equal if not the same errors") {
-                    expect(HTTPError.other(HTTPError.noResponse)).toNot(equal(HTTPError.noResponse))
+                    expect(HTTPError.other(HTTPError.noResponse, Data())).toNot(equal(HTTPError.noResponse))
                     expect(HTTPError.noResponse) == HTTPError.noResponse
                 }
                 
                 it("considers URLResponse when comparing unexpectedResponse") {
                     let response1 = URLResponse()
                     let response2 = URLResponse()
-                    expect(HTTPError.unexpectedResponse(response1)).toNot(equal(HTTPError.unexpectedResponse(response2)))
-                    expect(HTTPError.unexpectedResponse(response1)).to(equal(HTTPError.unexpectedResponse(response1)))
+                    let data1 = "{\"message\": \"data1\"}".data(using: .utf8)
+                    let data2 = "{\"message\": \"data2\"}".data(using: .utf8)
+                    expect(HTTPError.unexpectedResponse(response1, data1)).toNot(equal(HTTPError.unexpectedResponse(response2, data2)))
+                    expect(HTTPError.unexpectedResponse(response1, data1)).to(equal(HTTPError.unexpectedResponse(response1, data1)))
                 }
                 
                 it("considers HTTPURLResponses when comparing unsuccessfulResponses") {
@@ -37,14 +39,15 @@ class HttpErrorSpec: QuickSpec {
                 }
                 
                 it("does not consider internals when comparing unableTodeserializeJSON") {
-                    let unable1 = HTTPError.unableToDeserializeJSON(error: HTTPError.other(HTTPError.noResponse), data: nil)
+                    let unable1 = HTTPError.unableToDeserializeJSON(error: HTTPError.other(HTTPError.noResponse, nil), data: nil)
                     let unable2 = HTTPError.unableToDeserializeJSON(error: HTTPError.noResponse, data: Data())
                     expect(unable1) == unable2
                 }
                 
-                it("does not consider internals when comparing others") {
-                    let other1 = HTTPError.other(HTTPError.other(HTTPError.noResponse))
-                    let other2 = HTTPError.other(HTTPError.noResponse)
+                it("does not consider internal errors when comparing others") {
+                    let data = Data()
+                    let other1 = HTTPError.other(HTTPError.other(HTTPError.noResponse, nil), data)
+                    let other2 = HTTPError.other(HTTPError.noResponse, data)
                     expect(other1) == other2
                 }
             }
