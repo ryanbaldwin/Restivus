@@ -14,16 +14,16 @@ public enum HTTPError: Error {
     case noResponse,
 
     /// The URLResponse is not of the expected type
-    unexpectedResponse(URLResponse),
+    unexpectedResponse(URLResponse, Data?),
 
     ///The HTTPURLResponse has a status code other than 2xx
-    unsuccessfulResponse(HTTPURLResponse),
+    unsuccessfulResponse(HTTPURLResponse, Data?),
 
     /// The returned data cannot be deserialized into the expected type
     unableToDeserializeJSON(error: Error, data: Data?),
 
     /// Some other non-HttpError is raised.
-    other(Error)
+    other(Error, Data?)
 }
 
 /// Determines if 2 HttpErrors are _roughly_ equal.
@@ -43,17 +43,17 @@ extension HTTPError: Equatable {
         switch (lhs, rhs) {
         case (.noResponse, .noResponse): return true
             
-        case (let .unexpectedResponse(response1), let .unexpectedResponse(response2)):
-            return response1.isEqual(response2)
+        case (let .unexpectedResponse(response1, data1), let .unexpectedResponse(response2, data2)):
+            return response1.isEqual(response2) && data1 == data2
             
-        case (let .unsuccessfulResponse(response1), let .unsuccessfulResponse(response2)):
-            return response1.statusCode == response2.statusCode
+        case (let .unsuccessfulResponse(response1, data1), let .unsuccessfulResponse(response2, data2)):
+            return response1.statusCode == response2.statusCode && data1 == data2
             
         case(.unableToDeserializeJSON, .unableToDeserializeJSON):
             return true // nearly impossible to equate these 2 things accurately
             
-        case (.other, .other):
-            return true // cannot accurately compare the underlying Error types as Error is a protocol
+        case (let .other(_, data1), let .other(_, data2)):
+            return data1 == data2 // cannot accurately compare the underlying Error types as Error is a protocol
             
         default: return false
         }

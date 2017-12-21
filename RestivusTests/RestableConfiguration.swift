@@ -30,11 +30,12 @@ class RestableConfiguration: QuickConfiguration {
             context("it fails") {
                 it("completes with an HTTPError.other if an error occured.") {
                     var error: HTTPError?
-                    restable.dataTaskCompletionHandler(data: nil, response: HTTPURLResponse(),
+                    let data = Data()
+                    restable.dataTaskCompletionHandler(data: data, response: HTTPURLResponse(),
                                                        error: HTTPError.noResponse) {
                         if case let Result.failure(err) = $0 { error = err }
                     }
-                    expect(error).toEventually(equal(HTTPError.other(HTTPError.noResponse)))
+                    expect(error).toEventually(equal(HTTPError.other(HTTPError.noResponse, data)))
                 }
                 
                 it("completes with HTTPError.noResponse when the server does not respond.") {
@@ -49,22 +50,24 @@ class RestableConfiguration: QuickConfiguration {
                 it("completes with HTTPError.unexpectedResponse when the URLResponse is not an HTTPURLResponse") {
                     var error: HTTPError?
                     let response = URLResponse()
-                    restable.dataTaskCompletionHandler(data: Data(), response: response, error: nil) {
+                    let data = Data()
+                    restable.dataTaskCompletionHandler(data: data, response: response, error: nil) {
                         if case let Result.failure(err) = $0 { error = err }
                     }
                     
-                    expect(error).toEventually(equal(HTTPError.unexpectedResponse(response)))
+                    expect(error).toEventually(equal(HTTPError.unexpectedResponse(response, data)))
                 }
                 
                 it("completes with HTTPError.unsuccessfulResponse when the response code is not a 2xx") {
                     var error: HTTPError?
                     let response = HTTPURLResponse(url: URL(string: "google.ca")!, statusCode: 403, httpVersion: nil,
                                                    headerFields: nil)!
-                    restable.dataTaskCompletionHandler(data: Data(), response: response, error: nil) {
+                    let data = Data()
+                    restable.dataTaskCompletionHandler(data: data, response: response, error: nil) {
                         if case let Result.failure(err) = $0 { error = err }
                     }
-                    
-                    expect(error).toEventually(equal(HTTPError.unsuccessfulResponse(response)))
+
+                    expect(error).toEventually(equal(HTTPError.unsuccessfulResponse(response, data)))
                 }
             }
             
