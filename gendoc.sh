@@ -1,5 +1,6 @@
 #! /bin/bash
-jazzy --source-directory ../src/ \
+jazzy \
+	--source-directory ../src/ \
 	--readme README.md \
 	-a 'Ryan Baldwin' \
 	-u 'https://www.github.com/ryanbaldwin' \
