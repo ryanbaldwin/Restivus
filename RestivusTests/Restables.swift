@@ -117,7 +117,6 @@ extension EncodablePutPersonRequest: Puttable {
 /// This is a test request to ensure this is no longer the case.
 struct InterceptableRequest: Interceptable, Gettable {
     typealias ResponseType = Raw
-    var resultFormat: ResultFormat = .raw
     var path: String { return "/" }
     
     func intercept(request: URLRequest) -> URLRequest {
@@ -125,4 +124,31 @@ struct InterceptableRequest: Interceptable, Gettable {
         req.setValue("ANYTHING-YOU-WANT", forHTTPHeaderField: "Accept")
         return req
     }
+}
+
+
+
+// PreEncoded Restables
+extension PreEncoded where Self: Restable {
+    var data: Data { return try! JSONEncoder().encode(Person(firstName: "Ryan", lastName: "Baldwin", age: 39))}
+}
+
+struct PreEncodedGettable: PreEncoded, Gettable {
+    typealias ResponseType = Raw
+}
+
+struct PreEncodedPostable: PreEncoded, Postable {
+    typealias ResponseType = Raw
+}
+
+struct PreEncodedPuttable: PreEncoded, Puttable {
+    typealias ResponseType = Raw
+}
+
+struct PreEncodedPatchable: PreEncoded, Patchable {
+    typealias ResponseType = Raw
+}
+
+struct PreEncodedDeletable: PreEncoded, Deletable {
+    typealias ResponseType = Raw
 }

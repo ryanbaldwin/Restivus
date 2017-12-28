@@ -21,6 +21,17 @@ extension Gettable {
     }
 }
 
+/// Creates a GET request for the current PreEncoded instance,
+/// and uses the `data` value as the body for the request.
+///
+/// - Returns: The URLRequest
+/// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
+extension Gettable where Self: PreEncoded {
+    public func request() throws -> URLRequest {
+        return try HTTPMethod.get.makeURLRequest(for: self)
+    }
+}
+
 extension Gettable where Self: Encodable {
     /// Creates a GET request for the current Encodable instance,
     /// and encodes itself into the HTTP body of the request.

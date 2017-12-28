@@ -12,13 +12,11 @@ import Nimble
 
 struct RawDelete: Deletable {
     typealias ResponseType = Raw
-    var resultFormat: ResultFormat = .raw
     var path: String = "/204"
 }
 
 struct GetGoogle: Gettable {
     typealias ResponseType = Raw
-    var resultFormat: ResultFormat = .raw
     var baseURL = "http://www.google.ca"
     var path = "/"
 }
@@ -48,6 +46,7 @@ class RawDecodableSpec: QuickSpec {
                 }
                 
                 expect(data).toEventuallyNot(beNil(), timeout: 3)
+                expect(data!.count) > 0
             }
         }
     }

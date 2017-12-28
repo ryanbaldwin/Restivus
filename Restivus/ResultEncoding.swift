@@ -11,9 +11,7 @@ import Foundation
 /// Defines the format of the URL response body
 public enum ResultFormat {
     /// The body of the response will be JSON decoded
-    case json,
-    /// The body of the response will be treated as RAW data and will not be decoded
-    raw
+    case json
     
     /// Decodes and the provided data into an instance of the provided type,
     /// for the current format. If the current format is `.raw`, the raw
@@ -29,8 +27,6 @@ public enum ResultFormat {
         switch self {
         case .json:
             return try JSONDecoder().decode(type, from: result)
-        case .raw:
-            return result as! T
         }
     }
     
@@ -40,8 +36,6 @@ public enum ResultFormat {
     /// - Parameter request: The request upon which the HTTPHeaders are to be set.
     /// - Returns: A new URLRequest with the set headers.
     public func headers(for request: URLRequest) -> URLRequest {
-        if self == .raw { return request }
-        
         var req = request
         req.setValue("application/json", forHTTPHeaderField: "Accept")
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")

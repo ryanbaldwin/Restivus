@@ -12,7 +12,6 @@ import Foundation
 public protocol Puttable: Restable {}
 
 extension Puttable {
-    
     /// Creates a POST request for the current instance
     ///
     /// - Returns: The URLRequest
@@ -22,8 +21,18 @@ extension Puttable {
     }
 }
 
-extension Puttable where Self: Encodable {
+/// Creates a PUT request for the current PreEncoded instance,
+/// and uses the `data` value as the body for the request.
+///
+/// - Returns: The URLRequest
+/// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
+extension Puttable where Self: PreEncoded {
+    public func request() throws -> URLRequest {
+        return try HTTPMethod.put.makeURLRequest(for: self)
+    }
+}
 
+extension Puttable where Self: Encodable {
     /// Creates a POST request for the current Encodable instance,
     /// and encodes itself into the HTTP body of the request.
     ///

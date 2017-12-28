@@ -41,6 +41,8 @@
 		C2548E161F545778003EDE96 /* AnyRestableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E151F545778003EDE96 /* AnyRestableSpec.swift */; };
 		C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
 		C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
+		C2C7F4B11FF41530003578A8 /* PreEncodedRestablesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */; };
+		C2C7F4B31FF4189F003578A8 /* PreEncodedRestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		C26230231F4C94E7003A5E99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C26230241F4C94E7003A5E99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestableConfiguration.swift; sourceTree = "<group>"; };
+		C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreEncodedRestablesSpec.swift; sourceTree = "<group>"; };
+		C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreEncodedRestableConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 				C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */,
 				C2548E111F54550F003EDE96 /* PostableSpec.swift */,
 				C2548E131F54553E003EDE96 /* PuttableSpec.swift */,
+				C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */,
 			);
 			name = http;
 			sourceTree = "<group>";
@@ -173,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				7DDB696F1F4B79AE001CC66D /* http */,
-				7DD789101F54FA3900446615 /* Interceptable.swift */,
 				7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */,
+				7DD789101F54FA3900446615 /* Interceptable.swift */,
 				7DDB69491F4B6FA1001CC66D /* Info.plist */,
 				7DDB69631F4B705D001CC66D /* Restable.swift */,
 				7DDB69481F4B6FA1001CC66D /* Restivous.h */,
@@ -191,11 +196,11 @@
 				7D424D471F4FC0F000D5C0B9 /* http */,
 				7DDB69551F4B6FA1001CC66D /* Info.plist */,
 				C2548E151F545778003EDE96 /* AnyRestableSpec.swift */,
-				C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */,
-				7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */,
-				7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */,
 				7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */,
 				7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */,
+				7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */,
+				7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */,
+				C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */,
 			);
 			path = RestivusTests;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			children = (
 				7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */,
 				C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */,
+				C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -363,7 +369,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */,
+				C2C7F4B11FF41530003578A8 /* PreEncodedRestablesSpec.swift in Sources */,
 				C2548E101F5454CE003EDE96 /* PatchableSpec.swift in Sources */,
+				C2C7F4B31FF4189F003578A8 /* PreEncodedRestableConfiguration.swift in Sources */,
 				7D2849991FE61249005A9BA1 /* InterceptableSpec.swift in Sources */,
 				7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */,
 				7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */,

@@ -104,21 +104,20 @@ public enum HTTPMethod: String {
     
     /// Creates a URLRequest appropriate for this instance
     ///
-    /// - Parameter url: The full URL for the URLRequest
-    /// - Returns: A URLRequest ready for submission
-    /// - Throws: An `InvalidURLError` if the `url` is malformed
+    /// - Parameter restable: The Restable for which a URLRequest is to be created
+    /// - Returns: The URLRequest for this Restable
+    /// - Throws: An `HTTPMethodError.invalidURL` if the `URLRequest` could not be created.
     public func makeURLRequest<T>(`for` restable: T) throws -> URLRequest where T: Restable {
         return try _makeURLRequest(for: restable)
     }
     
-    /// Creates a URLRequest appropriate for this instance
+    /// Creates a URLRequest for this instance and uses the JSON Encoded data of this instance as the request's body.
     ///
-    /// - Parameters
-    ///   - url: The full URL for the URLRequest
-    ///   - object: The JSONSerializable which, when provided, will be serialized and attached to the `URLRequest`s body
-    /// - Returns: A URLRequest ready for submission
-    /// - Throws: An `InvalidURLError` if the `url` is malformed, or another `Error` occuring during
-    ///           the JSONSerialization of the `object`.
+    /// - Parameter restable: The Restable for which a URLRequest is to be created
+    /// - Returns: The URLRequest for this Restable
+    /// - Throws:
+    ///     - An `HTTPMethodError.invalidURL` if the `URLRequest` could not be created.
+    ///     - An `HTTPMethodError.jsonSerializationFailed(error: Error)` if the Restable fails to encode.
     public func makeURLRequest<T>(`for` restable: T) throws -> URLRequest where T: Restable & Encodable {
         var request = try _makeURLRequest(for: restable)
         
@@ -128,6 +127,17 @@ public enum HTTPMethod: String {
             throw HTTPMethodError.jsonSerializationFailed(error: error)
         }
         
+        return request
+    }
+    
+    /// Creates a URLRequest for this instance and uses this instance's `data` value as the request's body.
+    ///
+    /// - Parameter restable: The Restable for which a URLRequest is to be created
+    /// - Returns: The URLRequest for this Restable
+    /// - Throws: An `HTTPMethodError.invalidURL` if the `URLRequest` could not be created.
+    public func makeURLRequest<T>(`for` restable: T) throws -> URLRequest where T: Restable & PreEncoded {
+        var request = try _makeURLRequest(for: restable)
+        request.httpBody = restable.data
         return request
     }
     

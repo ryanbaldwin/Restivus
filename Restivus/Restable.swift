@@ -29,6 +29,13 @@ public protocol NotificationCenterPublishable {
     func shouldPublish(_: HTTPURLResponse) -> Bool
 }
 
+/// When present, Restivus will populate the body of the HTTPURLRequest with
+/// the data found in the `data` property of the Restable request.
+/// If a Restable conforms to both `PreEncoded` and `Encodable`, Restivus will ignore the `Encodable`
+public protocol PreEncoded {
+    var data: Data { get }
+}
+
 /// The type to be used when no custom Decodable result is required.
 /// Useful for when you don't know, or care, what the response is (or if one is even provided),
 /// such as a `Deletable` with no response body, or a `Gettable` which returns HTML.
@@ -266,6 +273,11 @@ extension Restable {
         }
         
         do {
+            if ResponseType.self == Raw.self {
+                completion?(Result.success((data ?? Raw()) as! ResponseType))
+                return
+            }
+            
             let jsonData = data ?? "{}".data(using: .utf8)!
             let result = try resultFormat.decode(result: jsonData, as: ResponseType.self)
             completion?(Result.success(result))
