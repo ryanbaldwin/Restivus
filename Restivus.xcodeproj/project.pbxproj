@@ -7,65 +7,184 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D0083651F4E5FCF00729F22 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; };
-		7D0083661F4E5FCF00729F22 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; };
-		7D0083671F4E5FD200729F22 /* Nimble.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D0083681F4E5FD200729F22 /* Quick.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D2849991FE61249005A9BA1 /* InterceptableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */; };
-		7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */; };
-		7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */; };
-		7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
-		7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
-		7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
-		7D89E65F1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */; };
-		7DAD01DE1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */; };
-		7DD6954C1F8016670034969A /* NotificationCenterPublishableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */; };
 		7DD789111F54FA3900446615 /* Interceptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Interceptable.swift */; };
-		7DDB694F1F4B6FA1001CC66D /* Restivus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDB69451F4B6FA1001CC66D /* Restivus.framework */; };
 		7DDB69561F4B6FA1001CC66D /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DDB69611F4B7052001CC66D /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69601F4B7052001CC66D /* Http.swift */; };
-		7DDB69661F4B705D001CC66D /* Gettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69621F4B705D001CC66D /* Gettable.swift */; };
 		7DDB69671F4B705D001CC66D /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
-		7DDB696C1F4B76F1001CC66D /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB696B1F4B76F1001CC66D /* Postable.swift */; };
-		7DDB696E1F4B7861001CC66D /* Puttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB696D1F4B7861001CC66D /* Puttable.swift */; };
-		7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69701F4B79EF001CC66D /* Patchable.swift */; };
-		7DDB69731F4B7A5F001CC66D /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69721F4B7A5F001CC66D /* Deletable.swift */; };
 		7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
-		C2380A841F50B753004C1B04 /* DeletableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2380A831F50B753004C1B04 /* DeletableSpec.swift */; };
-		C23F9A811F584395000CE9E6 /* RawDecodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */; };
-		C23F9A831F584C08000CE9E6 /* ResultEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F9A821F584C08000CE9E6 /* ResultEncoding.swift */; };
-		C2548E0E1F545366003EDE96 /* GettableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0D1F545366003EDE96 /* GettableSpec.swift */; };
-		C2548E101F5454CE003EDE96 /* PatchableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */; };
-		C2548E121F54550F003EDE96 /* PostableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E111F54550F003EDE96 /* PostableSpec.swift */; };
-		C2548E141F54553E003EDE96 /* PuttableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E131F54553E003EDE96 /* PuttableSpec.swift */; };
-		C2548E161F545778003EDE96 /* AnyRestableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E151F545778003EDE96 /* AnyRestableSpec.swift */; };
 		C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
-		C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
-		C2C7F4B11FF41530003578A8 /* PreEncodedRestablesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */; };
-		C2C7F4B31FF4189F003578A8 /* PreEncodedRestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */; };
+		C28474171FFBFFF900E13F56 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474101FFBFFF900E13F56 /* Http.swift */; };
+		C28474181FFBFFF900E13F56 /* ResultEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474111FFBFFF900E13F56 /* ResultEncoding.swift */; };
+		C28474191FFBFFF900E13F56 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474121FFBFFF900E13F56 /* Deletable.swift */; };
+		C284741A1FFBFFF900E13F56 /* Gettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474131FFBFFF900E13F56 /* Gettable.swift */; };
+		C284741B1FFBFFF900E13F56 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474141FFBFFF900E13F56 /* Postable.swift */; };
+		C284741C1FFBFFF900E13F56 /* Puttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474151FFBFFF900E13F56 /* Puttable.swift */; };
+		C284741D1FFBFFF900E13F56 /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474161FFBFFF900E13F56 /* Patchable.swift */; };
+		C284741E1FFC029A00E13F56 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474121FFBFFF900E13F56 /* Deletable.swift */; };
+		C284741F1FFC029A00E13F56 /* Gettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474131FFBFFF900E13F56 /* Gettable.swift */; };
+		C28474201FFC029A00E13F56 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474101FFBFFF900E13F56 /* Http.swift */; };
+		C28474211FFC029A00E13F56 /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474161FFBFFF900E13F56 /* Patchable.swift */; };
+		C28474221FFC029A00E13F56 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474141FFBFFF900E13F56 /* Postable.swift */; };
+		C28474231FFC029A00E13F56 /* Puttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474151FFBFFF900E13F56 /* Puttable.swift */; };
+		C28474241FFC029A00E13F56 /* ResultEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474111FFBFFF900E13F56 /* ResultEncoding.swift */; };
+		C28474251FFC029B00E13F56 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474121FFBFFF900E13F56 /* Deletable.swift */; };
+		C28474261FFC029B00E13F56 /* Gettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474131FFBFFF900E13F56 /* Gettable.swift */; };
+		C28474271FFC029B00E13F56 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474101FFBFFF900E13F56 /* Http.swift */; };
+		C28474281FFC029B00E13F56 /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474161FFBFFF900E13F56 /* Patchable.swift */; };
+		C28474291FFC029B00E13F56 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474141FFBFFF900E13F56 /* Postable.swift */; };
+		C284742A1FFC029B00E13F56 /* Puttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474151FFBFFF900E13F56 /* Puttable.swift */; };
+		C284742B1FFC029B00E13F56 /* ResultEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474111FFBFFF900E13F56 /* ResultEncoding.swift */; };
+		C284742C1FFC029C00E13F56 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474121FFBFFF900E13F56 /* Deletable.swift */; };
+		C284742D1FFC029C00E13F56 /* Gettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474131FFBFFF900E13F56 /* Gettable.swift */; };
+		C284742E1FFC029C00E13F56 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474101FFBFFF900E13F56 /* Http.swift */; };
+		C284742F1FFC029C00E13F56 /* Patchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474161FFBFFF900E13F56 /* Patchable.swift */; };
+		C28474301FFC029C00E13F56 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474141FFBFFF900E13F56 /* Postable.swift */; };
+		C28474311FFC029C00E13F56 /* Puttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474151FFBFFF900E13F56 /* Puttable.swift */; };
+		C28474321FFC029C00E13F56 /* ResultEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474111FFBFFF900E13F56 /* ResultEncoding.swift */; };
+		C28474331FFC02A200E13F56 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
+		C28474341FFC02A200E13F56 /* Interceptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Interceptable.swift */; };
+		C28474351FFC02A200E13F56 /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
+		C28474361FFC02A200E13F56 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
+		C28474371FFC02A300E13F56 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
+		C28474381FFC02A300E13F56 /* Interceptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Interceptable.swift */; };
+		C28474391FFC02A300E13F56 /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
+		C284743A1FFC02A300E13F56 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
+		C284743B1FFC02A400E13F56 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
+		C284743C1FFC02A400E13F56 /* Interceptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD789101F54FA3900446615 /* Interceptable.swift */; };
+		C284743D1FFC02A400E13F56 /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
+		C284743E1FFC02A400E13F56 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
+		C284743F1FFC02AB00E13F56 /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C28474401FFC02AB00E13F56 /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C28474411FFC02AD00E13F56 /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C28474691FFC05B100E13F56 /* Restivus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28473F81FFBFE1800E13F56 /* Restivus.framework */; };
+		C284747B1FFC05BC00E13F56 /* AnyRestableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E151F545778003EDE96 /* AnyRestableSpec.swift */; };
+		C284747C1FFC05BC00E13F56 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */; };
+		C284747D1FFC05BC00E13F56 /* InterceptableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */; };
+		C284747E1FFC05BC00E13F56 /* NotificationCenterPublishableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */; };
+		C284747F1FFC05BC00E13F56 /* OptionalResponseTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */; };
+		C28474801FFC05BC00E13F56 /* RawDecodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */; };
+		C28474871FFC05C600E13F56 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
+		C28474881FFC05C600E13F56 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
+		C28474891FFC05C600E13F56 /* PreEncodedRestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */; };
+		C284748E1FFC05CC00E13F56 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
+		C284748F1FFC05CC00E13F56 /* Restables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */; };
+		C28474A01FFC05DA00E13F56 /* HttpErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */; };
+		C28474A11FFC05DA00E13F56 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
+		C28474A21FFC05DA00E13F56 /* DeletableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2380A831F50B753004C1B04 /* DeletableSpec.swift */; };
+		C28474A31FFC05DA00E13F56 /* GettableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0D1F545366003EDE96 /* GettableSpec.swift */; };
+		C28474A41FFC05DA00E13F56 /* PatchableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */; };
+		C28474A51FFC05DA00E13F56 /* PostableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E111F54550F003EDE96 /* PostableSpec.swift */; };
+		C28474A61FFC05DA00E13F56 /* PuttableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E131F54553E003EDE96 /* PuttableSpec.swift */; };
+		C28474A71FFC05DA00E13F56 /* PreEncodedRestablesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */; };
+		C28474C41FFC0BEF00E13F56 /* Restivus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDB69451F4B6FA1001CC66D /* Restivus.framework */; };
+		C28474D31FFC0BFE00E13F56 /* Restivus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28473EB1FFBFE0500E13F56 /* Restivus.framework */; };
+		C28474D91FFC0C1C00E13F56 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; };
+		C28474DA1FFC0C1C00E13F56 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; };
+		C28474DB1FFC11B800E13F56 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
+		C28474DC1FFC11B800E13F56 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
+		C28474DD1FFC11B800E13F56 /* PreEncodedRestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */; };
+		C28474DE1FFC11B800E13F56 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
+		C28474DF1FFC11B800E13F56 /* Restables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */; };
+		C28474E01FFC11B800E13F56 /* HttpErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */; };
+		C28474E11FFC11B800E13F56 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
+		C28474E21FFC11B800E13F56 /* DeletableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2380A831F50B753004C1B04 /* DeletableSpec.swift */; };
+		C28474E31FFC11B800E13F56 /* GettableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0D1F545366003EDE96 /* GettableSpec.swift */; };
+		C28474E41FFC11B800E13F56 /* PatchableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */; };
+		C28474E51FFC11B800E13F56 /* PostableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E111F54550F003EDE96 /* PostableSpec.swift */; };
+		C28474E61FFC11B800E13F56 /* PuttableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E131F54553E003EDE96 /* PuttableSpec.swift */; };
+		C28474E71FFC11B800E13F56 /* PreEncodedRestablesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */; };
+		C28474E81FFC11B800E13F56 /* AnyRestableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E151F545778003EDE96 /* AnyRestableSpec.swift */; };
+		C28474E91FFC11B800E13F56 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */; };
+		C28474EA1FFC11B800E13F56 /* InterceptableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */; };
+		C28474EB1FFC11B800E13F56 /* NotificationCenterPublishableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */; };
+		C28474EC1FFC11B800E13F56 /* OptionalResponseTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */; };
+		C28474ED1FFC11B800E13F56 /* RawDecodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */; };
+		C28474EE1FFC11B900E13F56 /* HTTPMethodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA151F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift */; };
+		C28474EF1FFC11B900E13F56 /* RestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */; };
+		C28474F01FFC11B900E13F56 /* PreEncodedRestableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */; };
+		C28474F11FFC11B900E13F56 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA171F4E715000A4B3F9 /* Person.swift */; };
+		C28474F21FFC11B900E13F56 /* Restables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */; };
+		C28474F31FFC11B900E13F56 /* HttpErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D424D451F4F9DA600D5C0B9 /* HttpErrorSpec.swift */; };
+		C28474F41FFC11B900E13F56 /* HTTPMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72FA131F4E669F00A4B3F9 /* HTTPMethodSpec.swift */; };
+		C28474F51FFC11B900E13F56 /* DeletableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2380A831F50B753004C1B04 /* DeletableSpec.swift */; };
+		C28474F61FFC11B900E13F56 /* GettableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0D1F545366003EDE96 /* GettableSpec.swift */; };
+		C28474F71FFC11B900E13F56 /* PatchableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */; };
+		C28474F81FFC11B900E13F56 /* PostableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E111F54550F003EDE96 /* PostableSpec.swift */; };
+		C28474F91FFC11B900E13F56 /* PuttableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E131F54553E003EDE96 /* PuttableSpec.swift */; };
+		C28474FA1FFC11B900E13F56 /* PreEncodedRestablesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */; };
+		C28474FB1FFC11B900E13F56 /* AnyRestableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2548E151F545778003EDE96 /* AnyRestableSpec.swift */; };
+		C28474FC1FFC11B900E13F56 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89E65E1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift */; };
+		C28474FD1FFC11B900E13F56 /* InterceptableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2849981FE61249005A9BA1 /* InterceptableSpec.swift */; };
+		C28474FE1FFC11B900E13F56 /* NotificationCenterPublishableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */; };
+		C28474FF1FFC11B900E13F56 /* OptionalResponseTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */; };
+		C28475001FFC11B900E13F56 /* RawDecodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */; };
+		C28475021FFC12D100E13F56 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C26230231F4C94E7003A5E99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28475031FFC12D100E13F56 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C26230241F4C94E7003A5E99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28475041FFC177700E13F56 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28474B11FFC09B600E13F56 /* Nimble.framework */; };
+		C28475051FFC177700E13F56 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28474B21FFC09B600E13F56 /* Quick.framework */; };
+		C28475071FFC17AF00E13F56 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C28474B11FFC09B600E13F56 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28475081FFC17AF00E13F56 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C28474B21FFC09B600E13F56 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C284750A1FFC17D300E13F56 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28474AB1FFC099800E13F56 /* Nimble.framework */; };
+		C284750B1FFC17D300E13F56 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28474AC1FFC099800E13F56 /* Quick.framework */; };
+		C284750C1FFC17D700E13F56 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C28474AB1FFC099800E13F56 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C284750D1FFC17D700E13F56 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C28474AC1FFC099800E13F56 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7DDB69501F4B6FA1001CC66D /* PBXContainerItemProxy */ = {
+		C284746A1FFC05B100E13F56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DDB693C1F4B6FA1001CC66D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C28473F71FFBFE1800E13F56;
+			remoteInfo = "Restivus-macOS";
+		};
+		C28474C51FFC0BEF00E13F56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DDB693C1F4B6FA1001CC66D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7DDB69441F4B6FA1001CC66D;
-			remoteInfo = RestEasy;
+			remoteInfo = "Restivus-iOS";
+		};
+		C28474D41FFC0BFE00E13F56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DDB693C1F4B6FA1001CC66D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C28473EA1FFBFE0500E13F56;
+			remoteInfo = "Restivus-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C26230271F4C9505003A5E99 /* Copy Carthage Frameworks */ = {
+		C28475011FFC12BD00E13F56 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7D0083671F4E5FD200729F22 /* Nimble.framework in Copy Carthage Frameworks */,
-				7D0083681F4E5FD200729F22 /* Quick.framework in Copy Carthage Frameworks */,
+				C28475021FFC12D100E13F56 /* Nimble.framework in CopyFiles */,
+				C28475031FFC12D100E13F56 /* Quick.framework in CopyFiles */,
 			);
-			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28475061FFC17A000E13F56 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C28475071FFC17AF00E13F56 /* Nimble.framework in CopyFiles */,
+				C28475081FFC17AF00E13F56 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28475091FFC17BF00E13F56 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C284750C1FFC17D700E13F56 /* Nimble.framework in CopyFiles */,
+				C284750D1FFC17D700E13F56 /* Quick.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -82,21 +201,13 @@
 		7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterPublishableSpec.swift; sourceTree = "<group>"; };
 		7DD789101F54FA3900446615 /* Interceptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptable.swift; sourceTree = "<group>"; };
 		7DDB69451F4B6FA1001CC66D /* Restivus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Restivus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DDB69481F4B6FA1001CC66D /* Restivous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restivous.h; sourceTree = "<group>"; };
-		7DDB69491F4B6FA1001CC66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DDB694E1F4B6FA1001CC66D /* RestivusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestivusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DDB69481F4B6FA1001CC66D /* Restivous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Restivous.h; path = Sources/Restivous.h; sourceTree = SOURCE_ROOT; };
+		7DDB69491F4B6FA1001CC66D /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		7DDB69551F4B6FA1001CC66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DDB69601F4B7052001CC66D /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
-		7DDB69621F4B705D001CC66D /* Gettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gettable.swift; sourceTree = "<group>"; };
 		7DDB69631F4B705D001CC66D /* Restable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restable.swift; sourceTree = "<group>"; };
-		7DDB696B1F4B76F1001CC66D /* Postable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
-		7DDB696D1F4B7861001CC66D /* Puttable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puttable.swift; sourceTree = "<group>"; };
-		7DDB69701F4B79EF001CC66D /* Patchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patchable.swift; sourceTree = "<group>"; };
-		7DDB69721F4B7A5F001CC66D /* Deletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deletable.swift; sourceTree = "<group>"; };
 		7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		C2380A831F50B753004C1B04 /* DeletableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableSpec.swift; sourceTree = "<group>"; };
 		C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDecodableSpec.swift; sourceTree = "<group>"; };
-		C23F9A821F584C08000CE9E6 /* ResultEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultEncoding.swift; sourceTree = "<group>"; };
 		C2548E0D1F545366003EDE96 /* GettableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettableSpec.swift; sourceTree = "<group>"; };
 		C2548E0F1F5454CE003EDE96 /* PatchableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchableSpec.swift; sourceTree = "<group>"; };
 		C2548E111F54550F003EDE96 /* PostableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostableSpec.swift; sourceTree = "<group>"; };
@@ -106,6 +217,29 @@
 		C26230231F4C94E7003A5E99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C26230241F4C94E7003A5E99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		C262302D1F4C9705003A5E99 /* RestableConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestableConfiguration.swift; sourceTree = "<group>"; };
+		C28473EB1FFBFE0500E13F56 /* Restivus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Restivus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28473EE1FFBFE0500E13F56 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		C28473F81FFBFE1800E13F56 /* Restivus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Restivus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28473FB1FFBFE1800E13F56 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		C28474051FFBFE4B00E13F56 /* Restivus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Restivus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28474081FFBFE4B00E13F56 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
+		C28474101FFBFFF900E13F56 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		C28474111FFBFFF900E13F56 /* ResultEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultEncoding.swift; sourceTree = "<group>"; };
+		C28474121FFBFFF900E13F56 /* Deletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deletable.swift; sourceTree = "<group>"; };
+		C28474131FFBFFF900E13F56 /* Gettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gettable.swift; sourceTree = "<group>"; };
+		C28474141FFBFFF900E13F56 /* Postable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
+		C28474151FFBFFF900E13F56 /* Puttable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puttable.swift; sourceTree = "<group>"; };
+		C28474161FFBFFF900E13F56 /* Patchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patchable.swift; sourceTree = "<group>"; };
+		C284744A1FFC047700E13F56 /* Info-tvTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvTests.plist"; sourceTree = "<group>"; };
+		C28474591FFC057B00E13F56 /* Info-iOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOSTests.plist"; sourceTree = "<group>"; };
+		C28474641FFC05B100E13F56 /* Restivus-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Restivus-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28474681FFC05B100E13F56 /* Info-macOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOSTests.plist"; sourceTree = "<group>"; };
+		C28474AB1FFC099800E13F56 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		C28474AC1FFC099800E13F56 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		C28474B11FFC09B600E13F56 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		C28474B21FFC09B600E13F56 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		C28474BF1FFC0BEF00E13F56 /* Restivus-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Restivus-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28474CE1FFC0BFE00E13F56 /* Restivus-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Restivus-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreEncodedRestablesSpec.swift; sourceTree = "<group>"; };
 		C2C7F4B21FF4189F003578A8 /* PreEncodedRestableConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreEncodedRestableConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,13 +252,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DDB694B1F4B6FA1001CC66D /* Frameworks */ = {
+		C28473E71FFBFE0500E13F56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DDB694F1F4B6FA1001CC66D /* Restivus.framework in Frameworks */,
-				7D0083651F4E5FCF00729F22 /* Nimble.framework in Frameworks */,
-				7D0083661F4E5FCF00729F22 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28473F41FFBFE1800E13F56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474011FFBFE4B00E13F56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474611FFC05B100E13F56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474691FFC05B100E13F56 /* Restivus.framework in Frameworks */,
+				C28475041FFC177700E13F56 /* Nimble.framework in Frameworks */,
+				C28475051FFC177700E13F56 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474BC1FFC0BEF00E13F56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474C41FFC0BEF00E13F56 /* Restivus.framework in Frameworks */,
+				C28474D91FFC0C1C00E13F56 /* Nimble.framework in Frameworks */,
+				C28474DA1FFC0C1C00E13F56 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474CB1FFC0BFE00E13F56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474D31FFC0BFE00E13F56 /* Restivus.framework in Frameworks */,
+				C284750A1FFC17D300E13F56 /* Nimble.framework in Frameworks */,
+				C284750B1FFC17D300E13F56 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +333,8 @@
 		7DDB693B1F4B6FA1001CC66D = {
 			isa = PBXGroup;
 			children = (
-				7DDB69471F4B6FA1001CC66D /* Restivus */,
-				7DDB69521F4B6FA1001CC66D /* RestivusTests */,
+				C284740E1FFBFE9100E13F56 /* Sources */,
+				7DDB69521F4B6FA1001CC66D /* Tests */,
 				7DDB69461F4B6FA1001CC66D /* Products */,
 				C26230221F4C94E7003A5E99 /* Frameworks */,
 			);
@@ -169,26 +344,17 @@
 			isa = PBXGroup;
 			children = (
 				7DDB69451F4B6FA1001CC66D /* Restivus.framework */,
-				7DDB694E1F4B6FA1001CC66D /* RestivusTests.xctest */,
+				C28473EB1FFBFE0500E13F56 /* Restivus.framework */,
+				C28473F81FFBFE1800E13F56 /* Restivus.framework */,
+				C28474051FFBFE4B00E13F56 /* Restivus.framework */,
+				C28474641FFC05B100E13F56 /* Restivus-macOSTests.xctest */,
+				C28474BF1FFC0BEF00E13F56 /* Restivus-iOSTests.xctest */,
+				C28474CE1FFC0BFE00E13F56 /* Restivus-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7DDB69471F4B6FA1001CC66D /* Restivus */ = {
-			isa = PBXGroup;
-			children = (
-				7DDB696F1F4B79AE001CC66D /* http */,
-				7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */,
-				7DD789101F54FA3900446615 /* Interceptable.swift */,
-				7DDB69491F4B6FA1001CC66D /* Info.plist */,
-				7DDB69631F4B705D001CC66D /* Restable.swift */,
-				7DDB69481F4B6FA1001CC66D /* Restivous.h */,
-				C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */,
-			);
-			path = Restivus;
-			sourceTree = "<group>";
-		};
-		7DDB69521F4B6FA1001CC66D /* RestivusTests */ = {
+		7DDB69521F4B6FA1001CC66D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				C262302C1F4C96F3003A5E99 /* Configurations */,
@@ -201,27 +367,20 @@
 				7DD6954B1F8016670034969A /* NotificationCenterPublishableSpec.swift */,
 				7DAD01DD1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift */,
 				C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */,
+				C284744A1FFC047700E13F56 /* Info-tvTests.plist */,
+				C28474591FFC057B00E13F56 /* Info-iOSTests.plist */,
+				C28474681FFC05B100E13F56 /* Info-macOSTests.plist */,
 			);
-			path = RestivusTests;
-			sourceTree = "<group>";
-		};
-		7DDB696F1F4B79AE001CC66D /* http */ = {
-			isa = PBXGroup;
-			children = (
-				7DDB69721F4B7A5F001CC66D /* Deletable.swift */,
-				7DDB69621F4B705D001CC66D /* Gettable.swift */,
-				7DDB69601F4B7052001CC66D /* Http.swift */,
-				7DDB69701F4B79EF001CC66D /* Patchable.swift */,
-				7DDB696B1F4B76F1001CC66D /* Postable.swift */,
-				7DDB696D1F4B7861001CC66D /* Puttable.swift */,
-				C23F9A821F584C08000CE9E6 /* ResultEncoding.swift */,
-			);
-			name = http;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		C26230221F4C94E7003A5E99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C28474B11FFC09B600E13F56 /* Nimble.framework */,
+				C28474B21FFC09B600E13F56 /* Quick.framework */,
+				C28474AB1FFC099800E13F56 /* Nimble.framework */,
+				C28474AC1FFC099800E13F56 /* Quick.framework */,
 				C26230231F4C94E7003A5E99 /* Nimble.framework */,
 				C26230241F4C94E7003A5E99 /* Quick.framework */,
 			);
@@ -238,6 +397,37 @@
 			name = Configurations;
 			sourceTree = "<group>";
 		};
+		C284740E1FFBFE9100E13F56 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C284740F1FFBFFD100E13F56 /* http */,
+				7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */,
+				7DD789101F54FA3900446615 /* Interceptable.swift */,
+				7DDB69631F4B705D001CC66D /* Restable.swift */,
+				C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */,
+				7DDB69481F4B6FA1001CC66D /* Restivous.h */,
+				7DDB69491F4B6FA1001CC66D /* Info-iOS.plist */,
+				C28473EE1FFBFE0500E13F56 /* Info-tvOS.plist */,
+				C28473FB1FFBFE1800E13F56 /* Info-macOS.plist */,
+				C28474081FFBFE4B00E13F56 /* Info-watchOS.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C284740F1FFBFFD100E13F56 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				C28474121FFBFFF900E13F56 /* Deletable.swift */,
+				C28474131FFBFFF900E13F56 /* Gettable.swift */,
+				C28474101FFBFFF900E13F56 /* Http.swift */,
+				C28474161FFBFFF900E13F56 /* Patchable.swift */,
+				C28474141FFBFFF900E13F56 /* Postable.swift */,
+				C28474151FFBFFF900E13F56 /* Puttable.swift */,
+				C28474111FFBFFF900E13F56 /* ResultEncoding.swift */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -249,12 +439,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C28473E81FFBFE0500E13F56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C284743F1FFC02AB00E13F56 /* Restivous.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28473F51FFBFE1800E13F56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474401FFC02AB00E13F56 /* Restivous.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474021FFBFE4B00E13F56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474411FFC02AD00E13F56 /* Restivous.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7DDB69441F4B6FA1001CC66D /* Restivus */ = {
+		7DDB69441F4B6FA1001CC66D /* Restivus-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DDB69591F4B6FA1001CC66D /* Build configuration list for PBXNativeTarget "Restivus" */;
+			buildConfigurationList = 7DDB69591F4B6FA1001CC66D /* Build configuration list for PBXNativeTarget "Restivus-iOS" */;
 			buildPhases = (
 				7DDB69401F4B6FA1001CC66D /* Sources */,
 				7DDB69411F4B6FA1001CC66D /* Frameworks */,
@@ -265,28 +479,120 @@
 			);
 			dependencies = (
 			);
-			name = Restivus;
+			name = "Restivus-iOS";
 			productName = RestEasy;
 			productReference = 7DDB69451F4B6FA1001CC66D /* Restivus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7DDB694D1F4B6FA1001CC66D /* RestivusTests */ = {
+		C28473EA1FFBFE0500E13F56 /* Restivus-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DDB695C1F4B6FA1001CC66D /* Build configuration list for PBXNativeTarget "RestivusTests" */;
+			buildConfigurationList = C28473F01FFBFE0500E13F56 /* Build configuration list for PBXNativeTarget "Restivus-tvOS" */;
 			buildPhases = (
-				7DDB694A1F4B6FA1001CC66D /* Sources */,
-				7DDB694B1F4B6FA1001CC66D /* Frameworks */,
-				7DDB694C1F4B6FA1001CC66D /* Resources */,
-				C26230271F4C9505003A5E99 /* Copy Carthage Frameworks */,
+				C28473E61FFBFE0500E13F56 /* Sources */,
+				C28473E71FFBFE0500E13F56 /* Frameworks */,
+				C28473E81FFBFE0500E13F56 /* Headers */,
+				C28473E91FFBFE0500E13F56 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7DDB69511F4B6FA1001CC66D /* PBXTargetDependency */,
 			);
-			name = RestivusTests;
-			productName = RestEasyTests;
-			productReference = 7DDB694E1F4B6FA1001CC66D /* RestivusTests.xctest */;
+			name = "Restivus-tvOS";
+			productName = "Restivus-tvOS";
+			productReference = C28473EB1FFBFE0500E13F56 /* Restivus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C28473F71FFBFE1800E13F56 /* Restivus-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C28473FD1FFBFE1800E13F56 /* Build configuration list for PBXNativeTarget "Restivus-macOS" */;
+			buildPhases = (
+				C28473F31FFBFE1800E13F56 /* Sources */,
+				C28473F41FFBFE1800E13F56 /* Frameworks */,
+				C28473F51FFBFE1800E13F56 /* Headers */,
+				C28473F61FFBFE1800E13F56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Restivus-macOS";
+			productName = "Restivus-macOS";
+			productReference = C28473F81FFBFE1800E13F56 /* Restivus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C28474041FFBFE4B00E13F56 /* Restivus-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C284740A1FFBFE4B00E13F56 /* Build configuration list for PBXNativeTarget "Restivus-watchOS" */;
+			buildPhases = (
+				C28474001FFBFE4B00E13F56 /* Sources */,
+				C28474011FFBFE4B00E13F56 /* Frameworks */,
+				C28474021FFBFE4B00E13F56 /* Headers */,
+				C28474031FFBFE4B00E13F56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Restivus-watchOS";
+			productName = "Restivus-watchOS";
+			productReference = C28474051FFBFE4B00E13F56 /* Restivus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C28474631FFC05B100E13F56 /* Restivus-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C284746C1FFC05B100E13F56 /* Build configuration list for PBXNativeTarget "Restivus-macOSTests" */;
+			buildPhases = (
+				C28474601FFC05B100E13F56 /* Sources */,
+				C28474611FFC05B100E13F56 /* Frameworks */,
+				C28474621FFC05B100E13F56 /* Resources */,
+				C28475061FFC17A000E13F56 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C284746B1FFC05B100E13F56 /* PBXTargetDependency */,
+			);
+			name = "Restivus-macOSTests";
+			productName = "RestivusTests-macOSTests";
+			productReference = C28474641FFC05B100E13F56 /* Restivus-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C28474BE1FFC0BEF00E13F56 /* Restivus-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C28474C71FFC0BEF00E13F56 /* Build configuration list for PBXNativeTarget "Restivus-iOSTests" */;
+			buildPhases = (
+				C28474BB1FFC0BEF00E13F56 /* Sources */,
+				C28474BC1FFC0BEF00E13F56 /* Frameworks */,
+				C28474BD1FFC0BEF00E13F56 /* Resources */,
+				C28475011FFC12BD00E13F56 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C28474C61FFC0BEF00E13F56 /* PBXTargetDependency */,
+			);
+			name = "Restivus-iOSTests";
+			productName = "Restivus-iOSTests";
+			productReference = C28474BF1FFC0BEF00E13F56 /* Restivus-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C28474CD1FFC0BFE00E13F56 /* Restivus-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C28474D61FFC0BFE00E13F56 /* Build configuration list for PBXNativeTarget "Restivus-tvOSTests" */;
+			buildPhases = (
+				C28474CA1FFC0BFE00E13F56 /* Sources */,
+				C28474CB1FFC0BFE00E13F56 /* Frameworks */,
+				C28474CC1FFC0BFE00E13F56 /* Resources */,
+				C28475091FFC17BF00E13F56 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C28474D51FFC0BFE00E13F56 /* PBXTargetDependency */,
+			);
+			name = "Restivus-tvOSTests";
+			productName = "Restivus-tvOSTests";
+			productReference = C28474CE1FFC0BFE00E13F56 /* Restivus-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +601,7 @@
 		7DDB693C1F4B6FA1001CC66D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = bunnyhug.me;
 				TargetAttributes = {
@@ -304,8 +610,28 @@
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
-					7DDB694D1F4B6FA1001CC66D = {
-						CreatedOnToolsVersion = 8.3.3;
+					C28473EA1FFBFE0500E13F56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C28473F71FFBFE1800E13F56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C28474041FFBFE4B00E13F56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C28474631FFC05B100E13F56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C28474BE1FFC0BEF00E13F56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C28474CD1FFC0BFE00E13F56 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -322,8 +648,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DDB69441F4B6FA1001CC66D /* Restivus */,
-				7DDB694D1F4B6FA1001CC66D /* RestivusTests */,
+				7DDB69441F4B6FA1001CC66D /* Restivus-iOS */,
+				C28473EA1FFBFE0500E13F56 /* Restivus-tvOS */,
+				C28473F71FFBFE1800E13F56 /* Restivus-macOS */,
+				C28474041FFBFE4B00E13F56 /* Restivus-watchOS */,
+				C28474BE1FFC0BEF00E13F56 /* Restivus-iOSTests */,
+				C28474631FFC05B100E13F56 /* Restivus-macOSTests */,
+				C28474CD1FFC0BFE00E13F56 /* Restivus-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,7 +667,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DDB694C1F4B6FA1001CC66D /* Resources */ = {
+		C28473E91FFBFE0500E13F56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28473F61FFBFE1800E13F56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474031FFBFE4B00E13F56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474621FFC05B100E13F56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474BD1FFC0BEF00E13F56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474CC1FFC0BFE00E13F56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,52 +717,168 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDB69671F4B705D001CC66D /* Restable.swift in Sources */,
+				C284741D1FFBFFF900E13F56 /* Patchable.swift in Sources */,
+				C284741A1FFBFFF900E13F56 /* Gettable.swift in Sources */,
 				7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */,
-				7DDB696E1F4B7861001CC66D /* Puttable.swift in Sources */,
-				7DDB69611F4B7052001CC66D /* Http.swift in Sources */,
 				7DD789111F54FA3900446615 /* Interceptable.swift in Sources */,
-				7DDB696C1F4B76F1001CC66D /* Postable.swift in Sources */,
-				7DDB69661F4B705D001CC66D /* Gettable.swift in Sources */,
-				7DDB69711F4B79EF001CC66D /* Patchable.swift in Sources */,
-				C23F9A831F584C08000CE9E6 /* ResultEncoding.swift in Sources */,
-				7DDB69731F4B7A5F001CC66D /* Deletable.swift in Sources */,
+				C28474181FFBFFF900E13F56 /* ResultEncoding.swift in Sources */,
 				C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */,
+				C284741B1FFBFFF900E13F56 /* Postable.swift in Sources */,
+				C28474191FFBFFF900E13F56 /* Deletable.swift in Sources */,
+				C284741C1FFBFFF900E13F56 /* Puttable.swift in Sources */,
+				C28474171FFBFFF900E13F56 /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DDB694A1F4B6FA1001CC66D /* Sources */ = {
+		C28473E61FFBFE0500E13F56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D72FA141F4E669F00A4B3F9 /* HTTPMethodSpec.swift in Sources */,
-				C2C7F4B11FF41530003578A8 /* PreEncodedRestablesSpec.swift in Sources */,
-				C2548E101F5454CE003EDE96 /* PatchableSpec.swift in Sources */,
-				C2C7F4B31FF4189F003578A8 /* PreEncodedRestableConfiguration.swift in Sources */,
-				7D2849991FE61249005A9BA1 /* InterceptableSpec.swift in Sources */,
-				7D424D4C1F4FC5C000D5C0B9 /* Restables.swift in Sources */,
-				7D424D461F4F9DA600D5C0B9 /* HttpErrorSpec.swift in Sources */,
-				C2548E161F545778003EDE96 /* AnyRestableSpec.swift in Sources */,
-				7DAD01DE1F7EE91D00C9C732 /* OptionalResponseTypeSpec.swift in Sources */,
-				C23F9A811F584395000CE9E6 /* RawDecodableSpec.swift in Sources */,
-				7D89E65F1F81732700341AC7 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */,
-				C2380A841F50B753004C1B04 /* DeletableSpec.swift in Sources */,
-				7D72FA161F4E67A700A4B3F9 /* HTTPMethodConfiguration.swift in Sources */,
-				7D72FA181F4E715000A4B3F9 /* Person.swift in Sources */,
-				C2548E0E1F545366003EDE96 /* GettableSpec.swift in Sources */,
-				C2548E141F54553E003EDE96 /* PuttableSpec.swift in Sources */,
-				C2548E121F54550F003EDE96 /* PostableSpec.swift in Sources */,
-				C262302E1F4C9705003A5E99 /* RestableConfiguration.swift in Sources */,
-				7DD6954C1F8016670034969A /* NotificationCenterPublishableSpec.swift in Sources */,
+				C28474331FFC02A200E13F56 /* HTTPURLResponse+Extensions.swift in Sources */,
+				C28474351FFC02A200E13F56 /* Restable.swift in Sources */,
+				C284741E1FFC029A00E13F56 /* Deletable.swift in Sources */,
+				C284741F1FFC029A00E13F56 /* Gettable.swift in Sources */,
+				C28474241FFC029A00E13F56 /* ResultEncoding.swift in Sources */,
+				C28474341FFC02A200E13F56 /* Interceptable.swift in Sources */,
+				C28474221FFC029A00E13F56 /* Postable.swift in Sources */,
+				C28474211FFC029A00E13F56 /* Patchable.swift in Sources */,
+				C28474231FFC029A00E13F56 /* Puttable.swift in Sources */,
+				C28474201FFC029A00E13F56 /* Http.swift in Sources */,
+				C28474361FFC02A200E13F56 /* URLRequest+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28473F31FFBFE1800E13F56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474371FFC02A300E13F56 /* HTTPURLResponse+Extensions.swift in Sources */,
+				C28474391FFC02A300E13F56 /* Restable.swift in Sources */,
+				C28474251FFC029B00E13F56 /* Deletable.swift in Sources */,
+				C28474261FFC029B00E13F56 /* Gettable.swift in Sources */,
+				C284742B1FFC029B00E13F56 /* ResultEncoding.swift in Sources */,
+				C28474381FFC02A300E13F56 /* Interceptable.swift in Sources */,
+				C28474291FFC029B00E13F56 /* Postable.swift in Sources */,
+				C28474281FFC029B00E13F56 /* Patchable.swift in Sources */,
+				C284742A1FFC029B00E13F56 /* Puttable.swift in Sources */,
+				C28474271FFC029B00E13F56 /* Http.swift in Sources */,
+				C284743A1FFC02A300E13F56 /* URLRequest+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474001FFBFE4B00E13F56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C284743B1FFC02A400E13F56 /* HTTPURLResponse+Extensions.swift in Sources */,
+				C284743D1FFC02A400E13F56 /* Restable.swift in Sources */,
+				C284742C1FFC029C00E13F56 /* Deletable.swift in Sources */,
+				C284742D1FFC029C00E13F56 /* Gettable.swift in Sources */,
+				C28474321FFC029C00E13F56 /* ResultEncoding.swift in Sources */,
+				C284743C1FFC02A400E13F56 /* Interceptable.swift in Sources */,
+				C28474301FFC029C00E13F56 /* Postable.swift in Sources */,
+				C284742F1FFC029C00E13F56 /* Patchable.swift in Sources */,
+				C28474311FFC029C00E13F56 /* Puttable.swift in Sources */,
+				C284742E1FFC029C00E13F56 /* Http.swift in Sources */,
+				C284743E1FFC02A400E13F56 /* URLRequest+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474601FFC05B100E13F56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474A31FFC05DA00E13F56 /* GettableSpec.swift in Sources */,
+				C28474A71FFC05DA00E13F56 /* PreEncodedRestablesSpec.swift in Sources */,
+				C284747C1FFC05BC00E13F56 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */,
+				C28474871FFC05C600E13F56 /* HTTPMethodConfiguration.swift in Sources */,
+				C28474A61FFC05DA00E13F56 /* PuttableSpec.swift in Sources */,
+				C28474891FFC05C600E13F56 /* PreEncodedRestableConfiguration.swift in Sources */,
+				C284748E1FFC05CC00E13F56 /* Person.swift in Sources */,
+				C28474A51FFC05DA00E13F56 /* PostableSpec.swift in Sources */,
+				C28474A21FFC05DA00E13F56 /* DeletableSpec.swift in Sources */,
+				C28474A41FFC05DA00E13F56 /* PatchableSpec.swift in Sources */,
+				C28474A11FFC05DA00E13F56 /* HTTPMethodSpec.swift in Sources */,
+				C284747B1FFC05BC00E13F56 /* AnyRestableSpec.swift in Sources */,
+				C28474A01FFC05DA00E13F56 /* HttpErrorSpec.swift in Sources */,
+				C28474881FFC05C600E13F56 /* RestableConfiguration.swift in Sources */,
+				C284747D1FFC05BC00E13F56 /* InterceptableSpec.swift in Sources */,
+				C284747E1FFC05BC00E13F56 /* NotificationCenterPublishableSpec.swift in Sources */,
+				C28474801FFC05BC00E13F56 /* RawDecodableSpec.swift in Sources */,
+				C284747F1FFC05BC00E13F56 /* OptionalResponseTypeSpec.swift in Sources */,
+				C284748F1FFC05CC00E13F56 /* Restables.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474BB1FFC0BEF00E13F56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474E41FFC11B800E13F56 /* PatchableSpec.swift in Sources */,
+				C28474E61FFC11B800E13F56 /* PuttableSpec.swift in Sources */,
+				C28474EB1FFC11B800E13F56 /* NotificationCenterPublishableSpec.swift in Sources */,
+				C28474EA1FFC11B800E13F56 /* InterceptableSpec.swift in Sources */,
+				C28474DE1FFC11B800E13F56 /* Person.swift in Sources */,
+				C28474DC1FFC11B800E13F56 /* RestableConfiguration.swift in Sources */,
+				C28474E11FFC11B800E13F56 /* HTTPMethodSpec.swift in Sources */,
+				C28474DB1FFC11B800E13F56 /* HTTPMethodConfiguration.swift in Sources */,
+				C28474E91FFC11B800E13F56 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */,
+				C28474E71FFC11B800E13F56 /* PreEncodedRestablesSpec.swift in Sources */,
+				C28474E51FFC11B800E13F56 /* PostableSpec.swift in Sources */,
+				C28474E21FFC11B800E13F56 /* DeletableSpec.swift in Sources */,
+				C28474ED1FFC11B800E13F56 /* RawDecodableSpec.swift in Sources */,
+				C28474DD1FFC11B800E13F56 /* PreEncodedRestableConfiguration.swift in Sources */,
+				C28474E01FFC11B800E13F56 /* HttpErrorSpec.swift in Sources */,
+				C28474E81FFC11B800E13F56 /* AnyRestableSpec.swift in Sources */,
+				C28474E31FFC11B800E13F56 /* GettableSpec.swift in Sources */,
+				C28474EC1FFC11B800E13F56 /* OptionalResponseTypeSpec.swift in Sources */,
+				C28474DF1FFC11B800E13F56 /* Restables.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28474CA1FFC0BFE00E13F56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28474F71FFC11B900E13F56 /* PatchableSpec.swift in Sources */,
+				C28474F91FFC11B900E13F56 /* PuttableSpec.swift in Sources */,
+				C28474FE1FFC11B900E13F56 /* NotificationCenterPublishableSpec.swift in Sources */,
+				C28474FD1FFC11B900E13F56 /* InterceptableSpec.swift in Sources */,
+				C28474F11FFC11B900E13F56 /* Person.swift in Sources */,
+				C28474EF1FFC11B900E13F56 /* RestableConfiguration.swift in Sources */,
+				C28474F41FFC11B900E13F56 /* HTTPMethodSpec.swift in Sources */,
+				C28474EE1FFC11B900E13F56 /* HTTPMethodConfiguration.swift in Sources */,
+				C28474FC1FFC11B900E13F56 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */,
+				C28474FA1FFC11B900E13F56 /* PreEncodedRestablesSpec.swift in Sources */,
+				C28474F81FFC11B900E13F56 /* PostableSpec.swift in Sources */,
+				C28474F51FFC11B900E13F56 /* DeletableSpec.swift in Sources */,
+				C28475001FFC11B900E13F56 /* RawDecodableSpec.swift in Sources */,
+				C28474F01FFC11B900E13F56 /* PreEncodedRestableConfiguration.swift in Sources */,
+				C28474F31FFC11B900E13F56 /* HttpErrorSpec.swift in Sources */,
+				C28474FB1FFC11B900E13F56 /* AnyRestableSpec.swift in Sources */,
+				C28474F61FFC11B900E13F56 /* GettableSpec.swift in Sources */,
+				C28474FF1FFC11B900E13F56 /* OptionalResponseTypeSpec.swift in Sources */,
+				C28474F21FFC11B900E13F56 /* Restables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7DDB69511F4B6FA1001CC66D /* PBXTargetDependency */ = {
+		C284746B1FFC05B100E13F56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7DDB69441F4B6FA1001CC66D /* Restivus */;
-			targetProxy = 7DDB69501F4B6FA1001CC66D /* PBXContainerItemProxy */;
+			target = C28473F71FFBFE1800E13F56 /* Restivus-macOS */;
+			targetProxy = C284746A1FFC05B100E13F56 /* PBXContainerItemProxy */;
+		};
+		C28474C61FFC0BEF00E13F56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DDB69441F4B6FA1001CC66D /* Restivus-iOS */;
+			targetProxy = C28474C51FFC0BEF00E13F56 /* PBXContainerItemProxy */;
+		};
+		C28474D51FFC0BFE00E13F56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C28473EA1FFBFE0500E13F56 /* Restivus-tvOS */;
+			targetProxy = C28474D41FFC0BFE00E13F56 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -517,6 +999,7 @@
 		7DDB695A1F4B6FA1001CC66D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -524,11 +1007,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Restivus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-iOS";
+				PRODUCT_NAME = Restivus;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -538,6 +1021,7 @@
 		7DDB695B1F4B6FA1001CC66D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -545,47 +1029,327 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Restivus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-iOS";
+				PRODUCT_NAME = Restivus;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
-		7DDB695D1F4B6FA1001CC66D /* Debug */ = {
+		C28473F11FFBFE0500E13F56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 54F2GBB767;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Restivus/Info.plist;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-tvOS";
+				PRODUCT_NAME = Restivus;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		C28473F21FFBFE0500E13F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-tvOS";
+				PRODUCT_NAME = Restivus;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		C28473FE1FFBFE1800E13F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-macOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-macOS";
+				PRODUCT_NAME = Restivus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		7DDB695E1F4B6FA1001CC66D /* Release */ = {
+		C28473FF1FFBFE1800E13F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-macOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-macOS";
+				PRODUCT_NAME = Restivus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C284740B1FFBFE4B00E13F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-watchOS";
+				PRODUCT_NAME = Restivus;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		C284740C1FFBFE4B00E13F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.bunnyhug.Restivus-watchOS";
+				PRODUCT_NAME = Restivus;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		C284746D1FFC05B100E13F56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Sources/Info-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C284746E1FFC05B100E13F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Sources/Info-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C28474C81FFC0BEF00E13F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54F2GBB767;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Restivus/Info.plist;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Sources/Info-iOS.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C28474C91FFC0BEF00E13F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54F2GBB767;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Sources/Info-iOS.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C28474D71FFC0BFE00E13F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54F2GBB767;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		C28474D81FFC0BFE00E13F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54F2GBB767;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.Restivus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Release;
 		};
@@ -601,7 +1365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DDB69591F4B6FA1001CC66D /* Build configuration list for PBXNativeTarget "Restivus" */ = {
+		7DDB69591F4B6FA1001CC66D /* Build configuration list for PBXNativeTarget "Restivus-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DDB695A1F4B6FA1001CC66D /* Debug */,
@@ -610,11 +1374,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DDB695C1F4B6FA1001CC66D /* Build configuration list for PBXNativeTarget "RestivusTests" */ = {
+		C28473F01FFBFE0500E13F56 /* Build configuration list for PBXNativeTarget "Restivus-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7DDB695D1F4B6FA1001CC66D /* Debug */,
-				7DDB695E1F4B6FA1001CC66D /* Release */,
+				C28473F11FFBFE0500E13F56 /* Debug */,
+				C28473F21FFBFE0500E13F56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C28473FD1FFBFE1800E13F56 /* Build configuration list for PBXNativeTarget "Restivus-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28473FE1FFBFE1800E13F56 /* Debug */,
+				C28473FF1FFBFE1800E13F56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C284740A1FFBFE4B00E13F56 /* Build configuration list for PBXNativeTarget "Restivus-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C284740B1FFBFE4B00E13F56 /* Debug */,
+				C284740C1FFBFE4B00E13F56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C284746C1FFC05B100E13F56 /* Build configuration list for PBXNativeTarget "Restivus-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C284746D1FFC05B100E13F56 /* Debug */,
+				C284746E1FFC05B100E13F56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C28474C71FFC0BEF00E13F56 /* Build configuration list for PBXNativeTarget "Restivus-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28474C81FFC0BEF00E13F56 /* Debug */,
+				C28474C91FFC0BEF00E13F56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C28474D61FFC0BFE00E13F56 /* Build configuration list for PBXNativeTarget "Restivus-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28474D71FFC0BFE00E13F56 /* Debug */,
+				C28474D81FFC0BFE00E13F56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

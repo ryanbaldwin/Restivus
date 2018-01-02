@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,9 +17,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DDB694D1F4B6FA1001CC66D"
-               BuildableName = "RestivusTests.xctest"
-               BlueprintName = "RestivusTests"
+               BlueprintIdentifier = "C28474BE1FFC0BEF00E13F56"
+               BuildableName = "Restivus-iOSTests.xctest"
+               BlueprintName = "Restivus-iOSTests"
                ReferencedContainer = "container:Restivus.xcodeproj">
             </BuildableReference>
          </TestableReference>

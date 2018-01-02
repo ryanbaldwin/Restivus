@@ -6,8 +6,6 @@
 //  Copyright © 2017 bunnyhug.me. All rights governed under the Apache 2 License Agreement
 //
 
-#import <UIKit/UIKit.h>
-
 //! Project version number for Restivus.
 FOUNDATION_EXPORT double RestivusVersionNumber;
 
