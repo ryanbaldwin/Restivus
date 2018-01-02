@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Restivus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C28474BE1FFC0BEF00E13F56"
+               BuildableName = "Restivus-iOSTests.xctest"
+               BlueprintName = "Restivus-iOSTests"
+               ReferencedContainer = "container:Restivus.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -30,16 +44,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DDB694D1F4B6FA1001CC66D"
-               BuildableName = "RestivusTests.xctest"
-               BlueprintName = "RestivusTests"
-               ReferencedContainer = "container:Restivus.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
