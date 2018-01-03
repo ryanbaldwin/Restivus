@@ -13,7 +13,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Restivus Docs</a> (100% documented)</p>
+        <p><a href="index.html">Restivus Docs</a> (99% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -91,6 +91,9 @@
                 <a href="Protocols/Postable.html">Postable</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/PreEncoded.html">PreEncoded</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/Puttable.html">Puttable</a>
               </li>
               <li class="nav-group-task">
@@ -159,6 +162,36 @@ notification, containing the original request and response.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:8Restivus10PreEncodedP"></a>
+                    <a name="//apple_ref/swift/Protocol/PreEncoded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus10PreEncodedP">PreEncoded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When present, Restivus will populate the body of the HTTPURLRequest with
+the data found in the <code>data</code> property of the Restable request.
+If a Restable conforms to both <code>PreEncoded</code> and <code>Encodable</code>, Restivus will ignore the <code>Encodable</code></p>
+
+                        <a href="Protocols/PreEncoded.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PreEncoded</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:8Restivus8RestableP"></a>
                     <a name="//apple_ref/swift/Protocol/Restable" class="dashAnchor"></a>
                     <a class="token" href="#/s:8Restivus8RestableP">Restable</a>
@@ -191,9 +224,9 @@ notification, containing the original request and response.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8PuttableP"></a>
-                    <a name="//apple_ref/swift/Protocol/Puttable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8PuttableP">Puttable</a>
+                    <a name="/s:8Restivus9PatchableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Patchable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus9PatchableP">Patchable</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -201,15 +234,47 @@ notification, containing the original request and response.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Designates the conforming type as a PUT HTTP Request.</p>
+                        <p>Designates the conforming type as a PATCH HTTP Request.</p>
 
-                        <a href="Protocols/Puttable.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/Patchable.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Puttable</span><span class="p">:</span> <span class="kt"><a href="Protocols/Restable.html">Restable</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Patchable</span><span class="p">:</span> <span class="kt"><a href="Protocols/Restable.html">Restable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Restivus8GettableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Gettable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus8GettableP">Gettable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designates the conforming type as a GET HTTP Request.</p>
+
+                        <a href="Protocols/Gettable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Gettable</span><span class="p">:</span> <span class="kt"><a href="Protocols/Restable.html">Restable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -288,70 +353,6 @@ For example, adding a token in a header.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8GettableP"></a>
-                    <a name="//apple_ref/swift/Protocol/Gettable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8GettableP">Gettable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Designates the conforming type as a GET HTTP Request.</p>
-
-                        <a href="Protocols/Gettable.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Gettable</span><span class="p">:</span> <span class="kt"><a href="Protocols/Restable.html">Restable</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Restivus9PatchableP"></a>
-                    <a name="//apple_ref/swift/Protocol/Patchable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus9PatchableP">Patchable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Designates the conforming type as a PATCH HTTP Request.</p>
-
-                        <a href="Protocols/Patchable.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Patchable</span><span class="p">:</span> <span class="kt"><a href="Protocols/Restable.html">Restable</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8Restivus9DeletableP"></a>
                     <a name="//apple_ref/swift/Protocol/Deletable" class="dashAnchor"></a>
                     <a class="token" href="#/s:8Restivus9DeletableP">Deletable</a>
@@ -379,10 +380,42 @@ For example, adding a token in a header.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Restivus8PuttableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Puttable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus8PuttableP">Puttable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designates the conforming type as a PUT HTTP Request.</p>
+
+                        <a href="Protocols/Puttable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Puttable</span><span class="p">:</span> <span class="kt"><a href="Protocols/Restable.html">Restable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://www.github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2017-12-21)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2018-01-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

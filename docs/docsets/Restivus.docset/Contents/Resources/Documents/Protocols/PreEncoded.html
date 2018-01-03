@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Result Enumeration Reference</title>
+    <title>PreEncoded Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/Result" class="dashAnchor"></a>
-    <a title="Result Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Protocol/PreEncoded" class="dashAnchor"></a>
+    <a title="PreEncoded Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Restivus Docs</a> (99% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Restivus Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Result Enumeration Reference
+        PreEncoded Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -123,14 +123,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Result</h1>
+            <h1>PreEncoded</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PreEncoded</span></code></pre>
 
                 </div>
               </div>
-            <p>Represents the result of an asynchronous operation.</p>
+            <p>When present, Restivus will populate the body of the HTTPURLRequest with
+the data found in the <code>data</code> property of the Restable request.
+If a Restable conforms to both <code>PreEncoded</code> and <code>Encodable</code>, Restivus will ignore the <code>Encodable</code></p>
 
           </section>
           <section class="section task-group-section">
@@ -139,9 +141,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus6ResultO7successACyxGxcAEmlF"></a>
-                    <a name="//apple_ref/swift/Element/success" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus6ResultO7successACyxGxcAEmlF">success</a>
+                    <a name="/s:8Restivus10PreEncodedP4data10Foundation4DataVv"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus10PreEncodedP4data10Foundation4DataVv">data</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -149,45 +151,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The operation was a success, and contains the <code>Success</code> output from that operation.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">success</span><span class="p">(</span><span class="kt">Success</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8Restivus6ResultO7failureACyxGAA9HTTPErrorOcAEmlF"></a>
-                    <a name="//apple_ref/swift/Element/failure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus6ResultO7failureACyxGAA9HTTPErrorOcAEmlF">failure</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The operation failed, and contains the <code>Error</code> from that operation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">failure</span><span class="p">(</span><span class="kt"><a href="../Enums/HTTPError.html">HTTPError</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
 
                         </div>
                       </div>

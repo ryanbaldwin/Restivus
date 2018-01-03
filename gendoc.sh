@@ -1,7 +1,7 @@
 #! /bin/bash
 jazzy \
 	--source-directory ../src/ \
-	--readme README.md \
+	--readme ../src/README.md \
 	-a 'Ryan Baldwin' \
 	-u 'https://www.github.com/ryanbaldwin' \
 	-m 'Restivus' \
