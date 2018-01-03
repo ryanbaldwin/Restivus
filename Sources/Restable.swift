@@ -33,6 +33,7 @@ public protocol NotificationCenterPublishable {
 /// the data found in the `data` property of the Restable request.
 /// If a Restable conforms to both `PreEncoded` and `Encodable`, Restivus will ignore the `Encodable`
 public protocol PreEncoded {
+    /// The data to put into the body of the HTTPURLRequest
     var data: Data { get }
 }
 
