@@ -320,7 +320,7 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
         return try _request()
     }
     
-    public func submit(callbackOnMain: Bool = true,
+    @discardableResult public func submit(callbackOnMain: Bool = true,
                        session: URLSession = URLSession.shared,
                        completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
         return try _submit(callbackOnMain, session, completion)

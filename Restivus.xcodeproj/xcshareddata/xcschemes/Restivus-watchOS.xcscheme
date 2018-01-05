@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C28474041FFBFE4B00E13F56"
-               BuildableName = "Restivus_watchOS.framework"
+               BuildableName = "Restivus.framework"
                BlueprintName = "Restivus-watchOS"
                ReferencedContainer = "container:Restivus.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C28474041FFBFE4B00E13F56"
-            BuildableName = "Restivus_watchOS.framework"
+            BuildableName = "Restivus.framework"
             BlueprintName = "Restivus-watchOS"
             ReferencedContainer = "container:Restivus.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C28474041FFBFE4B00E13F56"
-            BuildableName = "Restivus_watchOS.framework"
+            BuildableName = "Restivus.framework"
             BlueprintName = "Restivus-watchOS"
             ReferencedContainer = "container:Restivus.xcodeproj">
          </BuildableReference>
