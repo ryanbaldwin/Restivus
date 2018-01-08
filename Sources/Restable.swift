@@ -92,7 +92,7 @@ public struct OptionalResponseType<T>: Decodable where T: Decodable {
 
 
 // The function used as a completion handler in all Restables.
-public typealias RestableCompletionHandler<ResponseType> = (Result<ResponseType>) -> Void
+public typealias RestableCompletionHandler<ResponseType> = (Result<ResponseType>) -> ()
 
 /// The base protocol for method-specific protocols.
 public protocol Restable {
@@ -302,7 +302,7 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
     public var path: String
     
     private var _request: () throws -> URLRequest
-    private var _submit: (Bool, URLSession, ((Result<ExpectedResponseType>) -> Void)?) throws -> URLSessionDataTask
+    private var _submit: (Bool, URLSession, RestableCompletionHandler<ResponseType>?) throws -> URLSessionDataTask
     
     /// Wraps the provided `restable` into a type-erased enclosure,
     /// allowing it to be passed around to other functions, used as a stored property, etc.
@@ -320,7 +320,7 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
         return try _request()
     }
     
-    public func submit(callbackOnMain: Bool = true,
+    @discardableResult public func submit(callbackOnMain: Bool = true,
                        session: URLSession = URLSession.shared,
                        completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
         return try _submit(callbackOnMain, session, completion)

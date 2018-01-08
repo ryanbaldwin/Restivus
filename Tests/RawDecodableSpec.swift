@@ -33,7 +33,7 @@ class RawDecodableSpec: QuickSpec {
                     }
                 }
                 
-                expect(data).toEventuallyNot(beNil())
+                expect(data).toEventuallyNot(beNil(), timeout: 3)
             }
             
             it("can handle non-empty response body") {
