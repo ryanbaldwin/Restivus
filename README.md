@@ -1,11 +1,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-| Platform | Status |
-|----------|--------|
-| iOS      | [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4beaa48c4ffd000199ac2a&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4beaa48c4ffd000199ac2a/build/latest?branch=master) |
-| macOS    | [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4becd1e8a8bf0001e10da2&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4becd1e8a8bf0001e10da2/build/latest?branch=master)|
-| tvOS     | [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4bf1da3dea84000173db00&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4bf1da3dea84000173db00/build/latest?branch=master)|
-| watchOS  | [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4ce1760d54600001f3eedf&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4ce1760d54600001f3eedf/build/latest?branch=master)|
+| iOS | macOS | tvOS | watchOS |
+|-----|-------|------|---------|
+|[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4beaa48c4ffd000199ac2a&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4beaa48c4ffd000199ac2a/build/latest?branch=master)| [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4becd1e8a8bf0001e10da2&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4becd1e8a8bf0001e10da2/build/latest?branch=master)|[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4bf1da3dea84000173db00&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4bf1da3dea84000173db00/build/latest?branch=master)|[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a4ce1760d54600001f3eedf&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a4ce1760d54600001f3eedf/build/latest?branch=master)
 
 # Restivus
 > _Finally!_ A Festivus for the _Restivus_!
@@ -21,7 +18,7 @@ I do not currently support CocoaPods because, frankly, I hate it. If there's eno
 ## Carthage
 1. In your cartfile simply add the following
 
-        github "ryanbaldwin/Restivus" == 0.4
+        github "ryanbaldwin/Restivus" == 0.4.1
         
 2. Run a `carthage update`
 3. Add the framework to your project, as defined [here](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
