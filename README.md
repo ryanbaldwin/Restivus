@@ -73,6 +73,9 @@ struct LoginRequest: Encodable {
 }
 
 extension LoginRequest: Postable {
+    // Tells Restivus to deserialize the response into the User struct we define above
+    typealias ResponseType = User
+
     let url = URL(string: "https://my.awesome-app.com/login")
 }
 
