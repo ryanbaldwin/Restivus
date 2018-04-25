@@ -26,7 +26,9 @@ public enum ResultFormat {
                                      dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate) throws -> T {
         switch self {
         case .json:
-            return try JSONDecoder().decode(type, from: result)
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = dateDecodingStrategy
+            return try decoder.decode(type, from: result)
         }
     }
     

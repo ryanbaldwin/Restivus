@@ -11,6 +11,9 @@
 		7DDB69561F4B6FA1001CC66D /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DDB69671F4B705D001CC66D /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
 		7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
+		C22D22D22090B0E500E78B03 /* ResultFormatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */; };
+		C22D22D32090B0E500E78B03 /* ResultFormatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */; };
+		C22D22D42090B0E500E78B03 /* ResultFormatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */; };
 		C26230211F4C8A08003A5E99 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26230201F4C8A08003A5E99 /* URLRequest+Extensions.swift */; };
 		C28474171FFBFFF900E13F56 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474101FFBFFF900E13F56 /* Http.swift */; };
 		C28474181FFBFFF900E13F56 /* ResultEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28474111FFBFFF900E13F56 /* ResultEncoding.swift */; };
@@ -206,6 +209,7 @@
 		7DDB69551F4B6FA1001CC66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DDB69631F4B705D001CC66D /* Restable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restable.swift; sourceTree = "<group>"; };
 		7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
+		C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormatSpec.swift; sourceTree = "<group>"; };
 		C2380A831F50B753004C1B04 /* DeletableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableSpec.swift; sourceTree = "<group>"; };
 		C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDecodableSpec.swift; sourceTree = "<group>"; };
 		C2548E0D1F545366003EDE96 /* GettableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettableSpec.swift; sourceTree = "<group>"; };
@@ -317,6 +321,7 @@
 				C2548E111F54550F003EDE96 /* PostableSpec.swift */,
 				C2548E131F54553E003EDE96 /* PuttableSpec.swift */,
 				C2C7F4B01FF41530003578A8 /* PreEncodedRestablesSpec.swift */,
+				C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */,
 			);
 			name = http;
 			sourceTree = "<group>";
@@ -792,6 +797,7 @@
 				C28474A71FFC05DA00E13F56 /* PreEncodedRestablesSpec.swift in Sources */,
 				C284747C1FFC05BC00E13F56 /* HTTPURLResponse+ExtensionsSpec.swift in Sources */,
 				C28474871FFC05C600E13F56 /* HTTPMethodConfiguration.swift in Sources */,
+				C22D22D32090B0E500E78B03 /* ResultFormatSpec.swift in Sources */,
 				C28474A61FFC05DA00E13F56 /* PuttableSpec.swift in Sources */,
 				C28474891FFC05C600E13F56 /* PreEncodedRestableConfiguration.swift in Sources */,
 				C284748E1FFC05CC00E13F56 /* Person.swift in Sources */,
@@ -818,6 +824,7 @@
 				C28474E61FFC11B800E13F56 /* PuttableSpec.swift in Sources */,
 				C28474EB1FFC11B800E13F56 /* NotificationCenterPublishableSpec.swift in Sources */,
 				C28474EA1FFC11B800E13F56 /* InterceptableSpec.swift in Sources */,
+				C22D22D22090B0E500E78B03 /* ResultFormatSpec.swift in Sources */,
 				C28474DE1FFC11B800E13F56 /* Person.swift in Sources */,
 				C28474DC1FFC11B800E13F56 /* RestableConfiguration.swift in Sources */,
 				C28474E11FFC11B800E13F56 /* HTTPMethodSpec.swift in Sources */,
@@ -844,6 +851,7 @@
 				C28474F91FFC11B900E13F56 /* PuttableSpec.swift in Sources */,
 				C28474FE1FFC11B900E13F56 /* NotificationCenterPublishableSpec.swift in Sources */,
 				C28474FD1FFC11B900E13F56 /* InterceptableSpec.swift in Sources */,
+				C22D22D42090B0E500E78B03 /* ResultFormatSpec.swift in Sources */,
 				C28474F11FFC11B900E13F56 /* Person.swift in Sources */,
 				C28474EF1FFC11B900E13F56 /* RestableConfiguration.swift in Sources */,
 				C28474F41FFC11B900E13F56 /* HTTPMethodSpec.swift in Sources */,
