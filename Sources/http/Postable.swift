@@ -21,12 +21,12 @@ extension Postable {
     }
 }
 
-/// Creates a POST request for the current PreEncoded instance,
-/// and uses the `data` value as the body for the request.
-///
-/// - Returns: The URLRequest
-/// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
 extension Postable where Self: PreEncoded {
+    /// Creates a POST request for the current PreEncoded instance,
+    /// and uses the `data` value as the body for the request.
+    ///
+    /// - Returns: The URLRequest
+    /// - Throws: An HTTPMethodError when the attempt to make the URLRequest failed.
     public func request() throws -> URLRequest {
         return try HTTPMethod.post.makeURLRequest(for: self)
     }

@@ -91,7 +91,7 @@ public struct OptionalResponseType<T>: Decodable where T: Decodable {
 }
 
 
-// The function used as a completion handler in all Restables.
+/// The function used as a completion handler in all Restables.
 public typealias RestableCompletionHandler<ResponseType> = (Result<ResponseType>) -> ()
 
 /// The base protocol for method-specific protocols.
@@ -329,7 +329,16 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
     /// This should match the wrapped Restable's `ResponseType`.
     public typealias ResponseType = ExpectedResponseType
     
+    /// The base url against which the request will be made.
+    /// Example:
+    ///
+    ///     "https://www.google.com"
     public var baseURL: String
+    
+    /// The Path to the endpoint.
+    /// Example:
+    ///
+    ///    "/some/path"
     public var path: String
     
     private var _request: () throws -> URLRequest
@@ -347,10 +356,23 @@ public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
         _submit = { return try restable.submit(callbackOnMain: $0, session: $1, completion: $2) }
     }
     
+    /// Creates a URLRequest object.
+    ///
+    /// - Returns: A URLRequest object, if one was successfully created
     public func request() throws -> URLRequest {
         return try _request()
     }
     
+    /// Submits this request
+    ///
+    /// - Parameters:
+    ///   - callbackOnMain: When `true`, will dispatch the `completion` on the main queue. Otherwise `completion` will
+    ///                     be dispatched on whichever dispatch queue the task was original submitted.
+    ///                     Defaults to `true`.
+    ///   - session: The URLSession from which the URLSessionDataTask will be created. Defaults to `URLSession.shared`
+    ///   - completion: The handler to be called upon completion or failure. Defaults to `nil`
+    /// - Returns: The URLSessionDataTask
+    /// - Throws: If a URLSessionDataTask failed to create
     @discardableResult public func submit(callbackOnMain: Bool = true,
                        session: URLSession = URLSession.shared,
                        completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
