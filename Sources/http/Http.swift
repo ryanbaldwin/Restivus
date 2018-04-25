@@ -26,19 +26,19 @@ public enum HTTPError: Error {
     other(Error, Data?)
 }
 
-/// Determines if 2 HttpErrors are _roughly_ equal.
-/// _Roughly equal_ because some enum values, such as `.unableToDeserializeJSON`,
-/// cannot be accurately truely identified as "Equal" because of their underlying values.
-/// As a result, the following enum values will always return true if they are the same at
-/// superficial level:
-/// - .unableToDeserializeJSON
-/// - .other
-///
-/// - Parameters:
-///   - lhs: The HttpError
-///   - rhs: The other HttpError
-/// - Returns: True if the 2 protocols are roughly equal; otherwise false.
 extension HTTPError: Equatable {
+    /// Determines if 2 HttpErrors are _roughly_ equal.
+    /// _Roughly equal_ because some enum values, such as `.unableToDeserializeJSON`,
+    /// cannot be accurately truely identified as "Equal" because of their underlying values.
+    /// As a result, the following enum values will always return true if they are the same at
+    /// superficial level:
+    /// - .unableToDeserializeJSON
+    /// - .other
+    ///
+    /// - Parameters:
+    ///   - lhs: The HttpError
+    ///   - rhs: The other HttpError
+    /// - Returns: True if the 2 protocols are roughly equal; otherwise false.
     public static func ==(lhs: HTTPError, rhs: HTTPError) -> Bool {
         switch (lhs, rhs) {
         case (.noResponse, .noResponse): return true
@@ -150,7 +150,7 @@ public enum HTTPMethod: String {
     ///     - The value can't be encoded as a JSON array or JSON object—this method throws the invalidValue error.
     ///     - The value contains an exceptional floating-point number (such as infinity or nan) and you're using the default
     ///       JSONEncoder.NonConformingFloatEncodingStrategy—this method throws the invalidValue error.
-    func encode<T>(_ instance: T) throws -> Data where T: Encodable {
+    public func encode<T>(_ instance: T) throws -> Data where T: Encodable {
         return try JSONEncoder().encode(instance)
     }
     
@@ -163,7 +163,7 @@ public enum HTTPMethod: String {
     ///     - The value can't be encoded as a JSON array or JSON object—this method throws the invalidValue error.
     ///     - The value contains an exceptional floating-point number (such as infinity or nan) and you're using the default
     ///       JSONEncoder.NonConformingFloatEncodingStrategy—this method throws the invalidValue error.
-    func encode<T>(_ instance: T) throws -> Data where T: Encodable & Restable {
+    public func encode<T>(_ instance: T) throws -> Data where T: Encodable & Restable {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = instance.dateEncodingStrategy
         return try encoder.encode(instance)

@@ -96,6 +96,35 @@ public typealias RestableCompletionHandler<ResponseType> = (Result<ResponseType>
 
 /// The base protocol for method-specific protocols.
 public protocol Restable {
+    /// The expected, deserialized type for this request.
+    ///
+    /// For example, if we are creating a request which gets a User with a specific ID, we might have
+    /// have something like the following:
+    ///
+    ///     struct User: Decodable {
+    ///         enum Sex: String, Codable {
+    ///             case male, female
+    ///         }
+    ///
+    ///         var name: String
+    ///         var age: Int
+    ///         var sex: Sex
+    ///     }
+    ///
+    ///     struct GetUserRequest {
+    ///         var userId: Int
+    ///     }
+    ///
+    ///     extension GetUserRequest: Gettable {
+    ///         typealias ResponseType = User
+    ///         var url: URL? {
+    ///             return URL(string: "https://myfancyapi.com/user/\(userId)")
+    ///         }
+    ///     }
+    ///
+    /// In our request we are expecting some User JSON to come down. We create a struct which maps the structure
+    /// of that JSON, have it conform to Swift's `Decodable` protocol, and, using the ResponseType, tell our `GetUserRequest`
+    /// "Hey, when you receive the JSON in the response, deserialize it to whatever ResponeType is (i.e. a User instance)
     associatedtype ResponseType: Decodable
     
     /// Defines the `JSONDecoder.DateDecodingStrategy` to use when decoding from JSON into the conforming instance.
@@ -296,6 +325,8 @@ extension Restable {
 /// To get the full fledged story google `Swift Static Linking and Protocols with Associated Types`,
 /// crack a bottle of whisky, and watch Game of Thrones.
 public class AnyRestable<ExpectedResponseType: Decodable>: Restable {
+    /// The expected Decodable that the wrapped request will handle.
+    /// This should match the wrapped Restable's `ResponseType`.
     public typealias ResponseType = ExpectedResponseType
     
     public var baseURL: String

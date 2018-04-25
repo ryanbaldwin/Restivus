@@ -20,6 +20,8 @@ public enum ResultFormat {
     /// - Parameters:
     ///   - result: The HTTPURLResponse data to decode
     ///   - type: The instance to inflate from the decoded data
+    ///   - dateDecodingStrategy: The JSONDecoder.DateDecodingStrategy to use when deserializing Date objects.
+    ///                           Defaults to `.deferredToDate`
     /// - Returns: An inflated instance of T
     /// - Throws: Error if unable to deocde the data based on the current format.
     public func decode<T: Decodable>(result: Data, `as` type: T.Type,
