@@ -14,7 +14,7 @@
     <a title="AnyRestable Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (97% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -116,6 +116,9 @@
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:8Restivus3Rawa">Raw</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8Restivus25RestableCompletionHandlera">RestableCompletionHandler</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -144,9 +147,36 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8RestableP7baseURLSSv"></a>
+                    <a name="/s:8Restivus11AnyRestableC12ResponseTypea"></a>
+                    <a name="//apple_ref/swift/Alias/ResponseType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Restivus11AnyRestableC12ResponseTypea">ResponseType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ResponseType</span> <span class="o">=</span> <span class="kt">ExpectedResponseType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Restivus8RestableP7baseURLSSvp"></a>
                     <a name="//apple_ref/swift/Property/baseURL" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestableP7baseURLSSv">baseURL</a>
+                    <a class="token" href="#/s:8Restivus8RestableP7baseURLSSvp">baseURL</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -170,9 +200,9 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8RestableP4pathSSv"></a>
+                    <a name="/s:8Restivus8RestableP4pathSSvp"></a>
                     <a name="//apple_ref/swift/Property/path" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestableP4pathSSv">path</a>
+                    <a class="token" href="#/s:8Restivus8RestableP4pathSSvp">path</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -214,7 +244,7 @@ allowing it to be passed around to other functions, used as a stored property, e
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">R</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Restable.html">Restable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">restable</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="k">where</span> <span class="kt">R</span><span class="o">.</span><span class="kt">ResponseType</span> <span class="o">==</span> <span class="kt">ExpectedResponseType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">R</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Restable.html">Restable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">restable</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="k">where</span> <span class="kt">R</span><span class="o">.</span><span class="kt"><a href="../Classes/AnyRestable.html#/s:8Restivus11AnyRestableC12ResponseTypea">ResponseType</a></span> <span class="o">==</span> <span class="kt">ExpectedResponseType</span></code></pre>
 
                         </div>
                       </div>
@@ -287,7 +317,7 @@ allowing it to be passed around to other functions, used as a stored property, e
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">submit</span><span class="p">(</span><span class="nv">callbackOnMain</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
                    <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="o">.</span><span class="n">shared</span><span class="p">,</span>
-                   <span class="nv">completion</span><span class="p">:</span> <span class="kt">RestableCompletionHandler</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
+                   <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8Restivus25RestableCompletionHandlera">RestableCompletionHandler</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/AnyRestable.html#/s:8Restivus11AnyRestableC12ResponseTypea">ResponseType</a></span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
 
                         </div>
                       </div>
@@ -299,7 +329,7 @@ allowing it to be passed around to other functions, used as a stored property, e
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2018-03-14)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.github.com/ryanbaldwin" target="_blank" rel="external">Ryan Baldwin</a>. All rights reserved. (Last updated: 2018-04-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
