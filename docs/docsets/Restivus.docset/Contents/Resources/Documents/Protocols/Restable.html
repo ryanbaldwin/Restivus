@@ -14,7 +14,7 @@
     <a title="Restable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (97% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -152,7 +152,35 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The expected, deserialized type for this request.</p>
+
+<p>For example, if we are creating a request which gets a User with a specific ID, we might have
+have something like the following:</p>
+<pre class="highlight plaintext"><code>struct User: Decodable {
+    enum Sex: String, Codable {
+        case male, female
+    }
+
+    var name: String
+    var age: Int
+    var sex: Sex
+}
+
+struct GetUserRequest {
+    var userId: Int
+}
+
+extension GetUserRequest: Gettable {
+    typealias ResponseType = User
+    var url: URL? {
+        return URL(string: "https://myfancyapi.com/user/\(userId)")
+    }
+}
+</code></pre>
+
+<p>In our request we are expecting some User JSON to come down. We create a struct which maps the structure
+of that JSON, have it conform to Swift&rsquo;s <code>Decodable</code> protocol, and, using the ResponseType, tell our <code>GetUserRequest</code>
+&ldquo;Hey, when you receive the JSON in the response, deserialize it to whatever ResponeType is (i.e. a User instance)</p>
 
                       </div>
                       <div class="declaration">

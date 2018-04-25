@@ -14,7 +14,7 @@
     <a title="AnyRestable Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (97% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -157,7 +157,8 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The expected Decodable that the wrapped request will handle.
+This should match the wrapped Restable&rsquo;s <code>ResponseType</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -174,9 +175,9 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8RestableP7baseURLSSvp"></a>
+                    <a name="/s:8Restivus11AnyRestableC7baseURLSSvp"></a>
                     <a name="//apple_ref/swift/Property/baseURL" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestableP7baseURLSSvp">baseURL</a>
+                    <a class="token" href="#/s:8Restivus11AnyRestableC7baseURLSSvp">baseURL</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -184,7 +185,11 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The base url against which the request will be made.
+Example:</p>
+<pre class="highlight plaintext"><code>"https://www.google.com"
+</code></pre>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -200,9 +205,9 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8RestableP4pathSSvp"></a>
+                    <a name="/s:8Restivus11AnyRestableC4pathSSvp"></a>
                     <a name="//apple_ref/swift/Property/path" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestableP4pathSSvp">path</a>
+                    <a class="token" href="#/s:8Restivus11AnyRestableC4pathSSvp">path</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -210,7 +215,11 @@ crack a bottle of whisky, and watch Game of Thrones.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The Path to the endpoint.
+Example:</p>
+
+<p><q>/some/path</q></p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -273,9 +282,9 @@ allowing it to be passed around to other functions, used as a stored property, e
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8RestableP7request10Foundation10URLRequestVyKF"></a>
+                    <a name="/s:8Restivus11AnyRestableC7request10Foundation10URLRequestVyKF"></a>
                     <a name="//apple_ref/swift/Method/request()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestableP7request10Foundation10URLRequestVyKF">request()</a>
+                    <a class="token" href="#/s:8Restivus11AnyRestableC7request10Foundation10URLRequestVyKF">request()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -283,7 +292,8 @@ allowing it to be passed around to other functions, used as a stored property, e
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Creates a URLRequest object.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -293,15 +303,19 @@ allowing it to be passed around to other functions, used as a stored property, e
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A URLRequest object, if one was successfully created</p>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Restivus8RestableP6submitSo18URLSessionDataTaskCSb14callbackOnMain_So0D0C7sessionyAA6ResultOy12ResponseTypeQzGcSg10completiontKF"></a>
+                    <a name="/s:8Restivus11AnyRestableC6submitSo18URLSessionDataTaskCSb14callbackOnMain_So0E0C7sessionyAA6ResultOyxGcSg10completiontKF"></a>
                     <a name="//apple_ref/swift/Method/submit(callbackOnMain:session:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Restivus8RestableP6submitSo18URLSessionDataTaskCSb14callbackOnMain_So0D0C7sessionyAA6ResultOy12ResponseTypeQzGcSg10completiontKF">submit(callbackOnMain:session:completion:)</a>
+                    <a class="token" href="#/s:8Restivus11AnyRestableC6submitSo18URLSessionDataTaskCSb14callbackOnMain_So0E0C7sessionyAA6ResultOyxGcSg10completiontKF">submit(callbackOnMain:session:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -309,7 +323,13 @@ allowing it to be passed around to other functions, used as a stored property, e
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Submits this request</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    If a URLSessionDataTask failed to create
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -320,6 +340,55 @@ allowing it to be passed around to other functions, used as a stored property, e
                    <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8Restivus25RestableCompletionHandlera">RestableCompletionHandler</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/AnyRestable.html#/s:8Restivus11AnyRestableC12ResponseTypea">ResponseType</a></span><span class="o">&gt;</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackOnMain</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>When <code>true</code>, will dispatch the <code>completion</code> on the main queue. Otherwise <code>completion</code> will
+            be dispatched on whichever dispatch queue the task was original submitted.
+            Defaults to <code>true</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URLSession from which the URLSessionDataTask will be created. Defaults to <code>URLSession.shared</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The handler to be called upon completion or failure. Defaults to <code>nil</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The URLSessionDataTask</p>
                       </div>
                     </section>
                   </div>

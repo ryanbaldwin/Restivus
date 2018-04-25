@@ -1,26 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/rbaldwin/dev/Restivus/src/Sources/Restable.swift",
-      "line": 95,
-      "symbol": "RestableCompletionHandler",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rbaldwin/dev/Restivus/src/Sources/Restable.swift",
-      "line": 99,
-      "symbol": "Restable.ResponseType",
-      "symbol_kind": "source.lang.swift.decl.associatedtype",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rbaldwin/dev/Restivus/src/Sources/Restable.swift",
-      "line": 299,
-      "symbol": "AnyRestable.ResponseType",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/rbaldwin/dev/Restivus/src"
 }

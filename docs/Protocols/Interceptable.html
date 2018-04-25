@@ -14,7 +14,7 @@
     <a title="Interceptable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (97% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -154,6 +154,18 @@ For example, adding a token in a header.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Intercepts a URLRequest and allows the handler to mutate it to its heart content</p>
+
+<p>In the following example we conform <code>SomeRequest</code> to be an <code>Interceptable</code>, such that
+SomeRequest will attach an authorization HTTP Header prior to the request being sent:</p>
+<pre class="highlight plaintext"><code>struct SomeRequest: Gettable {...}
+extension SomeRequest: Interceptable {
+    func intercept(request: URLRequest) -&gt; URLRequest {
+        var req = request
+        req.setValue("Token I_AM_KING", forHTTPHeaderField: "Authorization")
+        return req
+    }
+}
+</code></pre>
 
                       </div>
                       <div class="declaration">

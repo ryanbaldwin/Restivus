@@ -14,7 +14,7 @@
     <a title="HTTPError Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Restivus Docs</a> (97% documented)</p>
+        <p><a href="../index.html">Restivus Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ryanbaldwin/Restivus"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -281,9 +281,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s9EquatableP2eeoiSbx_xtFZ"></a>
+                    <a name="/s:8Restivus9HTTPErrorO2eeoiSbAC_ACtFZ"></a>
                     <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s9EquatableP2eeoiSbx_xtFZ">==(_:_:)</a>
+                    <a class="token" href="#/s:8Restivus9HTTPErrorO2eeoiSbAC_ACtFZ">==(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -291,7 +291,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Determines if 2 HttpErrors are <em>roughly</em> equal.
+<em>Roughly equal</em> because some enum values, such as <code><a href="../Enums/HTTPError.html#/s:8Restivus9HTTPErrorO23unableToDeserializeJSONACs5Error_p5error_10Foundation4DataVSg4datatcACmF">.unableToDeserializeJSON</a></code>,
+cannot be accurately truely identified as <q>Equal</q> because of their underlying values.
+As a result, the following enum values will always return true if they are the same at
+superficial level:</p>
+
+<ul>
+<li>.unableToDeserializeJSON</li>
+<li><p>.other</p></li>
+</ul>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -300,6 +310,41 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">HTTPError</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">HTTPError</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HttpError</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other HttpError</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if the 2 protocols are roughly equal; otherwise false.</p>
                       </div>
                     </section>
                   </div>
