@@ -35,10 +35,13 @@ I do not currently support CocoaPods because, frankly, I hate it. If there's eno
 
 # Some quick examples
 Get the contents of the Google homepage as raw data:
+
 ```Swift
 struct GoogleHomepageRequest: Gettable {
     typealias ResponseType = Raw
-    var url = URL(string: "https://www.google.com")
+    var url: URL? {
+        return URL(string: "https://www.google.com")
+    }
 }
 
 let runningTask = try? GoogleHomepageRequest().submit { result in
@@ -49,10 +52,11 @@ let runningTask = try? GoogleHomepageRequest().submit { result in
 ```
 
 Submit a login request which, upon success, returns the authenticated user JSON in the response, something like the following:
-```Json
-{ "name": "Ryan Baldwin",
-  "age": 38,
-  "sex": "male"
+```JSON
+{ 
+    "name": "Ryan Baldwin",
+    "age": 38,
+    "sex": "male"
 }
 ```
 
@@ -76,7 +80,9 @@ extension LoginRequest: Postable {
     // Tells Restivus to deserialize the response into the User struct we define above
     typealias ResponseType = User
 
-    let url = URL(string: "https://my.awesome-app.com/login")
+    var url: URL? {
+        return URL(string: "https://my.awesome-app.com/login")
+    }
 }
 
 _ = try? LoginRequest(username: "rbaldwin", password: "insecure").submit() { result in 
@@ -91,14 +97,16 @@ struct UpdateUserRequest: Encodable {
     var user: User
 }
 
-extension UpdateUserRequest: Interceptable, Postable {
+extension UpdateUserRequest: Postable {
     typealias ResponseType = User
-    lazy var url: URL? = {
+    var url: URL? = {
         URL(string: "https://my.awesome-app.com/user/\(self.user.name)")
     }
+}
 
-    /// Sign this request by putting some token in the "Authorization" header
-    /// This function comes from the `Interceptable` protocol
+/// Sign this request by putting some token in the "Authorization" header
+/// This function comes from the `Interceptable` protocol
+extension UpdateUserRequest: Interceptable {
     func intercept(request: URLRequest) -> URLRequest {
         var req = request
         req.setValue("Token I_AM_KING", forHTTPHeaderField: "Authorization")
@@ -119,7 +127,7 @@ The above POSTs the JSON encoded `userForUpdate` to the server as the following:
            "age": 39,
            "sex": "male"}}
 ```
-If you don't like that you can implement the `Swift.Encodable`'s `encode` function, such as the following:
+If you don't like that serialization you can implement the `Swift.Encodable`'s `encode` function to dictate what the serialized structure should look like. For example, maybe we want to get rid of the `"user"` key and have _just_ the User object serialized in the request:
 ```Swift
 struct UpdateUserRequest: Encodable {
     var user: User
@@ -130,11 +138,13 @@ struct UpdateUserRequest: Encodable {
     }
 }
 ```
-This will now yield the resulting JSON as the following:
+The above yields the following JSON:
 ```JSON
-{"name": "Ryan Baldwin",
- "age": 39,
- "sex": "male"}
+{
+    "name": "Ryan Baldwin",
+    "age": 39,
+    "sex": "male"
+}
 ```
 
 ## More Info

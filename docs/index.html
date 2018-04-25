@@ -182,7 +182,9 @@
 <p>Get the contents of the Google homepage as raw data:</p>
 <pre class="highlight plaintext"><code>struct GoogleHomepageRequest: Gettable {
     typealias ResponseType = Raw
-    var url = URL(string: "https://www.google.com")
+    var url: URL? {
+        return URL(string: "https://www.google.com")
+    }
 }
 
 let runningTask = try? GoogleHomepageRequest().submit { result in
@@ -193,9 +195,10 @@ let runningTask = try? GoogleHomepageRequest().submit { result in
 </code></pre>
 
 <p>Submit a login request which, upon success, returns the authenticated user JSON in the response, something like the following:</p>
-<pre class="highlight plaintext"><code>{ "name": "Ryan Baldwin",
-  "age": 38,
-  "sex": "male"
+<pre class="highlight plaintext"><code>{ 
+    "name": "Ryan Baldwin",
+    "age": 38,
+    "sex": "male"
 }
 </code></pre>
 <pre class="highlight plaintext"><code>struct User: Codable {
@@ -217,7 +220,9 @@ extension LoginRequest: Postable {
     // Tells Restivus to deserialize the response into the User struct we define above
     typealias ResponseType = User
 
-    let url = URL(string: "https://my.awesome-app.com/login")
+    var url: URL? {
+        return URL(string: "https://my.awesome-app.com/login")
+    }
 }
 
 _ = try? LoginRequest(username: "rbaldwin", password: "insecure").submit() { result in 
@@ -232,14 +237,16 @@ _ = try? LoginRequest(username: "rbaldwin", password: "insecure").submit() { res
     var user: User
 }
 
-extension UpdateUserRequest: Interceptable, Postable {
+extension UpdateUserRequest: Postable {
     typealias ResponseType = User
-    lazy var url: URL? = {
+    var url: URL? = {
         URL(string: "https://my.awesome-app.com/user/\(self.user.name)")
     }
+}
 
-    /// Sign this request by putting some token in the "Authorization" header
-    /// This function comes from the `Interceptable` protocol
+/// Sign this request by putting some token in the "Authorization" header
+/// This function comes from the `Interceptable` protocol
+extension UpdateUserRequest: Interceptable {
     func intercept(request: URLRequest) -&gt; URLRequest {
         var req = request
         req.setValue("Token I_AM_KING", forHTTPHeaderField: "Authorization")
@@ -261,7 +268,7 @@ _ = try? UpdateUserRequest(user: userForUpdate).submit() { result in
            "sex": "male"}}
 </code></pre>
 
-<p>If you don&rsquo;t like that you can implement the <code>Swift.Encodable</code>&lsquo;s <code>encode</code> function, such as the following:</p>
+<p>If you don&rsquo;t like that serialization you can implement the <code>Swift.Encodable</code>&lsquo;s <code>encode</code> function to dictate what the serialized structure should look like. For example, maybe we want to get rid of the <code>&quot;user&quot;</code> key and have <em>just</em> the User object serialized in the request:</p>
 <pre class="highlight plaintext"><code>struct UpdateUserRequest: Encodable {
     var user: User
 
@@ -272,10 +279,12 @@ _ = try? UpdateUserRequest(user: userForUpdate).submit() { result in
 }
 </code></pre>
 
-<p>This will now yield the resulting JSON as the following:</p>
-<pre class="highlight plaintext"><code>{"name": "Ryan Baldwin",
- "age": 39,
- "sex": "male"}
+<p>The above yields the following JSON:</p>
+<pre class="highlight plaintext"><code>{
+    "name": "Ryan Baldwin",
+    "age": 39,
+    "sex": "male"
+}
 </code></pre>
 <h2 id='more-info' class='heading'>More Info</h2>
 
