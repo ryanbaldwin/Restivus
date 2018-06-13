@@ -45,6 +45,34 @@ class ResultFormatSpec: QuickSpec {
                     fail("\(error)")
                 }
             }
+            
+            it("uses the custom date formatters") {
+                let currentDateString = "2018-06-12T20:00:00.000-04:00"
+                
+                let formatter = DateFormatter()                
+                formatter.calendar = Calendar(identifier: .iso8601)
+                formatter.locale = Locale(identifier: "en_US_POSIX")
+                formatter.timeZone = TimeZone(secondsFromGMT: 0)
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+                
+                let currentDate = formatter.date(from: currentDateString)!
+                
+                do {
+                    let encoder = JSONEncoder()
+                    encoder.dateEncodingStrategy = .formatted(formatter)
+                    let data = try encoder.encode(["date": currentDateString])
+                    
+                    let deserializedData = try ResultFormat.json.decode(result: data, as: [String: Date].self,
+                                                                        dateDecodingStrategy: .formatted(formatter))
+                    let currentComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
+                                                                            from: currentDate)
+                    let actualComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
+                                                                           from: deserializedData["date"]!)
+                    expect(currentComponents) == actualComponents
+                } catch let error {
+                    fail("\(error)")
+                }
+            }
         }
     }
 }

@@ -309,7 +309,7 @@ extension Restable {
             }
             
             let jsonData = data ?? "{}".data(using: .utf8)!
-            let result = try resultFormat.decode(result: jsonData, as: ResponseType.self)
+            let result = try resultFormat.decode(result: jsonData, as: ResponseType.self, dateDecodingStrategy: dateDecodingStrategy)
             completion?(Result.success(result))
         } catch let error {
             print(error)
