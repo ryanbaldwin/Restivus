@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Quick
-import Nimble
 @testable import Restivus
 
 struct DateResponse: Decodable {
