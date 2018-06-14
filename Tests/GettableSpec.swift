@@ -16,29 +16,6 @@ extension Gettable {
     }
 }
 
-struct DateResponse: Decodable {
-    var date: Date
-}
-
-struct DateRequest: Gettable {
-    public typealias ResponseType = DateResponse
-    public var path: String { return "/test" }
-    public var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
-        return .formatted(dateFormatter())
-    }
-}
-
-extension DateRequest {
-    func dateFormatter() -> DateFormatter {
-        let formatter = DateFormatter()
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
-        return formatter
-    }
-}
-
 class GettableSpec: QuickSpec {
     override func spec() {
         describe("A default Gettable") {
@@ -59,11 +36,11 @@ class GettableSpec: QuickSpec {
                 let currentDateString = "2018-06-12T20:00:00.000-04:00"
                 let currentDate = gettable.dateFormatter().date(from: currentDateString)!
                 
-                do {
-                    // encode the date
-                    let encoder = JSONEncoder()
-                    encoder.dateEncodingStrategy = .formatted(gettable.dateFormatter())
-                    let data = try encoder.encode(["date": currentDateString])
+                expect {
+                    let data = """
+                    { "date": "\(currentDateString)" }
+                    """.data(using: .utf8)!
+                    
                     var dateResponse: DateResponse? = nil
                     
                     // NOTE: We use a dummy url response here as the `dataTaskCompletionHandler` needs it.
@@ -76,18 +53,16 @@ class GettableSpec: QuickSpec {
                         }
                     }
                     
+                    expect(dateResponse).toNot(beNil())
+                    
                     // compare the dates
                     let currentComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: currentDate)
-                    var actualComponents: DateComponents? = nil
-                    if let dateResponse = dateResponse {
-                        actualComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: dateResponse.date)
-                    }
+                    let actualComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: dateResponse!.date)
                     
-                    expect(actualComponents).toNot(beNil())
+                    expect(currentComponents).toNot(beNil())
                     expect(currentComponents) == actualComponents
-                } catch let error {
-                    fail("\(error)")
-                }
+                    return nil
+                }.toNot(throwError())
             }
         }
     }

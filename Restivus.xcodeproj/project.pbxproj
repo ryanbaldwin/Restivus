@@ -11,6 +11,7 @@
 		7DDB69561F4B6FA1001CC66D /* Restivous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDB69481F4B6FA1001CC66D /* Restivous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DDB69671F4B705D001CC66D /* Restable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69631F4B705D001CC66D /* Restable.swift */; };
 		7DDB69751F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */; };
+		9A64976520D2B5C200264C6E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64976420D2B5C200264C6E /* Date.swift */; };
 		C22D22D22090B0E500E78B03 /* ResultFormatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */; };
 		C22D22D32090B0E500E78B03 /* ResultFormatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */; };
 		C22D22D42090B0E500E78B03 /* ResultFormatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */; };
@@ -209,6 +210,7 @@
 		7DDB69551F4B6FA1001CC66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DDB69631F4B705D001CC66D /* Restable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restable.swift; sourceTree = "<group>"; };
 		7DDB69741F4BE06B001CC66D /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
+		9A64976420D2B5C200264C6E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C22D22D12090B0E500E78B03 /* ResultFormatSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormatSpec.swift; sourceTree = "<group>"; };
 		C2380A831F50B753004C1B04 /* DeletableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableSpec.swift; sourceTree = "<group>"; };
 		C23F9A801F584395000CE9E6 /* RawDecodableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDecodableSpec.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				7D72FA171F4E715000A4B3F9 /* Person.swift */,
 				7D424D4B1F4FC5C000D5C0B9 /* Restables.swift */,
+				9A64976420D2B5C200264C6E /* Date.swift */,
 			);
 			name = "Test Classes";
 			sourceTree = "<group>";
@@ -836,6 +839,7 @@
 				C28474ED1FFC11B800E13F56 /* RawDecodableSpec.swift in Sources */,
 				C28474DD1FFC11B800E13F56 /* PreEncodedRestableConfiguration.swift in Sources */,
 				C28474E01FFC11B800E13F56 /* HttpErrorSpec.swift in Sources */,
+				9A64976520D2B5C200264C6E /* Date.swift in Sources */,
 				C28474E81FFC11B800E13F56 /* AnyRestableSpec.swift in Sources */,
 				C28474E31FFC11B800E13F56 /* GettableSpec.swift in Sources */,
 				C28474EC1FFC11B800E13F56 /* OptionalResponseTypeSpec.swift in Sources */,
