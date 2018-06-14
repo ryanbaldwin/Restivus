@@ -44,7 +44,7 @@ class ResultFormatSpec: QuickSpec {
                 } catch let error {
                     fail("\(error)")
                 }
-            }
+            }            
         }
     }
 }
