@@ -48,6 +48,12 @@ class RawDecodableSpec: QuickSpec {
                 expect(data).toEventuallyNot(beNil(), timeout: 3)
                 expect(data!.count) > 0
             }
+            
+            it("Does not set the Accept Header") {
+                let task = try? RawDelete().submit()
+                expect(task?.originalRequest?.allHTTPHeaderFields).toNot(beNil())
+                expect(task!.originalRequest!.allHTTPHeaderFields!["Accept"]).to(beNil())
+            }
         }
     }
 }
