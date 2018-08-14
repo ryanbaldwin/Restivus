@@ -39,7 +39,7 @@ public enum ResultFormat {
     /// for `.json`, `application/json` headers are set for `Accept` and `Content-Type`, etc.
     /// - Parameter request: The request upon which the HTTPHeaders are to be set.
     /// - Returns: A new URLRequest with the set headers.
-    public func headers(for request: URLRequest) -> URLRequest {
+    public func setHeaders(on request: URLRequest) -> URLRequest {
         var req = request
         req.setValue("application/json", forHTTPHeaderField: "Accept")
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -235,7 +235,11 @@ extension Restable {
     @discardableResult public func submit(callbackOnMain: Bool = true,
                                           session: URLSession = URLSession.shared,
                                           completion: RestableCompletionHandler<ResponseType>? = nil) throws -> URLSessionDataTask {
-        var request = resultFormat.headers(for: try self.request())
+        var request = resultFormat.setHeaders(on: try self.request())
+        
+        // this feels so dirty.
+        if ResponseType.self == Raw.self { request.setValue(nil, forHTTPHeaderField: "Accept") }
+        
         if let interceptable = self as? Interceptable {
             request = interceptable.intercept(request: request)
         }
