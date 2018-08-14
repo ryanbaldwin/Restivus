@@ -1,5 +1,5 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Build Status](https://www.bitrise.io/app/862a430b37752ff9/status.svg?token=G1fML9C8VT5n8Nh7_KeFGA&branch=master)](https://www.bitrise.io/app/862a430b37752ff9)
+[![Build Status](https://app.bitrise.io/app/862a430b37752ff9/status.svg?token=G1fML9C8VT5n8Nh7_KeFGA&branch=master)](https://app.bitrise.io/app/862a430b37752ff9)
 
 # Restivus
 > _Finally!_ A Festivus for the _Restivus_!
